@@ -53,10 +53,17 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Customers.xml" />
-    <Content Include="Employees.xml" />
-    <Content Include="Employees4Write.xml" />
-    <Content Include="Employees4WriteWithFormat.xml" />
+    <Content Include="Docs\Customers.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Docs\CustomersWithoutWhiteSpace.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Docs\Employees.xml" />
+    <Content Include="Docs\Employees4Write.xml" />
+    <Content Include="Docs\Employees4WriteWithFormat.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
