@@ -53,6 +53,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Docs\Book.xml" />
     <Content Include="Docs\Customers.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -100,6 +101,9 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Docs\Book.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

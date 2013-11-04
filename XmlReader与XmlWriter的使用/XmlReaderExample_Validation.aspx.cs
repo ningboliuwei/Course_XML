@@ -19,13 +19,15 @@ namespace XmlReader与XmlWriter的使用
         protected void btnDisplay_Click(object sender, EventArgs e)
         {
             //XML文件所在位置
-            string xmlFilePath = Server.MapPath(@"Docs\Employees.xml");
+            string xmlFilePath = Server.MapPath(@"Docs\Books.xml");
 
             //创建XmlReaderSettings对象，并设置适合的属性
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.IgnoreComments = true;
             settings.ValidationType = ValidationType.Schema;
+            settings.Schemas.Add("Books.xsd");
             settings.IgnoreWhitespace = false;
+
 
 
             try
