@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Customers>
+  <Customer CustomerID="cid222">
+    <CustomerInfo>
+      <Name>Jane Smith</Name>
+      <Email>js@e4free.com</Email>
+      <Address>
+        <Street>234 Some Street</Street>
+        <City>Some City</City>
+        <State>SomeState</State>
+        <ZipCode>90000</ZipCode>
+      </Address>
+    </CustomerInfo>
+    <Orders>
+      <Order>
+        <OrderDetails OrderNumber="onid222" OrderDate="2005-09-23"/>
+        <OrderItems>
+          <OrderItem SKUNumber="2121" ItemNumber="2121-2">
+            <ItemCost>200</ItemCost>
+            <ItemPrice>1200</ItemPrice>
+          </OrderItem>
+        </OrderItems>
+      </Order>
+    </Orders>
+  </Customer>
+</Customers>
+

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Employee Details-->
+<employees>
+	<employee id="1" sex="M">
+		<name>
+			<firstName>Nancy</firstName>
+			<lastName>Davolio</lastName>
+		</name>
+		<city>Seattle</city>
+		<state>W        A</state>
+		<zipCode>98122</zipCode>
+	</employee>
+	<employee id="2" sex="F">
+		<name>
+			<firstName>Andrew</firstName>
+			<lastName>Fuller</lastName>
+		</name>
+		<city>Tacoma</city>
+		<state>WA</state>
+		<zipCode>98401</zipCode>
+	</employee>
+</employees>
+
