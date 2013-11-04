@@ -18,6 +18,7 @@
           <OrderItem SKUNumber="2121" ItemNumber="2121-2">
             <ItemCost>200</ItemCost>
             <ItemPrice>1200</ItemPrice>
+            <Test/>
           </OrderItem>
         </OrderItems>
       </Order>

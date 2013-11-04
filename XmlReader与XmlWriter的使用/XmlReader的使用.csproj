@@ -68,16 +68,32 @@
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Web.config" />
-    <Content Include="XmlReaderExample1.aspx" />
+    <Content Include="XmlReaderExample_DisplayDoc.aspx" />
+    <Content Include="XmlReaderExample_Intro.aspx" />
+    <Content Include="XmlReaderExample_Validation.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlReaderExample1.aspx.cs">
-      <DependentUpon>XmlReaderExample1.aspx</DependentUpon>
+    <Compile Include="XmlReaderExample_DisplayDoc.aspx.cs">
+      <DependentUpon>XmlReaderExample_DisplayDoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="XmlReaderExample1.aspx.designer.cs">
-      <DependentUpon>XmlReaderExample1.aspx</DependentUpon>
+    <Compile Include="XmlReaderExample_DisplayDoc.aspx.designer.cs">
+      <DependentUpon>XmlReaderExample_DisplayDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XmlReaderExample_Intro.aspx.cs">
+      <DependentUpon>XmlReaderExample_Intro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlReaderExample_Intro.aspx.designer.cs">
+      <DependentUpon>XmlReaderExample_Intro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XmlReaderExample_Validation.aspx.cs">
+      <DependentUpon>XmlReaderExample_Validation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlReaderExample_Validation.aspx.designer.cs">
+      <DependentUpon>XmlReaderExample_Validation.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

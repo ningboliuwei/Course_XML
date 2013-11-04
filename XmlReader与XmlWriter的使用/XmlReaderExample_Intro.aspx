@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XmlReaderExample1.aspx.cs" Inherits="XmlReader与XmlWriter的使用.XmlReaderExample1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XmlReaderExample_Intro.aspx.cs" Inherits="XmlReader与XmlWriter的使用.XmlReaderExample1" %>
 
 <!DOCTYPE html>
 
