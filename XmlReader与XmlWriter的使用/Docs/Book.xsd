@@ -11,13 +11,13 @@
 </xs:attribute>-->
 	<xs:simpleType name="gradeUnion">
 		<xs:union>
-			<xs:simpleType >
+			<xs:simpleType>
 				<xs:restriction base="xs:integer">
 					<xs:minInclusive value="0"/>
 					<xs:maxInclusive value="100"/>
 				</xs:restriction>
 			</xs:simpleType>
-			<xs:simpleType >
+			<xs:simpleType>
 				<xs:restriction base="xs:token">
 					<xs:enumeration value="ÓÅ"/>
 					<xs:enumeration value="Á¼"/>
@@ -32,12 +32,8 @@
 			<xs:sequence>
 				<xs:element name="title" type="xs:string"/>
 				<!--<xs:element name="author" type="xs:string" default="ØýÃû"/>-->
-				<xs:element name="author">
-					<xs:simpleType>
-						<xs:list itemType="xs:integer"/>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="price" type="gradeUnion"></xs:element>
+				<xs:element name="author" type="xs:string"/>
+				<xs:element name="price" type="xs:float"/>
 				<!--<xs:element name="price" type="xs:string"/>-->
 				<xs:element name="resume" type="xs:string"/>
 				<xs:element name="recommendation" type="xs:string"/>

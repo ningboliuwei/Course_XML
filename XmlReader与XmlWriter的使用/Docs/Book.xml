@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="gb2312"?>
-<book isbn="0-764-58007-8" xsi:type="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Book.xsd">
+<book isbn="0-764-58007-8" bookcategory="文艺">
 	<title>三国演义</title>
 	<author>罗贯中</author>
 	<price>80.00</price>
@@ -7,7 +7,6 @@
 	<recommendation>经典好书</recommendation>
 	<publish>
 		<publisher>文艺出版社</publisher>
-		
-	<!--<pubdate>1998-10-29</pubdate>-->
+    <pubdate>1998-10-29</pubdate>
 	</publish>
 </book>
