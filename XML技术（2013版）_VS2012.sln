@@ -1,7 +1,7 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader的使用", "XmlReader与XmlWriter的使用\XmlReader的使用.csproj", "{ABD955A1-CE16-4112-9665-51A61A862EFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader的使用_VS2012", "XmlReader与XmlWriter的使用\XmlReader的使用.csproj", "{ABD955A1-CE16-4112-9665-51A61A862EFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

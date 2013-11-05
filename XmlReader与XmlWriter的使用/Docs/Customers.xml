@@ -5,7 +5,8 @@
       <Name>Jane Smith</Name>
       <Email>js@e4free.com</Email>
       <Address>
-        <Street>234 Some Street</Street>
+        <Street>234 Some Street33</Street>
+        <Building>2#</Building>
         <City>Some City</City>
         <State>SomeState</State>
         <ZipCode>90000</ZipCode>
@@ -13,7 +14,7 @@
     </CustomerInfo>
     <Orders>
       <Order>
-        <OrderDetails OrderNumber="onid222" OrderDate="2005-09-23"/>
+        <OrderDetails OrderNumber="onid222" OrderDate="2005-09-23" />
         <OrderItems>
           <OrderItem SKUNumber="2121" ItemNumber="2121-2">
             <ItemCost>200</ItemCost>
