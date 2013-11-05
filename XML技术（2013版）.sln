@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader的使用", "XmlRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader的使用_实验", "XmlReader的使用_实验\XmlReader的使用_实验.csproj", "{E510B8B7-6030-4ADD-828E-473377A8F279}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "理论课", "理论课", "{81D63462-A240-46D3-9A58-4AA49EE2E651}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "实验课", "实验课", "{5C5FB0F8-A5C8-4815-B89D-A94BB18B88AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,5 +26,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ABD955A1-CE16-4112-9665-51A61A862EFF} = {81D63462-A240-46D3-9A58-4AA49EE2E651}
+		{E510B8B7-6030-4ADD-828E-473377A8F279} = {5C5FB0F8-A5C8-4815-B89D-A94BB18B88AA}
 	EndGlobalSection
 EndGlobal
