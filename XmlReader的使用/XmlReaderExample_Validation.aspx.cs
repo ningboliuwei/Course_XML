@@ -24,6 +24,7 @@ namespace XmlReader与XmlWriter的使用
             //创建XmlReaderSettings对象，并设置适合的属性
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.IgnoreComments = true;
+			
             settings.ValidationType = ValidationType.Schema;
             settings.Schemas.Add(null, Server.MapPath(@"Docs\Book.xsd"));
             settings.IgnoreWhitespace = false;
