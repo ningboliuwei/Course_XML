@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Customers>
+	<Customer CustomerID="1">
+		<CustomerInfo>
+			<Name>2</Name>
+			<Email>3</Email>
+			<Address>
+				<Street>4</Street>
+				<City>5</City>
+				<State>6</State>
+				<ZipCode>7</ZipCode>
+			</Address>
+		</CustomerInfo>
+		<Orders>
+			<Order>
+				<OrderDetails OrderNumber="8" OrderDate="9">
+					<OrderItems>
+						<OrderItem SKUNumber="10" ItemNumber="11">
+							<ItemCost>12</ItemCost>
+							<ItemPrice>13</ItemPrice>
+						</OrderItem>
+					</OrderItems>
+				</OrderDetails>
+			</Order>
+		</Orders>
+	</Customer>
+</Customers>

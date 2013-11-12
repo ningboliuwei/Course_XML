@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader的使用_实验",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlWriter的使用", "XmlWriter的使用\XmlWriter的使用.csproj", "{5BC2C33C-B8F1-4F4D-ADA8-6E8535DC403B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlWriter的使用_实验", "XmlWriter的使用_实验\XmlWriter的使用_实验.csproj", "{39907276-27A1-462F-85B5-ED2E591DC395}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{5BC2C33C-B8F1-4F4D-ADA8-6E8535DC403B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BC2C33C-B8F1-4F4D-ADA8-6E8535DC403B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BC2C33C-B8F1-4F4D-ADA8-6E8535DC403B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39907276-27A1-462F-85B5-ED2E591DC395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39907276-27A1-462F-85B5-ED2E591DC395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39907276-27A1-462F-85B5-ED2E591DC395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39907276-27A1-462F-85B5-ED2E591DC395}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
