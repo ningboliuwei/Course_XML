@@ -53,20 +53,60 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.7.1.js" />
-    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="books.xml" />
+    <Content Include="Employees.xml" />
+    <Content Include="NewBooks.xml" />
     <Content Include="Web.config" />
+    <Content Include="XmlDocumentExample_AddBook.aspx" />
+    <Content Include="XmlDocumentExample_AddBookWithoutExistingFile.aspx" />
+    <Content Include="XmlDocumentExample_DisplayBook.aspx" />
     <Content Include="XmlDocumentExample_LoadFromFile.aspx" />
+    <Content Include="XmlDocumentExample_LoadFromString.aspx" />
+    <Content Include="XmlDocumentExample_Traversal.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlDocumentExample_AddBook.aspx.cs">
+      <DependentUpon>XmlDocumentExample_AddBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlDocumentExample_AddBook.aspx.designer.cs">
+      <DependentUpon>XmlDocumentExample_AddBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XmlDocumentExample_AddBookWithoutExistingFile.aspx.cs">
+      <DependentUpon>XmlDocumentExample_AddBookWithoutExistingFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlDocumentExample_AddBookWithoutExistingFile.aspx.designer.cs">
+      <DependentUpon>XmlDocumentExample_AddBookWithoutExistingFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XmlDocumentExample_DisplayBook.aspx.cs">
+      <DependentUpon>XmlDocumentExample_DisplayBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlDocumentExample_DisplayBook.aspx.designer.cs">
+      <DependentUpon>XmlDocumentExample_DisplayBook.aspx</DependentUpon>
+    </Compile>
     <Compile Include="XmlDocumentExample_LoadFromFile.aspx.cs">
       <DependentUpon>XmlDocumentExample_LoadFromFile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="XmlDocumentExample_LoadFromFile.aspx.designer.cs">
       <DependentUpon>XmlDocumentExample_LoadFromFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XmlDocumentExample_LoadFromString.aspx.cs">
+      <DependentUpon>XmlDocumentExample_LoadFromString.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlDocumentExample_LoadFromString.aspx.designer.cs">
+      <DependentUpon>XmlDocumentExample_LoadFromString.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XmlDocumentExample_Traversal.aspx.cs">
+      <DependentUpon>XmlDocumentExample_Traversal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlDocumentExample_Traversal.aspx.designer.cs">
+      <DependentUpon>XmlDocumentExample_Traversal.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--This file represents a fragment of a book store inventory database-->
+<bookstore>
+  <book genre="aaa">
+    <title>bbb</title>
+    <author>
+      <first-name>ccc</first-name>
+      <last-name>ddd</last-name>
+    </author>
+    <price>eee</price>
+  </book>
+</bookstore>

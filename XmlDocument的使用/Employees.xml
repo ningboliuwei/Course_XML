@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<employees>
+  <employee id="1">
+    <name>
+      <firstName>Nancy</firstName>
+      <lastName>Davolio</lastName>
+    </name>
+    <city>Seattle</city>
+    <state>WA</state>
+    <zipCode>98122</zipCode>
+  </employee>
+</employees>
