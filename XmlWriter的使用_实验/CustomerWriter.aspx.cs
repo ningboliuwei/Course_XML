@@ -23,6 +23,7 @@ namespace XmlWriter的使用_实验
 
 			try
 			{
+				//zaici
 
 				XmlWriterSettings settings = new XmlWriterSettings();
 				settings.Indent = true;
