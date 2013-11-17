@@ -10,7 +10,7 @@
 namespace XmlDocument的使用 {
     
     
-    public partial class XmlDocumentExample_AddBookWithoutExistingFile {
+    public partial class XmlDocumentExample_CRUDBook {
         
         /// <summary>
         /// form1 控件。
@@ -22,13 +22,13 @@ namespace XmlDocument的使用 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txtGenre 控件。
+        /// dplGenre 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGenre;
+        protected global::System.Web.UI.WebControls.DropDownList dplGenre;
         
         /// <summary>
         /// txtTitle 控件。
@@ -67,6 +67,15 @@ namespace XmlDocument的使用 {
         protected global::System.Web.UI.WebControls.TextBox txtPrice;
         
         /// <summary>
+        /// lblResult 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResult;
+        
+        /// <summary>
         /// btnSave 控件。
         /// </summary>
         /// <remarks>
@@ -76,12 +85,30 @@ namespace XmlDocument的使用 {
         protected global::System.Web.UI.WebControls.Button btnSave;
         
         /// <summary>
-        /// lblResult 控件。
+        /// btnPreviousRecord 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResult;
+        protected global::System.Web.UI.WebControls.Button btnPreviousRecord;
+        
+        /// <summary>
+        /// btnNextRecord 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNextRecord;
+        
+        /// <summary>
+        /// btnDeleteRecord 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeleteRecord;
     }
 }

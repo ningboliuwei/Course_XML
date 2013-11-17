@@ -58,7 +58,7 @@
     <Content Include="NewBooks.xml" />
     <Content Include="Web.config" />
     <Content Include="XmlDocumentExample_AddBook.aspx" />
-    <Content Include="XmlDocumentExample_AddBookWithoutExistingFile.aspx" />
+    <Content Include="XmlDocumentExample_CRUDBook.aspx" />
     <Content Include="XmlDocumentExample_DisplayBook.aspx" />
     <Content Include="XmlDocumentExample_LoadFromFile.aspx" />
     <Content Include="XmlDocumentExample_LoadFromString.aspx" />
@@ -73,12 +73,12 @@
     <Compile Include="XmlDocumentExample_AddBook.aspx.designer.cs">
       <DependentUpon>XmlDocumentExample_AddBook.aspx</DependentUpon>
     </Compile>
-    <Compile Include="XmlDocumentExample_AddBookWithoutExistingFile.aspx.cs">
-      <DependentUpon>XmlDocumentExample_AddBookWithoutExistingFile.aspx</DependentUpon>
+    <Compile Include="XmlDocumentExample_CRUDBook.aspx.cs">
+      <DependentUpon>XmlDocumentExample_CRUDBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="XmlDocumentExample_AddBookWithoutExistingFile.aspx.designer.cs">
-      <DependentUpon>XmlDocumentExample_AddBookWithoutExistingFile.aspx</DependentUpon>
+    <Compile Include="XmlDocumentExample_CRUDBook.aspx.designer.cs">
+      <DependentUpon>XmlDocumentExample_CRUDBook.aspx</DependentUpon>
     </Compile>
     <Compile Include="XmlDocumentExample_DisplayBook.aspx.cs">
       <DependentUpon>XmlDocumentExample_DisplayBook.aspx</DependentUpon>
