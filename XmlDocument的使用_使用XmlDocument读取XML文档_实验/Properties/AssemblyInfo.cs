@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过下列特性集
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("XmlDocument的使用_实验")]
+[assembly: AssemblyTitle("XmlDocument的使用_使用XmlDocument读取XML文档_实验")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("XmlDocument的使用_实验")]
+[assembly: AssemblyProduct("XmlDocument的使用_使用XmlDocument读取XML文档_实验")]
 [assembly: AssemblyCopyright("版权所有(C)  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

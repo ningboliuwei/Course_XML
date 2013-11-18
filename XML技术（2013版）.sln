@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlWriter的使用_实验",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocument的使用", "XmlDocument的使用\XmlDocument的使用.csproj", "{FA2D352F-EC5B-4DBC-B918-EEBAF1A046CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocument的使用_实验", "XmlDocument的使用_实验\XmlDocument的使用_实验.csproj", "{7963CD93-4F38-419F-A635-D20044F5BD15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocument的使用_实验_使用XmlDocument读取XML文档", "XmlDocument的使用_使用XmlDocument读取XML文档_实验\XmlDocument的使用_实验_使用XmlDocument读取XML文档.csproj", "{7963CD93-4F38-419F-A635-D20044F5BD15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
