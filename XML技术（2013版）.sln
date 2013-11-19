@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader的使用", "XmlReader的使用\XmlReader的使用.csproj", "{ABD955A1-CE16-4112-9665-51A61A862EFF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader的使用_实验", "XmlReader的使用_实验\XmlReader的使用_实验.csproj", "{E510B8B7-6030-4ADD-828E-473377A8F279}"

@@ -10,20 +10,32 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <p>Genre:
-                <asp:TextBox runat="server" ID="txtGenre"></asp:TextBox></p>
-            <p>Title:
-                <asp:TextBox runat="server" ID="txtTitle"></asp:TextBox></p>
-            <p>First Name:
-                <asp:TextBox runat="server" ID="txtFirstName"></asp:TextBox></p>
-            <p>Last Name:
-                <asp:TextBox runat="server" ID="txtLastName"></asp:TextBox></p>
-            <p>Price:
-                <asp:TextBox runat="server" ID="txtPrice"></asp:TextBox></p>
             <p>
-                <asp:Button ID="lblResult" runat="server" OnClick="lblResult_Click" /></p>
+                Genre:
+                <asp:TextBox runat="server" ID="txtGenre"></asp:TextBox>
+            </p>
             <p>
-                <asp:Button ID="btnSave" runat="server" Text="保存文档" OnClick="btnSave_Click" /></p>
+                Title:
+                <asp:TextBox runat="server" ID="txtTitle"></asp:TextBox>
+            </p>
+            <p>
+                First Name:
+                <asp:TextBox runat="server" ID="txtFirstName"></asp:TextBox>
+            </p>
+            <p>
+                Last Name:
+                <asp:TextBox runat="server" ID="txtLastName"></asp:TextBox>
+            </p>
+            <p>
+                Price:
+                <asp:TextBox runat="server" ID="txtPrice"></asp:TextBox>
+            </p>
+            <p>
+                <asp:Label ID="lblResult" runat="server" />
+            </p>
+            <p>
+                <asp:Button ID="btnSave" runat="server" Text="保存文档" OnClick="btnSave_Click" />
+            </p>
 
         </div>
     </form>

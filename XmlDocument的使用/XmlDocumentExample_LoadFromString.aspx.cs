@@ -14,7 +14,7 @@ namespace XmlDocument的使用
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			XmlDocument empDoc = new XmlDocument();
-			Response.ContentType = "text/xml";
+			
 			try
 			{
 				//Load the XML from a String

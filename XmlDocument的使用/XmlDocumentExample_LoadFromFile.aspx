@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XmlDocumentExample_LoadFromFile.aspx.cs" Inherits="XmlDocument的使用.XmlDocumentExample_LoadFromFile" %>
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -14,4 +14,4 @@
     </div>
     </form>
 </body>
-</html>
+</html>-->
