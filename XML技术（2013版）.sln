@@ -13,7 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlWriter的使用_实验",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocument的使用", "XmlDocument的使用\XmlDocument的使用.csproj", "{FA2D352F-EC5B-4DBC-B918-EEBAF1A046CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocument的使用_实验_使用XmlDocument读取XML文档", "XmlDocument的使用_使用XmlDocument读取XML文档_实验\XmlDocument的使用_实验_使用XmlDocument读取XML文档.csproj", "{7963CD93-4F38-419F-A635-D20044F5BD15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocument的使用_实验_使用XmlDocument读取XML文档", "XmlDocument的使用_实验_使用XmlDocument读取XML文档\XmlDocument的使用_实验_使用XmlDocument读取XML文档.csproj", "{7963CD93-4F38-419F-A635-D20044F5BD15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocument的使用_实验_使用XmlDocument编辑XML文档", "XmlDocument的使用_实验_使用XmlDocument编辑XML文档\XmlDocument的使用_实验_使用XmlDocument编辑XML文档.csproj", "{71B139AB-CA1B-492E-8D92-CF77D7F1CA83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{7963CD93-4F38-419F-A635-D20044F5BD15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7963CD93-4F38-419F-A635-D20044F5BD15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7963CD93-4F38-419F-A635-D20044F5BD15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B139AB-CA1B-492E-8D92-CF77D7F1CA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B139AB-CA1B-492E-8D92-CF77D7F1CA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B139AB-CA1B-492E-8D92-CF77D7F1CA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B139AB-CA1B-492E-8D92-CF77D7F1CA83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
