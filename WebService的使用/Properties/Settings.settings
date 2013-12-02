@@ -14,5 +14,11 @@
     <Setting Name="WebService的使用_CustomClassService_CustomClassWebService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:32339/CustomClassWebService.asmx</Value>
     </Setting>
+    <Setting Name="WebService的使用_CustomDataArrayService_CustomDataArrayWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:32339/CustomDataArrayWebService.asmx</Value>
+    </Setting>
+    <Setting Name="WebService的使用_DataTableService_DataTableWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:32339/DataTableWebService.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

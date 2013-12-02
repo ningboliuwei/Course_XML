@@ -62,5 +62,25 @@ namespace WebService的使用.Properties {
                 return ((string)(this["WebService的使用_CustomClassService_CustomClassWebService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:32339/CustomDataArrayWebService.asmx")]
+        public string WebService的使用_CustomDataArrayService_CustomDataArrayWebService {
+            get {
+                return ((string)(this["WebService的使用_CustomDataArrayService_CustomDataArrayWebService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:32339/DataTableWebService.asmx")]
+        public string WebService的使用_DataTableService_DataTableWebService {
+            get {
+                return ((string)(this["WebService的使用_DataTableService_DataTableWebService"]));
+            }
+        }
     }
 }

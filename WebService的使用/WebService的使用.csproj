@@ -56,8 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CreateWebServiceExample_CustomClass.aspx" />
+    <Content Include="CreateWebServiceExample_DataTable.aspx" />
+    <Content Include="CreateWebServiceExample_GetAddressList.aspx" />
     <Content Include="CreateWebServiceExample_HelloWorld.aspx" />
     <Content Include="CustomClassWebService.asmx" />
+    <Content Include="CustomDataArrayWebService.asmx" />
+    <Content Include="DataTableWebService.asmx" />
     <Content Include="HelloWorldWebService.asmx" />
     <Content Include="InvokeWebServiceExample_CurrencyConvertor.aspx" />
     <Content Include="InvokeWebServiceExample_StockQuote.aspx" />
@@ -76,8 +80,23 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <Content Include="Web References\CustomDataArrayService\Address.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\CustomDataArrayService\CustomDataArrayWebService.wsdl" />
+    <Content Include="Web References\CustomDataArrayService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\DataTableService\DataTableWebService.wsdl" />
+    <Content Include="Web References\DataTableService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web References\HelloWorldService\HelloWorldWebService.wsdl" />
     <None Include="Web References\CustomClassService\CustomClassWebService.disco" />
+    <None Include="Web References\CustomDataArrayService\CustomDataArrayWebService.disco" />
+    <None Include="Web References\DataTableService\DataTableWebService.disco" />
     <Content Include="Web References\HelloWorldService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -105,6 +124,20 @@
     <Compile Include="CreateWebServiceExample_CustomClass.aspx.designer.cs">
       <DependentUpon>CreateWebServiceExample_CustomClass.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CreateWebServiceExample_DataTable.aspx.cs">
+      <DependentUpon>CreateWebServiceExample_DataTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateWebServiceExample_DataTable.aspx.designer.cs">
+      <DependentUpon>CreateWebServiceExample_DataTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateWebServiceExample_GetAddressList.aspx.cs">
+      <DependentUpon>CreateWebServiceExample_GetAddressList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateWebServiceExample_GetAddressList.aspx.designer.cs">
+      <DependentUpon>CreateWebServiceExample_GetAddressList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreateWebServiceExample_HelloWorld.aspx.cs">
       <DependentUpon>CreateWebServiceExample_HelloWorld.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -114,6 +147,14 @@
     </Compile>
     <Compile Include="CustomClassWebService.asmx.cs">
       <DependentUpon>CustomClassWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomDataArrayWebService.asmx.cs">
+      <DependentUpon>CustomDataArrayWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataTableWebService.asmx.cs">
+      <DependentUpon>DataTableWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="HelloWorldWebService.asmx.cs">
@@ -141,6 +182,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Web References\CustomClassService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CustomDataArrayService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DataTableService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -190,6 +241,28 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WebService的使用_CustomClassService_CustomClassWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:32339/CustomDataArrayWebService.asmx%3fop=GetAddresses">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CustomDataArrayService\</RelPath>
+      <UpdateFromURL>http://localhost:32339/CustomDataArrayWebService.asmx%3fop=GetAddresses</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebService的使用_CustomDataArrayService_CustomDataArrayWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:32339/DataTableWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DataTableService\</RelPath>
+      <UpdateFromURL>http://localhost:32339/DataTableWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebService的使用_DataTableService_DataTableWebService</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:32339/HelloWorldWebService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
