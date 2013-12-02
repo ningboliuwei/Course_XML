@@ -46,7 +46,7 @@ namespace XmlDocument的使用
                 doc.Load(filePath);
                 nodeList = doc.SelectNodes("/bookstore/book");
                 node = nodeList[index];
-
+				
                 node.ParentNode.RemoveChild(node);
                 doc.Save(filePath);
                 //此处有什么缺陷？如何解决？

@@ -334,5 +334,7 @@ namespace XmlDocument的使用_实验_使用XmlDocument编辑XML文档
             AddRecord();
             DisplayRecord(GetRecordCount() - 1);
         }
+
+		
     }
 }

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocument的使用_实验
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocument的使用_实验_使用XmlDocument编辑XML文档", "XmlDocument的使用_实验_使用XmlDocument编辑XML文档\XmlDocument的使用_实验_使用XmlDocument编辑XML文档.csproj", "{71B139AB-CA1B-492E-8D92-CF77D7F1CA83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService的使用", "WebService的使用\WebService的使用.csproj", "{D8B171B1-969C-442C-BF6A-6471DA7A871A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{71B139AB-CA1B-492E-8D92-CF77D7F1CA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71B139AB-CA1B-492E-8D92-CF77D7F1CA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71B139AB-CA1B-492E-8D92-CF77D7F1CA83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B171B1-969C-442C-BF6A-6471DA7A871A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B171B1-969C-442C-BF6A-6471DA7A871A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B171B1-969C-442C-BF6A-6471DA7A871A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B171B1-969C-442C-BF6A-6471DA7A871A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

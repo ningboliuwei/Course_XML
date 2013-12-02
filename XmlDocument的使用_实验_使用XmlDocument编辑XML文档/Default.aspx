@@ -32,7 +32,7 @@
         <asp:Button ID="btnAdd" runat="server" Text="新    增" OnClick="btnAdd_Click"></asp:Button>
         <asp:Button ID="btnDelete" runat="server" Text="删    除"
             OnClick="btnDelete_Click"></asp:Button>
-        <asp:Button ID="btnClear" runat="server" Text="清    空"></asp:Button><br />
+        <asp:Button ID="btnClear" runat="server" Text="清    空" OnClick="btnClear_Click"></asp:Button><br />
         <asp:Button ID="btnPreviousRecord" runat="server" Text="上一条记录"></asp:Button>
         <asp:Button ID="btnNextRecord" runat="server" Text="下一条记录"></asp:Button>
         <br />
