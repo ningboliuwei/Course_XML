@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAnswer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="question" type="tns:Question" />
+            <s:element minOccurs="1" maxOccurs="1" name="userAnswer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Question">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Operand1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Operand2" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorString" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAnswerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAnswerResult" type="tns:Answer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Answer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="QuestionString" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RightResult" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserAnswer" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetQuestion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetQuestionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQuestionResult" type="tns:Question" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAnswerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAnswer" />
+  </wsdl:message>
+  <wsdl:message name="GetAnswerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQuestion" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQuestionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CaculationSoap">
+    <wsdl:operation name="GetAnswer">
+      <wsdl:input message="tns:GetAnswerSoapIn" />
+      <wsdl:output message="tns:GetAnswerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <wsdl:input message="tns:GetQuestionSoapIn" />
+      <wsdl:output message="tns:GetQuestionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CaculationSoap" type="tns:CaculationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAnswer">
+      <soap:operation soapAction="http://tempuri.org/GetAnswer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <soap:operation soapAction="http://tempuri.org/GetQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CaculationSoap12" type="tns:CaculationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAnswer">
+      <soap12:operation soapAction="http://tempuri.org/GetAnswer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <soap12:operation soapAction="http://tempuri.org/GetQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Caculation">
+    <wsdl:port name="CaculationSoap" binding="tns:CaculationSoap">
+      <soap:address location="http://localhost:50073/Caculation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CaculationSoap12" binding="tns:CaculationSoap12">
+      <soap12:address location="http://localhost:50073/Caculation.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

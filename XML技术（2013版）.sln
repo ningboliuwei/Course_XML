@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService的使用", "WebS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService的使用_DEMO", "WebService的使用_DEMO\WebService的使用_DEMO.csproj", "{67FE4692-0E89-4768-A957-013AC136F982}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService的使用_实验_四则运算", "WebService的使用_实验_四则运算\WebService的使用_实验_四则运算.csproj", "{416D6872-597C-4DFD-86A6-F12BAB8CB8E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{67FE4692-0E89-4768-A957-013AC136F982}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67FE4692-0E89-4768-A957-013AC136F982}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67FE4692-0E89-4768-A957-013AC136F982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{416D6872-597C-4DFD-86A6-F12BAB8CB8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{416D6872-597C-4DFD-86A6-F12BAB8CB8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{416D6872-597C-4DFD-86A6-F12BAB8CB8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{416D6872-597C-4DFD-86A6-F12BAB8CB8E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
