@@ -11,11 +11,11 @@
     <form id="form1" runat="server">
     <div>
 		<asp:XmlDataSource ID=xmlDataSource1 runat=server ></asp:XmlDataSource>
-		<asp:GridView ID="gridView1" runat=server AutoGenerateColumns="False"  >
+		<asp:GridView ID="gridView1" runat=server AutoGenerateColumns="False" EnableModelValidation="True"  >
 			<Columns>
-				<asp:BoundField DataField="ISBN" />
-				<asp:BoundField DataField="Title" />
-				<asp:BoundField DataField="Price" />
+				<asp:BoundField DataField="ISBN" HeaderText="ISBN" />
+				<asp:BoundField DataField="Title" HeaderText="Title" />
+				<asp:BoundField DataField="Price" HeaderText="Price" />
 			</Columns>
             
            		</asp:GridView>

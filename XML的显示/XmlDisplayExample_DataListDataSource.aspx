@@ -12,7 +12,7 @@
     <h1>Bookstore: Fiction</h1>
     <asp:XmlDataSource id="MySource" DataFile="Bookstore.xml" 
       XPath="bookstore/genre/book" runat="server"/>
-    <asp:DataList id="DataList1" DataSourceId="MySource" runat="server">
+    <asp:DataList id="DataList1" DataSourceId="MySource" runat="server" RepeatColumns="2">
       <ItemTemplate>
         <table>
           <tr>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Channel title</title>
+    <link>Link to channel page</link>
+    <item>
+      <title>First content item</title>
+      <link>Link to first content item</link>
+      <pubDate>First content item publication date</pubDate>
+    </item>
+    <item>
+      <title>Second content item</title>
+      <link>Link to second content item</link>
+      <pubDate>Second content item publication date</pubDate>
+    </item>
+    <item>
+      <title>nth content item</title>
+      <link>Link to nth content item</link>
+      <pubDate>nth content item publication date</pubDate>
+    </item>
+  </channel>
+</rss>

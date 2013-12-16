@@ -60,6 +60,8 @@
     <Content Include="Images\10-861003-324.jpg" />
     <Content Include="Menu.xml" />
     <Content Include="Menu.xsl" />
+    <Content Include="RSS.xml" />
+    <Content Include="RSS.xsl" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -67,6 +69,7 @@
     <Content Include="XmlDisplayExample_DataListDataSource.aspx" />
     <Content Include="XmlDisplayExample_GridViewDataSource.aspx" />
     <Content Include="XmlDisplayExample_MenuDataSource.aspx" />
+    <Content Include="XmlDisplayExample_RSSReader.aspx" />
     <Content Include="XmlDisplayExample_SiteMap_Admin\XmlDisplayExample_SiteMap_ProductsAdmin.aspx" />
     <Content Include="XmlDisplayExample_SiteMap_Admin\XmlDisplayExample_SiteMap_CustomersAdmin.aspx" />
     <Content Include="XmlDisplayExample_SiteMap_Customer\XmlDisplayExample_SiteMap_CustomerLogin.aspx" />
@@ -99,6 +102,13 @@
     </Compile>
     <Compile Include="XmlDisplayExample_MenuDataSource.aspx.designer.cs">
       <DependentUpon>XmlDisplayExample_MenuDataSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XmlDisplayExample_RSSReader.aspx.cs">
+      <DependentUpon>XmlDisplayExample_RSSReader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlDisplayExample_RSSReader.aspx.designer.cs">
+      <DependentUpon>XmlDisplayExample_RSSReader.aspx</DependentUpon>
     </Compile>
     <Compile Include="XmlDisplayExample_SiteMap_Admin\XmlDisplayExample_SiteMap_ProductsAdmin.aspx.cs">
       <DependentUpon>XmlDisplayExample_SiteMap_ProductsAdmin.aspx</DependentUpon>
