@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Feeds>
+  <Feed Title="IPC.ME" URL="http://feed.ipc.me/" Category="新闻" />
+  <Feed Title="什么值得买" URL="http://feed.smzdm.com" Category="电商" />
+  <Feed Title="网易头条" Category="新闻" URL="http://news.163.com/special/00011K6L/rss_newstop.xml" />
+  <Feed Title="自然志" Category="博客" URL="http://ziranzhi.com/feed" />
+  <Feed Title="新浪要闻" Category="新闻" URL="http://rss.sina.com.cn/news/marquee/ddt.xml" />
+</Feeds>

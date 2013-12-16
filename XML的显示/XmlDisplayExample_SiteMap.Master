@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="XmlDisplayExample_SiteMap.master.cs" Inherits="XML的显示.XmlDisplayExample_SiteMap" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:SiteMapDataSource ID="siteMapDataSource1" runat="server" />
+            <asp:SiteMapPath ID="siteMapPath1" DataSourceID="siteMapDataSource1" runat="server"></asp:SiteMapPath>
+            <asp:TreeView ID="treeView1" runat="server" DataSourceID="siteMapDataSource1"></asp:TreeView>
+            <!--<asp:Menu runat="server" ID="menu1" DataSourceID="siteMapDataSource1"></asp:Menu>-->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+</body>
+</html>

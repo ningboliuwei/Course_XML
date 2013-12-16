@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<siteMap>
+  <siteMapNode title="Home" description="Home" url="XmlDisplayExample_SiteMap_Home.aspx">
+    <siteMapNode title="Admin" description="Admin">
+      <siteMapNode title="Customers Admin" description="Customers Admin"
+                   url="~/XmlDisplayExample_SiteMap_Admin/XmlDisplayExample_SiteMap_CustomersAdmin.aspx" />
+      <siteMapNode title="Products Admin" description="Products Admin"
+                   url="~/XmlDisplayExample_SiteMap_Admin/XmlDisplayExample_SiteMap_ProductsAdmin.aspx" />
+    </siteMapNode>
+    <siteMapNode title="Customer" description="Customer">
+      <siteMapNode title="Customer Register" description="Customer Register"
+                   url="~/XmlDisplayExample_SiteMap_Customer/XmlDisplayExample_SiteMap_CustomerRegister.aspx" />
+      <siteMapNode title="Customer Login" description="Customer Login"
+                   url="~/XmlDisplayExample_SiteMap_Customer/XmlDisplayExample_SiteMap_CustomerLogin.aspx" />
+    </siteMapNode>
+    <siteMapNode title="Members" description="Members"
+                 url="XmlDisplayExample_SiteMap_Members.aspx" />
+    <siteMapNode title="My Account" description="My Account"
+                 url="XmlDisplayExample_SiteMap_MyAccount.aspx" />
+    <siteMapNode title="Products" description="Products"
+                 url="XmlDisplayExample_SiteMap_Products.aspx" />
+  </siteMapNode>
+</siteMap>
