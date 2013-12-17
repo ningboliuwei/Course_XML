@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML的显示", "XML的显�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML显示_DEMO", "XML显示_DEMO\XML显示_DEMO.csproj", "{F1AC6C08-A60F-4895-8988-0C73BFA487D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService的使用_实验_天气预报", "WebService的使用_实验_天气预报\WebService的使用_实验_天气预报.csproj", "{ABB4EC4F-FCBF-4C1B-A02C-8B60E58AD421}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{F1AC6C08-A60F-4895-8988-0C73BFA487D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1AC6C08-A60F-4895-8988-0C73BFA487D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1AC6C08-A60F-4895-8988-0C73BFA487D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB4EC4F-FCBF-4C1B-A02C-8B60E58AD421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB4EC4F-FCBF-4C1B-A02C-8B60E58AD421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB4EC4F-FCBF-4C1B-A02C-8B60E58AD421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB4EC4F-FCBF-4C1B-A02C-8B60E58AD421}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
