@@ -22,10 +22,10 @@
 
 		public Address(string _Street, string _City, string _Country, int _ZIP)
 		{
-			this.Street = _Street;
-			this.City = _City;
-			this.ZIP = _ZIP;
-			this.Country = _Country;
+			Street = _Street;
+			City = _City;
+			ZIP = _ZIP;
+			Country = _Country;
 		}
 
 		#endregion

@@ -3,28 +3,28 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <p>
-                <asp:TextBox runat="server" ID="txtNumber1" ReadOnly="True"></asp:TextBox>
-                &nbsp;<asp:Label ID="lblOperator" runat="server" Text=""></asp:Label>&nbsp;
-                <asp:TextBox runat="server" ID="txtNumber2" ReadOnly="True"></asp:TextBox>&nbsp;=&nbsp;
-                <asp:TextBox runat="server" ID="txtResult"></asp:TextBox>
-                <br />
-                <asp:Button runat="server" ID="btnGenerate" Text="生成题目"
-                    OnClick="btnGenerate_Click" />&nbsp;
-                <asp:Button runat="server" ID="btnJudge" Text="判断对错" OnClick="btnJudge_Click" />&nbsp;<br />
-            </p>
-            <p>
-                <asp:GridView runat="server" ID="gdvQuestions"></asp:GridView>
-            </p>
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div>
+                <p>
+                    <asp:TextBox runat="server" ID="txtNumber1" ReadOnly="True"></asp:TextBox>
+                    &nbsp;<asp:Label ID="lblOperator" runat="server" Text=""></asp:Label>&nbsp;
+                    <asp:TextBox runat="server" ID="txtNumber2" ReadOnly="True"></asp:TextBox>&nbsp;=&nbsp;
+                    <asp:TextBox runat="server" ID="txtResult"></asp:TextBox>
+                    <br />
+                    <asp:Button runat="server" ID="btnGenerate" Text="生成题目"
+                                OnClick="btnGenerate_Click" />&nbsp;
+                    <asp:Button runat="server" ID="btnJudge" Text="判断对错" OnClick="btnJudge_Click" />&nbsp;<br />
+                </p>
+                <p>
+                    <asp:GridView runat="server" ID="gdvQuestions"></asp:GridView>
+                </p>
 
-        </div>
-    </form>
-</body>
+            </div>
+        </form>
+    </body>
 </html>

@@ -1,33 +1,34 @@
 <?xml version="1.0"?>
+
 <lunch-menu>
-	<food>
-		<name>Cheese Pizza</name>
-		<price>$6.95</price>
-		<description>Individual deep-dish pizza with lots of mozzarella cheese</description>
-		<calories>800</calories>
-	</food>
-	<food>
-		<name>Pepperoni Pizza</name>
-		<price>$7.95</price>
-		<description>Individual deep-dish cheese pizza with thick-cut pepperoni slices</description>
-		<calories>950</calories>
-	</food>
-	<food>
-		<name>The "Everything" Pizza</name>
-		<price>$9.95</price>
-		<description>Individual deep-dish pizza with all our toppings. House specialty!</description>
-		<calories>800</calories>
-	</food>
-	<food>
-		<name>Hungarian Ghoulash</name>
-		<price>$4.50</price>
-		<description>Large serving in a sourdough bread bowl. A_local delight!</description>
-		<calories>600</calories>
-	</food>
-	<food>
-		<name>Maisey's Pork Sandwich</name>
-		<price>$6.95</price>
-		<description>A fresh pork fillet, deep-fried to perfection. Served with fries.</description>
-		<calories>950</calories>
-	</food>
+  <food>
+    <name>Cheese Pizza</name>
+    <price>$6.95</price>
+    <description>Individual deep-dish pizza with lots of mozzarella cheese</description>
+    <calories>800</calories>
+  </food>
+  <food>
+    <name>Pepperoni Pizza</name>
+    <price>$7.95</price>
+    <description>Individual deep-dish cheese pizza with thick-cut pepperoni slices</description>
+    <calories>950</calories>
+  </food>
+  <food>
+    <name>The "Everything" Pizza</name>
+    <price>$9.95</price>
+    <description>Individual deep-dish pizza with all our toppings. House specialty!</description>
+    <calories>800</calories>
+  </food>
+  <food>
+    <name>Hungarian Ghoulash</name>
+    <price>$4.50</price>
+    <description>Large serving in a sourdough bread bowl. A_local delight!</description>
+    <calories>600</calories>
+  </food>
+  <food>
+    <name>Maisey's Pork Sandwich</name>
+    <price>$6.95</price>
+    <description>A fresh pork fillet, deep-fried to perfection. Served with fries.</description>
+    <calories>950</calories>
+  </food>
 </lunch-menu>

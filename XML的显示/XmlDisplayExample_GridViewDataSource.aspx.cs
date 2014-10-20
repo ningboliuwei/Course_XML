@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+
+#endregion
 
 namespace XML的显示
 {
-	public partial class XmlDisplayExample_GridViewDataSource : System.Web.UI.Page
+	public partial class XmlDisplayExample_GridViewDataSource : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

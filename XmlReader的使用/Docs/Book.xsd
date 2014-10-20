@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="gb2312"?>
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:attribute name="isbn" type="xs:string"/>
-	<!--<xs:attribute name="bookcategory" >
+  <xs:attribute name="isbn" type="xs:string" />
+  <!--<xs:attribute name="bookcategory" >
 	<xs:simpleType>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="文艺"/>
@@ -9,53 +10,53 @@
 		</xs:restriction>
 	</xs:simpleType>
 </xs:attribute>-->
-	<xs:simpleType name="gradeUnion">
-		<xs:union>
-			<xs:simpleType>
-				<xs:restriction base="xs:integer">
-					<xs:minInclusive value="0"/>
-					<xs:maxInclusive value="100"/>
-				</xs:restriction>
-			</xs:simpleType>
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-					<xs:enumeration value="优"/>
-					<xs:enumeration value="良"/>
-					<xs:enumeration value="及格"/>
-					<xs:enumeration value="不及格"/>
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:union>
-	</xs:simpleType>
-	<xs:element name="book">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="title" type="xs:string"/>
-				<!--<xs:element name="author" type="xs:string" default="佚名"/>-->
-				<xs:element name="author" type="xs:string"/>
-				<xs:element name="price" type="xs:float"/>
-				<!--<xs:element name="price" type="xs:string"/>-->
-				<xs:element name="resume" type="xs:string"/>
-				<xs:element name="recommendation" type="xs:string"/>
-				<xs:element name="publish" minOccurs="0" maxOccurs="unbounded">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="publisher" type="xs:string"/>
-							<xs:element name="pubdate" type="xs:date"/>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-			</xs:sequence>
-			<xs:attribute ref="isbn"/>
-			<xs:attribute name="bookcategory">
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:enumeration value="文艺"/>
-						<xs:enumeration value="科学"/>
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:attribute>
-			<!--<xs:attribute name="isbn" type="xs:string"/>-->
-		</xs:complexType>
-	</xs:element>
+  <xs:simpleType name="gradeUnion">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:minInclusive value="0" />
+          <xs:maxInclusive value="100" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="优" />
+          <xs:enumeration value="良" />
+          <xs:enumeration value="及格" />
+          <xs:enumeration value="不及格" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:element name="book">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="title" type="xs:string" />
+        <!--<xs:element name="author" type="xs:string" default="佚名"/>-->
+        <xs:element name="author" type="xs:string" />
+        <xs:element name="price" type="xs:float" />
+        <!--<xs:element name="price" type="xs:string"/>-->
+        <xs:element name="resume" type="xs:string" />
+        <xs:element name="recommendation" type="xs:string" />
+        <xs:element name="publish" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="publisher" type="xs:string" />
+              <xs:element name="pubdate" type="xs:date" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute ref="isbn" />
+      <xs:attribute name="bookcategory">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="文艺" />
+            <xs:enumeration value="科学" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <!--<xs:attribute name="isbn" type="xs:string"/>-->
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

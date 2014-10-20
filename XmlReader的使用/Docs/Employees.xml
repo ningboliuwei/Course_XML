@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <!-- Employee Details-->
 <employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Emplyees.xsd">
-	<employee id="1" sex="M">
-		<name>
-			<firstName>Nancy</firstName>
-			<lastName>Davolio</lastName>
-		</name>
-		<city>Seattle</city>
-		<state>W        A</state>
-		<zipCode>98122</zipCode>
-	</employee>
-	<employee id="2" sex="F">
-		
-		<city>Tacoma</city>
-		<state>WA</state>
-		<zipCode>98401</zipCode>
-	</employee>
+  <employee id="1" sex="M">
+    <name>
+      <firstName>Nancy</firstName>
+      <lastName>Davolio</lastName>
+    </name>
+    <city>Seattle</city>
+    <state>W        A</state>
+    <zipCode>98122</zipCode>
+  </employee>
+  <employee id="2" sex="F">
+
+    <city>Tacoma</city>
+    <state>WA</state>
+    <zipCode>98401</zipCode>
+  </employee>
 </employees>

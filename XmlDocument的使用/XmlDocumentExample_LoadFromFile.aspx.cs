@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
+
+#endregion
 
 namespace XmlDocument的使用
 {
-	using System.Xml;
-
-	public partial class XmlDocumentExample_LoadFromFile : System.Web.UI.Page
+	public partial class XmlDocumentExample_LoadFromFile : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -22,7 +21,6 @@ namespace XmlDocument的使用
 				booksDoc.PreserveWhitespace = true; //保留空格
 				booksDoc.Load(xmlPath); //从指定路径加载XML文档到XmlDocument对象中
 				Response.Write(booksDoc.InnerXml); //在浏览器中输出XML文档（利用InnerXml）
-
 			}
 			catch (Exception ex)
 			{

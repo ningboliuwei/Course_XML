@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using WebService的使用_实验_天气预报.weatherService;
+
+#endregion
 
 namespace WebService的使用_实验_天气预报
 {
-	public partial class WeatherForcast : System.Web.UI.Page
+	public partial class WeatherForcast : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -21,7 +21,7 @@ namespace WebService的使用_实验_天气预报
 
 		private void LoadProvince()
 		{
-			weatherService.WeatherWebService service;
+			WeatherWebService service;
 			string[] provinces; //此字符串数组用于保存支持的所有省份/洲名称
 
 			try
@@ -43,7 +43,7 @@ namespace WebService的使用_实验_天气预报
 
 		private void LoadCity(string provinceName)
 		{
-			weatherService.WeatherWebService service;
+			WeatherWebService service;
 			string[] cities; //此字符串数组用于保存支持的所有城市名称
 
 			try
@@ -70,7 +70,7 @@ namespace WebService的使用_实验_天气预报
 
 		private void DisplayWeather(string cityName)
 		{
-			weatherService.WeatherWebService service;
+			WeatherWebService service;
 			string[] weatherStatus; //此字符串数组用于保存各天气情况
 
 			try
@@ -87,11 +87,11 @@ namespace WebService的使用_实验_天气预报
 			//并以字符串数组的形式存放在weatherStatus中
 			Label1.Text = weatherStatus[10];
 			Label2.Text = weatherStatus[6] + "&nbsp;&nbsp;&nbsp;" + weatherStatus[5] + "&nbsp;&nbsp;&nbsp;"
-						  + weatherStatus[7];
+			              + weatherStatus[7];
 			Label3.Text = weatherStatus[13] + "&nbsp;&nbsp;&nbsp;" + weatherStatus[12] + "&nbsp;&nbsp;&nbsp;"
-						  + weatherStatus[14];
+			              + weatherStatus[14];
 			Label4.Text = weatherStatus[18] + "&nbsp;&nbsp;&nbsp;" + weatherStatus[17] + "&nbsp;&nbsp;&nbsp;"
-						  + weatherStatus[19];
+			              + weatherStatus[19];
 			Label5.Text = weatherStatus[11].Replace("\n", "<br />");
 			//Label6.Text = weatherStatus[22].Replace(Chr[10], "<br />");
 			Label7.Text = Convert.ToDateTime(weatherStatus[4]).ToString("yyyy年MM月dd日 dddd HH:mm");

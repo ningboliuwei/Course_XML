@@ -1,31 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
+using System.Text;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
+using WebService的使用.XStockQuote;
+
+#endregion
 
 namespace WebService的使用
 {
-	using System.Text;
-	using System.Xml;
-
-	using WebService的使用.XStockQuote;
-
-	public partial class InvokeWebServiceExample_StockQuote : System.Web.UI.Page
+	public partial class InvokeWebServiceExample_StockQuote : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
 		}
 
 		protected void btnOK_Click(object sender, EventArgs e)
 		{
-			XStockQuote.StockQuote service = new StockQuote();//创建Web Service代理类对象
-			string result = service.GetQuote(txtStock.Text);//调用Web Service的GetQuote()方法
+			StockQuote service = new StockQuote(); //创建Web Service代理类对象
+			string result = service.GetQuote(txtStock.Text); //调用Web Service的GetQuote()方法
 
 			XmlDocument doc = new XmlDocument();
-			doc.LoadXml(result);//将返回的字符串加载到XmlDocument对象中（以便进行后续操作）
+			doc.LoadXml(result); //将返回的字符串加载到XmlDocument对象中（以便进行后续操作）
 
 			//txtInfo.Text = doc.OuterXml;
 

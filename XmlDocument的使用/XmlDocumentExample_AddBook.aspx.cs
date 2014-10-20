@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
+using System.IO;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
+
+#endregion
 
 namespace XmlDocument的使用
 {
-	using System.Xml;
-
-	public partial class XmlDocumentExample_AddBook : System.Web.UI.Page
+	public partial class XmlDocumentExample_AddBook : Page
 	{
 		protected void btnSave_Click(object sender, EventArgs e)
 		{
 			string xmlPath = Server.MapPath("NewBooks.xml");
 			XmlDocument doc = new XmlDocument();
 			//Check if the file already exists or not
-			if (System.IO.File.Exists(xmlPath))
+			if (File.Exists(xmlPath))
 			{
 				doc.Load(xmlPath);
 				XmlNode bookNode = CreateBookNode(doc);
@@ -42,7 +42,7 @@ namespace XmlDocument的使用
 			doc.Save(xmlPath);
 		}
 
-		XmlNode CreateBookNode(XmlDocument doc)
+		private XmlNode CreateBookNode(XmlDocument doc)
 		{
 			XmlNode bookNode = doc.CreateElement("book");
 			//Add the genre attribute to the book node

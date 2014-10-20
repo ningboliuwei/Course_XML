@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
+using System.Text;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
+
+#endregion
 
 namespace XmlWriter的使用_实验
 {
-	using System.Xml;
-
-	public partial class CustomerWriter : System.Web.UI.Page
+	public partial class CustomerWriter : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
 		}
 
 		protected void btnWrite_Click(object sender, EventArgs e)
@@ -28,7 +27,7 @@ namespace XmlWriter的使用_实验
 				XmlWriterSettings settings = new XmlWriterSettings();
 				settings.Indent = true;
 				settings.IndentChars = "\t";
-				settings.Encoding = System.Text.Encoding.UTF8;
+				settings.Encoding = Encoding.UTF8;
 
 				writer = XmlWriter.Create(xmlFilePath, settings);
 
@@ -70,7 +69,6 @@ namespace XmlWriter的使用_实验
 			}
 			catch (Exception ex)
 			{
-
 				Response.Write(ex.Message);
 			}
 			finally

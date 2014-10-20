@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml.Xsl;
+
+#endregion
 
 namespace XML的显示
 {
-	using System.Xml.Xsl;
-
-	public partial class XmlDisplayExample_MenuDataSource : System.Web.UI.Page
+	public partial class XmlDisplayExample_MenuDataSource : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
 		}
 
 		protected void Button1_Click(object sender, EventArgs e)

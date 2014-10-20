@@ -1,11 +1,15 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebService的使用_DEMO.Properties" GeneratedClassName="Settings">
+
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
+              GeneratedClassNamespace="WebService的使用_DEMO.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="WebService的使用_DEMO_XCurrencyConvertor_CurrencyConvertor" Type="(Web Service URL)" Scope="Application">
+    <Setting Name="WebService的使用_DEMO_XCurrencyConvertor_CurrencyConvertor" Type="(Web Service URL)"
+             Scope="Application">
       <Value Profile="(Default)">http://www.webservicex.net/CurrencyConvertor.asmx</Value>
     </Setting>
-    <Setting Name="WebService的使用_DEMO_HelloWorldService_HelloWorldWebService" Type="(Web Service URL)" Scope="Application">
+    <Setting Name="WebService的使用_DEMO_HelloWorldService_HelloWorldWebService" Type="(Web Service URL)"
+             Scope="Application">
       <Value Profile="(Default)">http://localhost:4439/HelloWorldWebService.asmx</Value>
     </Setting>
     <Setting Name="WebService的使用_DEMO_AddService_AddWebService" Type="(Web Service URL)" Scope="Application">

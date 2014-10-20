@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
+
+#endregion
 
 namespace XmlDocument的使用
 {
-	using System.Xml;
-
-	public partial class XmlDocumentExample_Traversal : System.Web.UI.Page
+	public partial class XmlDocumentExample_Traversal : Page
 	{
-		void Page_Load(object sender, EventArgs e)
+		private void Page_Load(object sender, EventArgs e)
 		{
 			string xmlPath = Server.MapPath("Books.xml");
 			XmlDocument doc = new XmlDocument();
@@ -20,7 +19,7 @@ namespace XmlDocument的使用
 			DisplayNodes(rootNode);
 		}
 
-		void DisplayNodes(XmlNode node)
+		private void DisplayNodes(XmlNode node)
 		{
 			//输出节点的名称、类型与值 
 			if (node.NodeType == XmlNodeType.Text)
@@ -31,7 +30,6 @@ namespace XmlDocument的使用
 			{
 				Response.Write("Type= [" + node.NodeType + "] Name=" + node.Name + "<br>");
 			}
-			
 
 
 			//输出节点的属性

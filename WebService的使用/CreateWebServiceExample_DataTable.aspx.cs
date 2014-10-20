@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+
+#endregion
 
 namespace WebService的使用
 {
-	public partial class CreateWebServiceExample_DataTable : System.Web.UI.Page
+	public partial class CreateWebServiceExample_DataTable : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
 		}
 
 		protected void btnOK_Click(object sender, EventArgs e)

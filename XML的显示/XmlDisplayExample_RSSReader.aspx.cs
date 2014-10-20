@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
+
+#endregion
 
 namespace XML的显示
 {
-	using System.Xml;
-
-	public partial class XmlDisplayExample_RSSReader : System.Web.UI.Page
+	public partial class XmlDisplayExample_RSSReader : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
 		}
 
 		protected void okButton_Click(object sender, EventArgs e)

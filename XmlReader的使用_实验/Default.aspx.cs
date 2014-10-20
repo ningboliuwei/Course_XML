@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
+
+#endregion
 
 namespace XmlReader的使用_实验_VS2012
 {
-	using System.Xml;
-
-	public partial class _Default : System.Web.UI.Page
+	public partial class _Default : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

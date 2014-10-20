@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+
+#endregion
 
 namespace WebService的使用_DEMO
 {
-	public partial class InvokeAddWebService : System.Web.UI.Page
+	public partial class InvokeAddWebService : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
 		}
 
 		protected void btnAdd_Click(object sender, EventArgs e)

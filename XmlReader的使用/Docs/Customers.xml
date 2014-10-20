@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
 <Customers>
   <Customer CustomerID="cid222">
     <CustomerInfo>
@@ -19,11 +20,10 @@
           <OrderItem SKUNumber="2121" ItemNumber="2121-2">
             <ItemCost>200</ItemCost>
             <ItemPrice>1200</ItemPrice>
-            <Test/>
+            <Test />
           </OrderItem>
         </OrderItems>
       </Order>
     </Orders>
   </Customer>
 </Customers>
-

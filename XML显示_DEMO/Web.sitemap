@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-    <siteMapNode url="Home.aspx" title="首页"  description="首页">
-        <siteMapNode url="Customers.aspx" title="客户"  description="客户" />
-        <siteMapNode url="Products.aspx" title="产品"  description="产品" />
-    </siteMapNode>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="Home.aspx" title="首页" description="首页">
+    <siteMapNode url="Customers.aspx" title="客户" description="客户" />
+    <siteMapNode url="Products.aspx" title="产品" description="产品" />
+  </siteMapNode>
 </siteMap>

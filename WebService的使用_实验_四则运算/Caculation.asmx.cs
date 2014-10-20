@@ -1,22 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
+using System.ComponentModel;
 using System.Web.Services;
+using System.Xml.Serialization;
+
+#endregion
 
 namespace WebService的使用_实验_四则运算
 {
-	using System.Xml.Serialization;
-
 	/// <summary>
-	/// Caculation 的摘要说明
+	///     Caculation 的摘要说明
 	/// </summary>
 	[WebService(Namespace = "http://tempuri.org/")]
 	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
-	[System.ComponentModel.ToolboxItem(false)]
+	[ToolboxItem(false)]
 	// 若要允许使用 ASP.NET AJAX 从脚本中调用此 Web 服务，请取消注释以下行。 
 	// [System.Web.Script.Services.ScriptService]
-	public class Caculation : System.Web.Services.WebService
+	public class Caculation : WebService
 	{
 		//产生1~100之间的随机整数
 		public int GenerateOperand()
@@ -33,22 +34,22 @@ namespace WebService的使用_实验_四则运算
 		public string GenerateOperatorString() //产生随机的运算符
 		{
 			int number = 0;
-			string[] operatorString = new string[] { "+", "-", "*", "/" };//定义一个由四个运算符字符串组成的字符串数组
+			string[] operatorString = {"+", "-", "*", "/"}; //定义一个由四个运算符字符串组成的字符串数组
 
-			Random random = new Random(Guid.NewGuid().GetHashCode());//创建一个Random对象
-			number = random.Next(0, 3);//生成一个0-3之间的整数
+			Random random = new Random(Guid.NewGuid().GetHashCode()); //创建一个Random对象
+			number = random.Next(0, 3); //生成一个0-3之间的整数
 
-			return operatorString[number];//返回运算符数组中的某一个运算符
+			return operatorString[number]; //返回运算符数组中的某一个运算符
 		}
 
 		[WebMethod]
 		//通过传入一个Question类型的对象，与用户的答案，来生成一条答题记录
 		public Answer GetAnswer(Question question, int userAnswer)
 		{
-			int rightAnswer = 0;//正确答案
-			string answerStatusString;//答题状态字符串
+			int rightAnswer = 0; //正确答案
+			string answerStatusString; //答题状态字符串
 
-			string questionString;//问题字符串
+			string questionString; //问题字符串
 
 			//根据生成的问题中的不同的运算符，计算问题的正确答案
 			switch (question.OperatorString)
@@ -60,10 +61,10 @@ namespace WebService的使用_实验_四则运算
 					rightAnswer = question.Operand1 - question.Operand2;
 					break;
 				case "*":
-					rightAnswer = question.Operand1 * question.Operand2;
+					rightAnswer = question.Operand1*question.Operand2;
 					break;
 				case "/":
-					rightAnswer = question.Operand1 / question.Operand2;
+					rightAnswer = question.Operand1/question.Operand2;
 					break;
 				default:
 					break;
@@ -82,29 +83,27 @@ namespace WebService的使用_实验_四则运算
 				answerStatusString = "×";
 			}
 
-			
-			Answer answer = new Answer();//创建一个答题记录对象（Answer对象）
+
+			Answer answer = new Answer(); //创建一个答题记录对象（Answer对象）
 			answer.QuestionString = questionString;
 			answer.RightResult = rightAnswer;
 			answer.UserAnswer = userAnswer;
 			answer.Status = answerStatusString;
 
-			return answer;//返回answer对象
-
+			return answer; //返回answer对象
 		}
 
 
-
 		[WebMethod]
-		[XmlInclude(typeof(Question))]
+		[XmlInclude(typeof (Question))]
 		public Question GetQuestion()
 		{
-			Question question = new Question();//创建一个Question类型的对象
-			question.Operand1 = this.GenerateOperand();//随机生成操作数1
-			question.Operand2 = this.GenerateOperand();//随机生成操作数2
-			question.OperatorString = this.GenerateOperatorString();//随机生成运算符
+			Question question = new Question(); //创建一个Question类型的对象
+			question.Operand1 = GenerateOperand(); //随机生成操作数1
+			question.Operand2 = GenerateOperand(); //随机生成操作数2
+			question.OperatorString = GenerateOperatorString(); //随机生成运算符
 
-			return question;//返回question对象
+			return question; //返回question对象
 		}
 	}
 }

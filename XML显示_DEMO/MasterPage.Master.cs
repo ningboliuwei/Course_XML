@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿#region
+
+using System;
+
+#endregion
 
 namespace XML显示_DEMO
 {
@@ -11,7 +10,6 @@ namespace XML显示_DEMO
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
 		}
 	}
 }

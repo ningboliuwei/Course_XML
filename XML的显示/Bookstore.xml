@@ -1,40 +1,41 @@
 <?xml-stylesheet type="text/xsl" href="BOOKSTORE.XSL"?>
+
 <bookstore>
-	<genre name="Fiction">
-		<book ISBN="10-861003-324" Title="A Tale of Two Cities" Price="19.99">
-			<chapter num="1" name="Introduction">
+  <genre name="Fiction">
+    <book ISBN="10-861003-324" Title="A Tale of Two Cities" Price="19.99">
+      <chapter num="1" name="Introduction">
         Abstract...
       </chapter>
-			<chapter num="2" name="Body">
+      <chapter num="2" name="Body">
         Abstract...
       </chapter>
-			<chapter num="3" name="Conclusion">
+      <chapter num="3" name="Conclusion">
         Abstract...
       </chapter>
-		</book>
-		<book ISBN="1-861001-57-5" Title="Pride And Prejudice" Price="24.95">
-			<chapter num="1" name="Introduction">
+    </book>
+    <book ISBN="1-861001-57-5" Title="Pride And Prejudice" Price="24.95">
+      <chapter num="1" name="Introduction">
         Abstract...
       </chapter>
-			<chapter num="2" name="Body">
+      <chapter num="2" name="Body">
         Abstract...
       </chapter>
-			<chapter num="3" name="Conclusion">
+      <chapter num="3" name="Conclusion">
         Abstract...
       </chapter>
-		</book>
-	</genre>
-	<genre name="NonFiction">
-		<book ISBN="1-861001-57-6" Title="The Sea: becoming an Old Man and the Sea" Price="27.95">
-			<chapter num="1" name="Introduction">
+    </book>
+  </genre>
+  <genre name="NonFiction">
+    <book ISBN="1-861001-57-6" Title="The Sea: becoming an Old Man and the Sea" Price="27.95">
+      <chapter num="1" name="Introduction">
         Abstract...
       </chapter>
-			<chapter num="2" name="Body">
+      <chapter num="2" name="Body">
         Abstract...
       </chapter>
-			<chapter num="3" name="Conclusion">
+      <chapter num="3" name="Conclusion">
         Abstract...
       </chapter>
-		</book>
-	</genre>
+    </book>
+  </genre>
 </bookstore>

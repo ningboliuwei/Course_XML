@@ -1,5 +1,7 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebService的使用_实验_四则运算.Properties" GeneratedClassName="Settings">
+
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
+              GeneratedClassNamespace="WebService的使用_实验_四则运算.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="WebService的使用_实验_四则运算_CaculationService_Caculation" Type="(Web Service URL)" Scope="Application">

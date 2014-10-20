@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
+
+#endregion
 
 namespace XmlDocument的使用
 {
-	using System.Xml;
-
-	public partial class XmlDocumentExample_DisplayBook : System.Web.UI.Page
+	public partial class XmlDocumentExample_DisplayBook : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -43,8 +42,6 @@ namespace XmlDocument的使用
 			//Response.Write(node2.Attributes[0].Value);
 
 			XmlNode root = doc.DocumentElement;
-			
-
 		}
 	}
 }

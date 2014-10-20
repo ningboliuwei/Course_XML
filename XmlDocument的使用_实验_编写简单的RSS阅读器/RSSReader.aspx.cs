@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
+
+#endregion
 
 namespace XmlDocument的使用_实验_编写简单的RSS阅读器
 {
-	using System.Xml;
-
-	public partial class RSSReader : System.Web.UI.Page
+	public partial class RSSReader : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

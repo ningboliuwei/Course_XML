@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿#region
+
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Xml;
+
+#endregion
 
 namespace XmlReader与XmlWriter的使用
 {
-	public partial class XmlReaderExample_DisplayDoc : System.Web.UI.Page
+	public partial class XmlReaderExample_DisplayDoc : Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -69,7 +69,7 @@ namespace XmlReader与XmlWriter的使用
 
 						if (reader.Name == "zipCode")
 						{
-							lblResult.Text += "<li>Zipcode - " + reader.ReadElementContentAsInt().ToString() + "</li>";
+							lblResult.Text += "<li>Zipcode - " + reader.ReadElementContentAsInt() + "</li>";
 						}
 					}
 					else if (reader.NodeType == XmlNodeType.EndElement)
