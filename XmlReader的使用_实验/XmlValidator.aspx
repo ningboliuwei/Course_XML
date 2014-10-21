@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default2.aspx.cs" Inherits="XmlReader的使用_实验_VS2012.Default2" ValidateRequest="false"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XmlValidator.aspx.cs" Inherits="XmlReader的使用_实验_VS2012.Default2" ValidateRequest="false"%>
 
 <!DOCTYPE html>
 
@@ -22,7 +22,6 @@
                             <asp:Button runat="server" ID="btnValidate" Text="有效性验证" OnClick="btnValidate_Click" /><asp:Label runat="server" ID="lblInfo"></asp:Label></td>
                     </tr>
                 </table>
-
             </div>
         </form>
     </body>

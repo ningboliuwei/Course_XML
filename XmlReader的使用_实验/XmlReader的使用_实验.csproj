@@ -53,28 +53,37 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cars.xml" />
+    <Content Include="CarsReader.aspx" />
     <Content Include="Customers.xml" />
-    <Content Include="Default.aspx" />
-    <Content Include="Default2.aspx" />
+    <Content Include="CustomersReader.aspx" />
+    <Content Include="XmlValidator.aspx" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default2.aspx.cs">
-      <DependentUpon>Default2.aspx</DependentUpon>
+    <Compile Include="CarsReader.aspx.cs">
+      <DependentUpon>CarsReader.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default2.aspx.designer.cs">
-      <DependentUpon>Default2.aspx</DependentUpon>
+    <Compile Include="CarsReader.aspx.designer.cs">
+      <DependentUpon>CarsReader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersReader.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CustomersReader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersReader.aspx.designer.cs">
+      <DependentUpon>CustomersReader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XmlValidator.aspx.cs">
+      <DependentUpon>XmlValidator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlValidator.aspx.designer.cs">
+      <DependentUpon>XmlValidator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
