@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Text;
 using System.Web.UI;
 using System.Xml;
 
@@ -23,6 +24,8 @@ namespace XmlWriter的使用
 			{
 				//创建一个XmlWriterSettings对象
 				XmlWriterSettings settings = new XmlWriterSettings();
+				//设置编码为 UTF-8
+				settings.Encoding = Encoding.UTF8;
 				//设置保留缩进
 				settings.Indent = true;
 				settings.ConformanceLevel = ConformanceLevel.Auto;

@@ -57,11 +57,19 @@
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Web.config" />
+    <Content Include="XmlWriterExample_Basic.aspx" />
     <Content Include="XmlWriterExample_Intro.aspx" />
     <Content Include="XmlWriterExample_Settings.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlWriterExample_Basic.aspx.cs">
+      <DependentUpon>XmlWriterExample_Basic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlWriterExample_Basic.aspx.designer.cs">
+      <DependentUpon>XmlWriterExample_Basic.aspx</DependentUpon>
+    </Compile>
     <Compile Include="XmlWriterExample_Intro.aspx.cs">
       <DependentUpon>XmlWriterExample_Intro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

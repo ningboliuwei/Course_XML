@@ -13,6 +13,7 @@ namespace XmlDocument的使用
 		private void Page_Load(object sender, EventArgs e)
 		{
 			string xmlPath = Server.MapPath("Books.xml");
+			
 			XmlDocument doc = new XmlDocument();
 			doc.Load(xmlPath);
 			XmlNode rootNode = doc.DocumentElement;

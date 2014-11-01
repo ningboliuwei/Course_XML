@@ -15,58 +15,73 @@ namespace XmlDocument的使用
 		{
 			string xmlPath = Server.MapPath("NewBooks.xml");
 			XmlDocument doc = new XmlDocument();
-			//Check if the file already exists or not
+			//检查要写入的文件是否存在，若存在，则加载此文档到 XmlDocument 对象中
 			if (File.Exists(xmlPath))
 			{
-				doc.Load(xmlPath);
-				XmlNode bookNode = CreateBookNode(doc);
-				//Get reference to the book node and append the book node to it
-				XmlNode bookStoreNode = doc.SelectSingleNode("bookstore");
-				bookStoreNode.AppendChild(bookNode);
-				lblResult.Text = "XML Document has been successfully updated";
+				try
+				{
+					doc.Load(xmlPath);
+				}
+				catch (Exception ex)
+				{
+					throw new Exception(ex.Message);
+				}
 			}
+				//若不存在，则直接在 XmlDocument 对象中创建 XML 声明节点与根节点 bookstore。
 			else
 			{
+				//创建声明节点
 				XmlNode declarationNode = doc.CreateXmlDeclaration("1.0", "", "");
+				//将声明节点添加到文档中
 				doc.AppendChild(declarationNode);
-				XmlNode comment = doc.CreateComment("This file represents a fragment of a book store inventory database");
-				doc.AppendChild(comment);
+				//创建 bookstore 节点
 				XmlNode bookstoreNode = doc.CreateElement("bookstore");
-				XmlNode bookNode = CreateBookNode(doc);
-				//Append the book node to the bookstore node            
-				bookstoreNode.AppendChild(bookNode);
-				//Append the bookstore node to the document
+				//将 bookestore 节点作为根节点添加到文档中
 				doc.AppendChild(bookstoreNode);
-				lblResult.Text = "XML Document has been successfully created";
 			}
-			doc.Save(xmlPath);
+
+			XmlNode bookNode = CreateBookNode(doc);
+			//创建一个 book 节点，并添加为 bookstore 节点的子节点
+			XmlNode bookStoreNode = doc.SelectSingleNode("bookstore");
+			bookStoreNode.AppendChild(bookNode);
+			lblResult.Text = "XML 文档已被成功创建";
+
+			try
+			{
+				//将 XmlDocument 对象以 XML 文档的形式保存
+				doc.Save(xmlPath);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception(ex.Message);
+			}
 		}
 
 		private XmlNode CreateBookNode(XmlDocument doc)
 		{
+			//创建 book 节点
 			XmlNode bookNode = doc.CreateElement("book");
-			//Add the genre attribute to the book node
+			//为 book 节点添加 genre 属性
 			XmlAttribute genreAttribute = doc.CreateAttribute("genre");
 			genreAttribute.Value = txtGenre.Text;
 			bookNode.Attributes.Append(genreAttribute);
 
-			//Add all the children of the book node            
+			//为 book 节点添加 titile 节点          
 			XmlNode titleNode = doc.CreateElement("title");
 			titleNode.InnerText = txtTitle.Text;
 			bookNode.AppendChild(titleNode);
 
-			//Create the author node and its children
+			//为 book 节点添加 author 节点及其子节点 first_name 和 last-name
 			XmlNode authorNode = doc.CreateElement("author");
 			XmlNode firstNameNode = doc.CreateElement("first-name");
 			firstNameNode.InnerText = txtFirstName.Text;
 			authorNode.AppendChild(firstNameNode);
-
 			XmlNode lastNameNode = doc.CreateElement("last-name");
 			lastNameNode.InnerText = txtLastName.Text;
 			authorNode.AppendChild(lastNameNode);
-
 			bookNode.AppendChild(authorNode);
 
+			//为 book 节点添加 price 节点
 			XmlNode priceNode = doc.CreateElement("price");
 			priceNode.InnerText = txtPrice.Text;
 			bookNode.AppendChild(priceNode);

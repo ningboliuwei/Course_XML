@@ -53,7 +53,8 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RSS.xsl" />
+    <Content Include="Styles\RSS2.xsl" />
+    <Content Include="Styles\RSS.xsl" />
     <Content Include="RSSFeed.xml" />
     <Content Include="RSSReader.aspx" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />

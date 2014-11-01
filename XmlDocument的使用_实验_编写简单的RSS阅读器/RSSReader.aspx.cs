@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.IO;
 using System.Web.UI;
 using System.Xml;
 
@@ -15,16 +16,31 @@ namespace XmlDocument的使用_实验_编写简单的RSS阅读器
 			if (!Page.IsPostBack)
 			{
 				gdvRss.DataBind();
+
+				BindStyleDropDownList();
 			}
+		}
+
+		private void BindStyleDropDownList()
+		{
+			string[] filePaths = Directory.GetFiles(Server.MapPath("Styles\\"));
+
+			foreach (string filePath in filePaths)
+			{
+				ddlStyles.Items.Add(filePath.Substring(filePath.LastIndexOf("\\") + 1));
+			}
+
 		}
 
 		private void ShowRSS(string feedUrl)
 		{
 			XmlDocument doc = new XmlDocument();
-			doc.Load(feedUrl); //将RSS加载为XmlDocument对象
+			//将RSS加载为XmlDocument对象
+			doc.Load(feedUrl);
 
 			rssXml.Document = doc;
-			rssXml.TransformSource = "RSS.xsl"; //指定将RSS显示为Web的XSLT文件
+			//指定将RSS显示为Web的XSLT文件
+			rssXml.TransformSource = "Styles\\" + ddlStyles.Text;
 			rssXml.DataBind();
 		}
 
@@ -59,8 +75,8 @@ namespace XmlDocument的使用_实验_编写简单的RSS阅读器
 			if (gdvRss.SelectedIndex != -1)
 			{
 				string feedUrl = gdvRss.Rows[gdvRss.SelectedIndex].Cells[2].Text;
-
-				ShowRSS(feedUrl); //得到网格第3列的值（即URL）);
+				//得到网格第3列的值（即URL）);
+				ShowRSS(feedUrl);
 			}
 		}
 	}

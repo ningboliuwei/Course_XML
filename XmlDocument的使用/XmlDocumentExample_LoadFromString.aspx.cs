@@ -25,8 +25,8 @@ namespace XmlDocument的使用
 				               "</name><city>Seattle</city>" +
 				               "<state>WA</state><zipCode>98122</zipCode>" +
 				               "</employee></employees>");
-
-				empDoc.Save(Server.MapPath("Employees.xml")); //调用XmlDocument的Save()方法，将内存中的XML文档保存到磁盘上
+				//调用XmlDocument的Save()方法，将内存中的XML文档保存到磁盘上
+				empDoc.Save(Server.MapPath("Employees.xml")); 
 			}
 			catch (Exception ex)
 			{

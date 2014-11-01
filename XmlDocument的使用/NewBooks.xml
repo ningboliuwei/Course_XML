@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
-<!--This file represents a fragment of a book store inventory database-->
 <bookstore>
-  <book genre="1">
-    <title>2</title>
+  <book genre="a">
+    <title>b</title>
     <author>
-      <first-name>3</first-name>
-      <last-name>4</last-name>
+      <first-name>c</first-name>
+      <last-name>d</last-name>
     </author>
-    <price>5</price>
+    <price>e</price>
   </book>
 </bookstore>
