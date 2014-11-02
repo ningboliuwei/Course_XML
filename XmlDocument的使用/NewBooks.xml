@@ -8,4 +8,12 @@
     </author>
     <price>e</price>
   </book>
+  <book genre="b">
+    <title>b</title>
+    <author>
+      <first-name>b</first-name>
+      <last-name>b</last-name>
+    </author>
+    <price>b</price>
+  </book>
 </bookstore>

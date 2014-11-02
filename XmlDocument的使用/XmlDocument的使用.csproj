@@ -55,6 +55,7 @@
   <ItemGroup>
     <Content Include="books.xml" />
     <Content Include="Employees.xml" />
+    <Content Include="NewBooks.xml" />
     <Content Include="Web.config" />
     <Content Include="XmlDocumentExample_AddBook.aspx" />
     <Content Include="XmlDocumentExample_CRUDBook.aspx" />
