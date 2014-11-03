@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <bookstore>
   <book genre="a">
-    <title>b</title>
+    <title>a</title>
     <author>
-      <first-name>c</first-name>
-      <last-name>d</last-name>
+      <first-name>a</first-name>
+      <last-name>a</last-name>
     </author>
-    <price>e</price>
+    <price>a</price>
   </book>
   <book genre="b">
     <title>b</title>
@@ -15,5 +15,13 @@
       <last-name>b</last-name>
     </author>
     <price>b</price>
+  </book>
+  <book genre="c">
+    <title>c</title>
+    <author>
+      <first-name>c</first-name>
+      <last-name>c</last-name>
+    </author>
+    <price>c</price>
   </book>
 </bookstore>

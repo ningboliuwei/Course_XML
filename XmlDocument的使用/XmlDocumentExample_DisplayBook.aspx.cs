@@ -20,6 +20,7 @@ namespace XmlDocument的使用
 			XmlNodeList titleList = doc.GetElementsByTagName("title");
 			Response.Write("Titles: " + "<br>");
 			//输出所有 title 元素的文本值
+			
 			foreach (XmlNode node in titleList)
 			{
 				Response.Write("Title : " + node.InnerText + "<br>");

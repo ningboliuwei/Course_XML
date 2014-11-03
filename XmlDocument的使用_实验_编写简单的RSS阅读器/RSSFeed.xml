@@ -5,4 +5,5 @@
   <Feed Title="自然志" Category="博客" URL="http://ziranzhi.com/feed" />
   <Feed Title="新浪要闻" Category="新闻" URL="http://rss.sina.com.cn/news/marquee/ddt.xml" />
   <Feed Title="SMZDM-FX" Category="博客" URL="http://fx.smzdm.com/feed" />
+  <Feed Title="新浪英超" Category="博客" URL="http://rss.sina.com.cn/sports/global/england.xml" />
 </Feeds>
