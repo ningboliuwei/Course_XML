@@ -54,19 +54,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cellphone.xml" />
-    <Content Include="Default.aspx" />
+    <Content Include="DisplayCellphones.aspx" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="DisplayCellphones.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Default.aspx</DependentUpon>
+      <DependentUpon>DisplayCellphones.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="DisplayCellphones.aspx.designer.cs">
+      <DependentUpon>DisplayCellphones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
