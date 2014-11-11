@@ -10,7 +10,7 @@
 namespace XmlDocument的使用_实验_使用XmlDocument编辑XML文档 {
     
     
-    public partial class _Default {
+    public partial class _CellphoneEditor {
         
         /// <summary>
         /// Form1 控件。

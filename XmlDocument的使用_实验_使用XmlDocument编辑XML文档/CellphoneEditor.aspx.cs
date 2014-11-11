@@ -9,7 +9,7 @@ using System.Xml;
 
 namespace XmlDocument的使用_实验_使用XmlDocument编辑XML文档
 {
-	public partial class _Default : Page
+	public partial class _CellphoneEditor : Page
 	{
 		private const string fileName = "Cellphone.xml";
 		public static int index = 0;

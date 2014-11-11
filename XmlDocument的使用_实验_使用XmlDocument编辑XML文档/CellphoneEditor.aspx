@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CellphoneEditor.aspx.cs" Inherits="XmlDocument的使用_实验_使用XmlDocument编辑XML文档._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CellphoneEditor.aspx.cs" Inherits="XmlDocument的使用_实验_使用XmlDocument编辑XML文档._CellphoneEditor" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
