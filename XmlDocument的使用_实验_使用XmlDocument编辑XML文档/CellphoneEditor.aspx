@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="XmlDocument的使用_实验_使用XmlDocument编辑XML文档._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CellphoneEditor.aspx.cs" Inherits="XmlDocument的使用_实验_使用XmlDocument编辑XML文档._Default" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -29,11 +29,11 @@
             长：<asp:TextBox ID="txtLength" runat="server"></asp:TextBox><br />
             宽：<asp:TextBox ID="txtWidth" runat="server"></asp:TextBox><br />
             厚：<asp:TextBox ID="txtThickness" runat="server"></asp:TextBox><br />
-            <asp:Button ID="btnAdd" runat="server" Text="新    增" OnClick="btnAdd_Click"></asp:Button>
-            <asp:Button ID="btnDelete" runat="server" Text="删    除"
-                        OnClick="btnDelete_Click"></asp:Button>
-            <asp:Button ID="btnClear" runat="server" Text="清    空" OnClick="btnClear_Click"></asp:Button><br />
-            <asp:Button ID="btnPreviousRecord" runat="server" Text="上一条记录"></asp:Button>
+            <asp:Button ID="btnAdd" runat="server" Text="新    增" OnClick="btnAdd_Click"></asp:Button>&nbsp;
+            <asp:Button ID="btnDelete" runat="server" Text="删    除" OnClick="btnDelete_Click"></asp:Button>&nbsp;
+            <asp:Button ID="btnUpdate" runat="server" Text="修    改" OnClick="btnUpdate_Click"></asp:Button>&nbsp;
+            <asp:Button ID="btnClear" runat="server" Text="清    空" OnClick="btnClear_Click"></asp:Button>&nbsp;<br />
+            <asp:Button ID="btnPreviousRecord" runat="server" Text="上一条记录"></asp:Button>&nbsp;
             <asp:Button ID="btnNextRecord" runat="server" Text="下一条记录"></asp:Button>
             <br />
             <asp:Label ID="lblInfo" runat="server"></asp:Label>

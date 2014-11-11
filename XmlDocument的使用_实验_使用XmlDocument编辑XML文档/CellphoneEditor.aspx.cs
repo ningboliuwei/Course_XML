@@ -2,6 +2,7 @@
 
 using System;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using System.Xml;
 
 #endregion
@@ -113,6 +114,65 @@ namespace XmlDocument的使用_实验_使用XmlDocument编辑XML文档
 				node = doc.CreateElement("售价");
 				node.InnerText = txtPrice.Text.Trim();
 				parentNode.AppendChild(node);
+
+				doc.Save(filePath);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception(ex.Message);
+			}
+		}
+
+
+		private void UpdateRecord()
+		{
+			string filePath = Server.MapPath(fileName);
+			XmlDocument doc = new XmlDocument();
+			XmlNode node;
+			XmlNode parentNode;
+			XmlAttribute attr;
+
+			try
+			{
+				doc.Load(filePath);
+
+				parentNode = doc.DocumentElement;
+				node = doc.GetElementsByTagName("品牌")[index];
+				node.InnerText = txtBrand.Text.Trim();
+
+				attr = node.Attributes[0];
+				attr.Value = txtModel.Text.Trim();
+
+				node = doc.GetElementsByTagName("手机类型")[index];
+				node.InnerText = dplType.Text;
+
+				parentNode = doc.GetElementsByTagName("兼容网络制式")[index]; ;
+				parentNode.RemoveAll();
+				foreach (ListItem listItem in cblNetwork.Items)
+				{
+					if (listItem.Selected)
+					{
+						node = doc.CreateElement("网络制式");
+						node.InnerText = listItem.Text;
+						parentNode.AppendChild(node);
+					}
+				}
+
+		
+				node = doc.GetElementsByTagName("长")[index];
+				node.InnerText = txtLength.Text.Trim();
+
+				node = doc.GetElementsByTagName("宽")[index];
+				node.InnerText = txtWidth.Text.Trim();
+
+				node = doc.GetElementsByTagName("厚")[index];
+				node.InnerText = txtThickness.Text.Trim();
+
+				node = doc.GetElementsByTagName("重量")[index];
+				node.InnerText = txtWeight.Text.Trim();
+
+				node = doc.GetElementsByTagName("售价")[index];
+				node.InnerText = txtPrice.Text.Trim();
 
 				doc.Save(filePath);
 			}
@@ -332,5 +392,10 @@ namespace XmlDocument的使用_实验_使用XmlDocument编辑XML文档
 		}
 
 		#endregion
+
+		protected void btnUpdate_Click(object sender, EventArgs e)
+		{
+			UpdateRecord();
+		}
 	}
 }

@@ -10,8 +10,9 @@ namespace XmlDocument的使用_使用XmlDocument读取XML文档_实验
 {
 	public partial class _Default : Page
 	{
+		private static int index;
 		private const string fileName = "Cellphone.xml"; //指定要读取的XML文档的文件名
-		private static int index; //声明索引变量（静态变量）
+		 //声明索引变量（静态变量）
 
 		private void Page_Load(object sender, EventArgs e)
 		{
