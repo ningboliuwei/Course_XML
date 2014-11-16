@@ -17,7 +17,7 @@ namespace WebService的使用
 	// [System.Web.Script.Services.ScriptService]
 	public class HelloWorldWebService : WebService
 	{
-		[WebMethod]
+		
 		public string HelloWorld()
 		{
 			return "Hello World";

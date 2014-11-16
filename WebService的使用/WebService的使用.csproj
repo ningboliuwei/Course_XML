@@ -56,11 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CreateWebServiceExample_CustomClass.aspx" />
+    <Content Include="CreateWebServiceExample_DataSet.aspx" />
     <Content Include="CreateWebServiceExample_DataTable.aspx" />
     <Content Include="CreateWebServiceExample_GetAddressList.aspx" />
     <Content Include="CreateWebServiceExample_HelloWorld.aspx" />
     <Content Include="CustomClassWebService.asmx" />
     <Content Include="CustomDataArrayWebService.asmx" />
+    <Content Include="DataSetWebService.asmx" />
     <Content Include="DataTableWebService.asmx" />
     <Content Include="HelloWorldWebService.asmx" />
     <Content Include="InvokeWebServiceExample_CurrencyConvertor.aspx" />
@@ -88,7 +90,13 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <None Include="Web References\DataSetService\DataSetWebService.wsdl" />
+    <Content Include="Web References\DataSetService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web References\DataTableService\DataTableWebService.wsdl" />
+    <None Include="Web References\DataSetService\DataSetWebService.disco" />
     <Content Include="Web References\DataTableService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -101,14 +109,9 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <None Include="Web References\XCurrencyConvertor\CurrencyConvertor.disco" />
     <None Include="Web References\HelloWorldService\HelloWorldWebService.disco" />
+    <None Include="Web References\XCurrencyConvertor\CurrencyConvertor.disco" />
     <Content Include="Web References\XStockQuote\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
-    <None Include="Web References\XCurrencyConvertor\CurrencyConvertor.wsdl" />
-    <Content Include="Web References\XCurrencyConvertor\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
@@ -123,6 +126,13 @@
     </Compile>
     <Compile Include="CreateWebServiceExample_CustomClass.aspx.designer.cs">
       <DependentUpon>CreateWebServiceExample_CustomClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateWebServiceExample_DataSet.aspx.cs">
+      <DependentUpon>CreateWebServiceExample_DataSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateWebServiceExample_DataSet.aspx.designer.cs">
+      <DependentUpon>CreateWebServiceExample_DataSet.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreateWebServiceExample_DataTable.aspx.cs">
       <DependentUpon>CreateWebServiceExample_DataTable.aspx</DependentUpon>
@@ -151,6 +161,10 @@
     </Compile>
     <Compile Include="CustomDataArrayWebService.asmx.cs">
       <DependentUpon>CustomDataArrayWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetWebService.asmx.cs">
+      <DependentUpon>DataSetWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataTableWebService.asmx.cs">
@@ -191,6 +205,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\DataSetService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\DataTableService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -216,6 +235,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Web References\XCurrencyConvertor\CurrencyConvertor.wsdl" />
+    <Content Include="Web References\XCurrencyConvertor\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web References\XStockQuote\stockquote.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -252,6 +276,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WebService的使用_CustomDataArrayService_CustomDataArrayWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:32339/DataSetWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DataSetService\</RelPath>
+      <UpdateFromURL>http://localhost:32339/DataSetWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebService的使用_DataSetService_DataSetWebService</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:32339/DataTableWebService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>

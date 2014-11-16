@@ -18,9 +18,9 @@ namespace WebService的使用
 	public class CustomClassWebService : WebService
 	{
 		[WebMethod]
-		public Address GetAddress(string street, string city, string country, int ZIP)
+		public Address GetAddress(string street, string city, string country, int zip)
 		{
-			Address address = new Address(street, city, country, ZIP);
+			Address address = new Address(street, city, country, zip);
 
 			return address;
 		}

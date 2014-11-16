@@ -2,32 +2,23 @@
 {
 	public class Address
 	{
-		#region Fields
+		public string Street { get; set; }
+		public string City { get; set; }
 
-		public string City;
-
-		public string Country;
-
-		public string Street;
-
-		public int ZIP;
-
-		#endregion
-
-		#region Constructors and Destructors
+		public string Country { get; set; }
+		public int Zip { get; set; }
 
 		public Address()
 		{
+			
 		}
 
-		public Address(string _Street, string _City, string _Country, int _ZIP)
+		public Address(string street, string city, string country, int zip)
 		{
-			Street = _Street;
-			City = _City;
-			ZIP = _ZIP;
-			Country = _Country;
+			Street = street;
+			City = city;
+			Country = country;
+			Zip = zip;
 		}
-
-		#endregion
 	}
 }

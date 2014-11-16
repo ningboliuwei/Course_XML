@@ -2,6 +2,7 @@
 
 using System;
 using System.Web.UI;
+using WebService的使用;
 using WebService的使用.XCurrencyConvertor;
 
 #endregion

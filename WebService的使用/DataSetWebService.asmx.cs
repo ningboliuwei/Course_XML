@@ -1,28 +1,27 @@
-﻿#region
-
-using System;
-using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.Configuration;
 using System.Web.Services;
-
-#endregion
 
 namespace WebService的使用
 {
 	/// <summary>
-	///     DataTableWebService 的摘要说明
+	/// DataSetWebService 的摘要说明
 	/// </summary>
 	[WebService(Namespace = "http://tempuri.org/")]
 	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
-	[ToolboxItem(false)]
+	[System.ComponentModel.ToolboxItem(false)]
 	// 若要允许使用 ASP.NET AJAX 从脚本中调用此 Web 服务，请取消注释以下行。 
 	// [System.Web.Script.Services.ScriptService]
-	public class DataTableWebService : WebService
+	public class DataSetWebService : System.Web.Services.WebService
 	{
+
 		[WebMethod]
-		public DataTable GetDataTable(string tableName)
+		public DataSet GetDataSet()
 		{
 			try
 			{
@@ -30,13 +29,16 @@ namespace WebService的使用
 				{
 					string connectionString = WebConfigurationManager.AppSettings["connectionString"];
 					conn.ConnectionString = connectionString;
-					SqlCommand command = new SqlCommand("SELECT * FROM " + tableName, conn);
 
-					SqlDataAdapter adapter = new SqlDataAdapter(command);
+					SqlDataAdapter adapter = new SqlDataAdapter();
 					DataSet ds = new DataSet();
-
-					adapter.Fill(ds, tableName);
-					return ds.Tables[tableName];
+					adapter.SelectCommand = new SqlCommand("SELECT * FROM Student", conn);
+					adapter.Fill(ds, "Student");
+					adapter.SelectCommand = new SqlCommand("SELECT * FROM Course", conn);
+					adapter.Fill(ds, "Course");
+					adapter.SelectCommand = new SqlCommand("SELECT * FROM SC", conn);
+					adapter.Fill(ds, "SC");
+					return ds;
 				}
 			}
 			catch (Exception ex)

@@ -13,29 +13,30 @@
 // 
 #pragma warning disable 1591
 
-namespace WebService的使用.XStockQuote {
+namespace WebService的使用.DataSetService {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
     using System.Web.Services.Protocols;
     using System.Xml.Serialization;
     using System.ComponentModel;
+    using System.Data;
     
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="StockQuoteSoap", Namespace="http://www.webserviceX.NET/")]
-    public partial class StockQuote : System.Web.Services.Protocols.SoapHttpClientProtocol {
+    [System.Web.Services.WebServiceBindingAttribute(Name="DataSetWebServiceSoap", Namespace="http://tempuri.org/")]
+    public partial class DataSetWebService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback GetQuoteOperationCompleted;
+        private System.Threading.SendOrPostCallback GetDataSetOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
-        public StockQuote() {
-            this.Url = global::WebService的使用.Properties.Settings.Default.WebService的使用_XStockQuote_StockQuote;
+        public DataSetWebService() {
+            this.Url = global::WebService的使用.Properties.Settings.Default.WebService的使用_DataSetService_DataSetWebService;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
@@ -70,34 +71,32 @@ namespace WebService的使用.XStockQuote {
         }
         
         /// <remarks/>
-        public event GetQuoteCompletedEventHandler GetQuoteCompleted;
+        public event GetDataSetCompletedEventHandler GetDataSetCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.webserviceX.NET/GetQuote", RequestNamespace="http://www.webserviceX.NET/", ResponseNamespace="http://www.webserviceX.NET/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetQuote(string symbol) {
-            object[] results = this.Invoke("GetQuote", new object[] {
-                        symbol});
-            return ((string)(results[0]));
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetDataSet", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetDataSet() {
+            object[] results = this.Invoke("GetDataSet", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void GetQuoteAsync(string symbol) {
-            this.GetQuoteAsync(symbol, null);
+        public void GetDataSetAsync() {
+            this.GetDataSetAsync(null);
         }
         
         /// <remarks/>
-        public void GetQuoteAsync(string symbol, object userState) {
-            if ((this.GetQuoteOperationCompleted == null)) {
-                this.GetQuoteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetQuoteOperationCompleted);
+        public void GetDataSetAsync(object userState) {
+            if ((this.GetDataSetOperationCompleted == null)) {
+                this.GetDataSetOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDataSetOperationCompleted);
             }
-            this.InvokeAsync("GetQuote", new object[] {
-                        symbol}, this.GetQuoteOperationCompleted, userState);
+            this.InvokeAsync("GetDataSet", new object[0], this.GetDataSetOperationCompleted, userState);
         }
         
-        private void OnGetQuoteOperationCompleted(object arg) {
-            if ((this.GetQuoteCompleted != null)) {
+        private void OnGetDataSetOperationCompleted(object arg) {
+            if ((this.GetDataSetCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetQuoteCompleted(this, new GetQuoteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.GetDataSetCompleted(this, new GetDataSetCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -122,26 +121,26 @@ namespace WebService的使用.XStockQuote {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440")]
-    public delegate void GetQuoteCompletedEventHandler(object sender, GetQuoteCompletedEventArgs e);
+    public delegate void GetDataSetCompletedEventHandler(object sender, GetDataSetCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetQuoteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class GetDataSetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal GetQuoteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal GetDataSetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
         /// <remarks/>
-        public string Result {
+        public System.Data.DataSet Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((System.Data.DataSet)(this.results[0]));
             }
         }
     }
