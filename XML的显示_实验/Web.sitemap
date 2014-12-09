@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="Home.apsx" title="首页"  description="">
+		<siteMapNode url="Clothes.aspx" title="服装城"  description="" >
+			<siteMapNode url="FemaleClothes.aspx" title="女装"  description="" />
+			<siteMapNode url="MaleClothes.aspx" title="男装"  description="" />
+		</siteMapNode>
+		<siteMapNode url="Food.aspx" title="食品"  description="" >
+			<siteMapNode url="Fresh.aspx" title="生鲜"  description="" />
+			<siteMapNode url="GrainAndOil.aspx" title="粮油"  description="" />
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>
