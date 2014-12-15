@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader的使用", "XmlReader的使用\XmlReader的使用.csproj", "{ABD955A1-CE16-4112-9665-51A61A862EFF}"
 EndProject
@@ -31,7 +31,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML显示_DEMO", "XML显示
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService的使用_实验_天气预报", "WebService的使用_实验_天气预报\WebService的使用_实验_天气预报.csproj", "{ABB4EC4F-FCBF-4C1B-A02C-8B60E58AD421}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML的显示_实验", "XML的显示_实验\XML的显示_实验.csproj", "{7BEDFA7E-A6F7-4E5A-851B-E4D14384939D}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "XML与LINQ", "http://localhost:52652", "{8F1127E8-F34D-4B9B-868E-2D59D9E17E1C}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52652"
+		Debug.AspNetCompiler.PhysicalPath = "XML与LINQ\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52652\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52652"
+		Release.AspNetCompiler.PhysicalPath = "XML与LINQ\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52652\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "XML与LINQ\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,10 +115,10 @@ Global
 		{ABB4EC4F-FCBF-4C1B-A02C-8B60E58AD421}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABB4EC4F-FCBF-4C1B-A02C-8B60E58AD421}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABB4EC4F-FCBF-4C1B-A02C-8B60E58AD421}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BEDFA7E-A6F7-4E5A-851B-E4D14384939D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BEDFA7E-A6F7-4E5A-851B-E4D14384939D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BEDFA7E-A6F7-4E5A-851B-E4D14384939D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BEDFA7E-A6F7-4E5A-851B-E4D14384939D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F1127E8-F34D-4B9B-868E-2D59D9E17E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1127E8-F34D-4B9B-868E-2D59D9E17E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F1127E8-F34D-4B9B-868E-2D59D9E17E1C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1127E8-F34D-4B9B-868E-2D59D9E17E1C}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
