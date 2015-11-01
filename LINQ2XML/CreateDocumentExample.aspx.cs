@@ -18,6 +18,11 @@ namespace LINQ2XML
 		{
 			string filePath = "r:\\books.xml";
 
+	
+			int 1E7 = 32;
+			
+			
+			
 			try
 			{
 				XElement bookstore = new XElement("bookstore",

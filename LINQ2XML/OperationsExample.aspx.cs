@@ -83,7 +83,7 @@ namespace LINQ2XML
 				//xElement.Descendants("title").ToList()[0].Value = "## MODIFIED! ##";
 
 				//另外一种用法
-				XElement newTitle = new XElement("title", new XElement("test"));
+				XElement newTitle = new XElement("title", new XElement("test", "abc"));
 				xElement.Descendants("title").ToList()[0].ReplaceWith(newTitle);
 
 				xElement.Save(filePath);
