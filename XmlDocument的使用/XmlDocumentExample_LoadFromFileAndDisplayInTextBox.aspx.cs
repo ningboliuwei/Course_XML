@@ -1,14 +1,14 @@
-﻿#region
-
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using System.Xml;
-
-#endregion
 
 namespace XmlDocument的使用
 {
-	public partial class XmlDocumentExample_LoadFromFile : Page
+	public partial class XmlDocumentExample_LoadFromFileAndDisplayInTextBox : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -16,7 +16,6 @@ namespace XmlDocument的使用
 			//创建一个XmlDocument对象
 			XmlDocument booksDoc = new XmlDocument();
 
-			Response.ContentType = "text/xml";
 			//保留空格
 			booksDoc.PreserveWhitespace = true;
 
@@ -30,7 +29,7 @@ namespace XmlDocument的使用
 				Response.Write("Exception: " + ex.Message);
 			}
 			//在浏览器中输出XML文档（利用InnerXml）
-			Response.Write(booksDoc.OuterXml);
+			txtContent.Text = booksDoc.OuterXml;
 		}
 	}
 }

@@ -172,9 +172,9 @@ namespace XmlDocument的使用
 				doc.Save(filePath);
 				lblResult.Text = "共有 " + recordCount + " 条记录，当前是第 " + (index + 1) + " 条记录" + "<br/>当前记录保存成功";
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
-				throw;
+				throw new Exception(ex.Message);
 			}
 		}
 

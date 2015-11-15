@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- This file represents a fragment of a book store inventory database -->
+﻿<?xml version="1.0" encoding="utf-8"?>
 <bookstore>
   <book genre="philosophy">
     <title>Critique of Pure Reason</title>
@@ -8,5 +7,21 @@
       <last-name>Kant</last-name>
     </author>
     <price>9.99</price>
+  </book>
+  <book genre="children">
+    <title>Harry Potter</title>
+    <author>
+      <first-name>J K.</first-name>
+      <last-name>Rowling</last-name>
+    </author>
+    <price>29.99</price>
+  </book>
+  <book genre="web">
+    <title>Learning XML</title>
+    <author>
+      <first-name>Erik T.</first-name>
+      <last-name>Ray</last-name>
+    </author>
+    <price>39.95</price>
   </book>
 </bookstore>

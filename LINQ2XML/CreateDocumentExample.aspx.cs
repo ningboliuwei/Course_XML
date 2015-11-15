@@ -17,11 +17,6 @@ namespace LINQ2XML
 		protected void btnCreate_OnClick(object sender, EventArgs e)
 		{
 			string filePath = "r:\\books.xml";
-
-	
-			int 1E7 = 32;
-			
-			
 			
 			try
 			{
