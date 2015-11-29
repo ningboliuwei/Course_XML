@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <bookstore>
-  <book genre="philosophy">
-    <title>Critique of Pure Reason</title>
-    <author>
-      <first-name>Immanuel</first-name>
-      <last-name>Kant</last-name>
-    </author>
-    <price>9.99</price>
-  </book>
   <book genre="children">
     <title>Harry Potter</title>
     <author>
@@ -16,12 +8,12 @@
     </author>
     <price>29.99</price>
   </book>
-  <book genre="web">
+  <book genre="philosophy">
     <title>Learning XML</title>
     <author>
       <first-name>Erik T.</first-name>
       <last-name>Ray</last-name>
     </author>
-    <price>39.95</price>
+    <price>20</price>
   </book>
 </bookstore>

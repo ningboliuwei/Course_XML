@@ -168,8 +168,8 @@ namespace XmlDocument的使用
 			//通过XmlDocument的SelectNodes方法，XPath作为参数，得到相应的节点（集合）
 
 			try
-			{
-				doc.Save(filePath);
+			{doc.Save(filePath);
+				
 				lblResult.Text = "共有 " + recordCount + " 条记录，当前是第 " + (index + 1) + " 条记录" + "<br/>当前记录保存成功";
 			}
 			catch (Exception ex)

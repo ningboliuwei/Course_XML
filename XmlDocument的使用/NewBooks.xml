@@ -24,4 +24,12 @@
     </author>
     <price>c</price>
   </book>
+  <book genre="D">
+    <title>D</title>
+    <author>
+      <first-name>D</first-name>
+      <last-name>D</last-name>
+    </author>
+    <price>D</price>
+  </book>
 </bookstore>

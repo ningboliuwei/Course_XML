@@ -13,6 +13,8 @@ namespace XmlDocument的使用
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			string xmlPath = Server.MapPath("Books.xml");
+			//string xmlPath = "http://www.people.com.cn/rss/politics.xml";
+			
 			//创建一个XmlDocument对象
 			XmlDocument booksDoc = new XmlDocument();
 
