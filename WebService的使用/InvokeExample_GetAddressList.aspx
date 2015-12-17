@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateWebServiceExample_GetAddressList.aspx.cs" Inherits="WebService的使用.CreateWebServiceExample_GetAddressList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InvokeExample_GetAddressList.aspx.cs" Inherits="WebService的使用.CreateWebServiceExample_GetAddressList" %>
 
 <!DOCTYPE html>
 

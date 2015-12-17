@@ -21,19 +21,19 @@ namespace WebService的使用_实验_天气预报
 
 		private void LoadProvince()
 		{
-			WeatherWebService service;
+			weatherService.WeatherWS service;
 			string[] provinces; //此字符串数组用于保存支持的所有省份/洲名称
 
 			try
 			{
-				service = new WeatherWebService(); //创建Web服务代理对象
+				service = new WeatherWS(); //创建Web服务代理对象
 			}
 			catch (Exception ex)
 			{
 				throw new Exception(ex.Message);
 			}
 
-			provinces = service.getSupportProvince();
+			provinces = service.get();
 			//通过调用Web服务的getSupportProvince()方法，得到所有支持的省份/洲名称，
 			//并以字符串数组的形式存放在provinces中
 
@@ -43,19 +43,19 @@ namespace WebService的使用_实验_天气预报
 
 		private void LoadCity(string provinceName)
 		{
-			WeatherWebService service;
+			WeatherWS service;
 			string[] cities; //此字符串数组用于保存支持的所有城市名称
 
 			try
 			{
-				service = new WeatherWebService(); //创建Web服务代理对象
+				service = new WeatherWS(); //创建Web服务代理对象
 			}
 			catch (Exception ex)
 			{
 				throw new Exception(ex.Message);
 			}
 
-			cities = service.getSupportCity(provinceName);
+			cities = service.getSupportCityString(provinceName);
 			//通过调用Web服务的getSupportCity()方法，传入省份/洲名，得到所有支持的城市名称，
 			//并以字符串数组的形式存放在cities中
 
@@ -70,19 +70,19 @@ namespace WebService的使用_实验_天气预报
 
 		private void DisplayWeather(string cityName)
 		{
-			WeatherWebService service;
+			weatherService.WeatherWS service;
 			string[] weatherStatus; //此字符串数组用于保存各天气情况
 
 			try
 			{
-				service = new WeatherWebService(); //创建Web服务代理对象
+				service = new WeatherWS(); //创建Web服务代理对象
 			}
 			catch (Exception ex)
 			{
 				throw new Exception(ex.Message);
 			}
 
-			weatherStatus = service.getWeatherbyCityName(cityName);
+			weatherStatus = service.getSupportCityString(cityName);
 			//通过调用Web服务的getWeatherbyCityName()方法，传入城市名，得到该城市的天气情况，
 			//并以字符串数组的形式存放在weatherStatus中
 			Label1.Text = weatherStatus[10];

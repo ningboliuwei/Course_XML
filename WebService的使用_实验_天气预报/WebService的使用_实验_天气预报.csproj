@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -169,11 +170,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Web References\weatherService\Reference.map">
+    <None Include="Web References\weatherService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
-    <None Include="Web References\weatherService\WeatherWebService.disco" />
+    </None>
+    <None Include="Web References\weatherService\WeatherWS.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -200,7 +201,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web References\weatherService\WeatherWebService.wsdl" />
+    <None Include="Web References\weatherService\WeatherWS.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -215,16 +216,16 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx">
+    <WebReferenceUrl Include="http://webservice.webxml.com.cn/WebServices/WeatherWS.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\weatherService\</RelPath>
-      <UpdateFromURL>http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://webservice.webxml.com.cn/WebServices/WeatherWS.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>WebService的使用_实验_天气预报_weatherService_WeatherWebService</CachedSettingsPropName>
+      <CachedSettingsPropName>WebService的使用_实验_天气预报_weatherService_WeatherWS</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>

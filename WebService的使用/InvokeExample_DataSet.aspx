@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateWebServiceExample_DataSet.aspx.cs" Inherits="WebService的使用.CreateWebServiceExample_DataSet" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InvokeExample_DataSet.aspx.cs" Inherits="WebService的使用.CreateWebServiceExample_DataSet" %>
 
 <!DOCTYPE html>
 

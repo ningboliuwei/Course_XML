@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader的使用", "XmlReader的使用\XmlReader的使用.csproj", "{ABD955A1-CE16-4112-9665-51A61A862EFF}"
 EndProject
@@ -56,6 +56,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ2XML", "LINQ2XML\LINQ2XML.csproj", "{A0A8EC4B-5000-4EC8-9A96-D1A5AC1A9F90}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ2XML_DEMO", "LINQ2XML_DEMO\LINQ2XML_DEMO.csproj", "{B30FAA48-61E5-486D-BFC3-EF0571192FD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService上课演示", "WebService上课演示\WebService上课演示.csproj", "{ED917E38-8A69-491C-8E92-4D4365C7700C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +133,10 @@ Global
 		{B30FAA48-61E5-486D-BFC3-EF0571192FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B30FAA48-61E5-486D-BFC3-EF0571192FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B30FAA48-61E5-486D-BFC3-EF0571192FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED917E38-8A69-491C-8E92-4D4365C7700C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED917E38-8A69-491C-8E92-4D4365C7700C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED917E38-8A69-491C-8E92-4D4365C7700C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED917E38-8A69-491C-8E92-4D4365C7700C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

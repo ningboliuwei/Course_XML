@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateWebServiceExample_CustomClass.aspx.cs" Inherits="WebService的使用.CreateWebServiceExample_CustomClass" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InvokeExample_CustomClass.aspx.cs" Inherits="WebService的使用.CreateWebServiceExample_CustomClass" %>
 
 <!DOCTYPE html>
 

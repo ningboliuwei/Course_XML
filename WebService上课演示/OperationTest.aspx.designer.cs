@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace XML的显示 {
+namespace WebService上课演示 {
     
     
-    public partial class XmlDisplayExample_TreeViewDataSource {
+    public partial class OperationTest {
         
         /// <summary>
         /// form1 控件。
@@ -22,48 +22,48 @@ namespace XML的显示 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// xmlDataSource1 控件。
+        /// txtX 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.XmlDataSource xmlDataSource1;
+        protected global::System.Web.UI.WebControls.TextBox txtX;
         
         /// <summary>
-        /// xmlDataSource2 控件。
+        /// txtY 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.XmlDataSource xmlDataSource2;
+        protected global::System.Web.UI.WebControls.TextBox txtY;
         
         /// <summary>
-        /// xmlDataSource3 控件。
+        /// btnOK 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.XmlDataSource xmlDataSource3;
+        protected global::System.Web.UI.WebControls.Button btnOK;
         
         /// <summary>
-        /// xmlDataSource4 控件。
+        /// btnSub 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.XmlDataSource xmlDataSource4;
+        protected global::System.Web.UI.WebControls.Button btnSub;
         
         /// <summary>
-        /// treeView1 控件。
+        /// lblResult 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TreeView treeView1;
+        protected global::System.Web.UI.WebControls.Label lblResult;
     }
 }

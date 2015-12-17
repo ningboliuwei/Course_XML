@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Web.Services;
+using System.Linq;
 
 #endregion
 
@@ -24,13 +25,17 @@ namespace WebService的使用
 			List<Address> addresses = new List<Address>();
 			Address address1 = new Address("解放路", "宁波", "中国", 315000);
 			Address address2 = new Address("中山路", "杭州", "中国", 31000);
-			Address address3 = new Address("人民路", "温州", "中国", 31000);
+			Address address3 = new Address("人民路", "杭州", "中国", 31000);
 
 			addresses.Add(address1);
 			addresses.Add(address2);
 			addresses.Add(address3);
 
-			return addresses;
+			var r = (from a in addresses
+				where a.City == "杭州"
+					 select a).ToList();
+
+			return r;
 		}
 	}
 }

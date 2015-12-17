@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateWebServiceExample_HelloWorld.aspx.cs" Inherits="WebService的使用.CreateWebServiceExample_HelloWorld" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InvokeExample_HelloWorld.aspx.cs" Inherits="WebService的使用.CreateWebServiceExample_HelloWorld" %>
 
 <!DOCTYPE html>
 

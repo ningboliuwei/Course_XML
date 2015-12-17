@@ -1,11 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
-              GeneratedClassNamespace="WebService的使用_实验_天气预报.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebService的使用_实验_天气预报.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="WebService的使用_实验_天气预报_weatherService_WeatherWebService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx</Value>
+    <Setting Name="WebService的使用_实验_天气预报_weatherService_WeatherWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://webservice.webxml.com.cn/WebServices/WeatherWS.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Collections.Generic;
 using System.Web.UI;
 
 #endregion
@@ -17,7 +18,8 @@ namespace WebService的使用
 		{
 			CustomDataArrayService.CustomDataArrayWebService service = new CustomDataArrayService.CustomDataArrayWebService();
 
-			gdvAddress.DataSource = service.GetAddresses();
+			//gdvAddress.DataSource = service.GetAddresses();
+
 			gdvAddress.DataBind();
 		}
 	}

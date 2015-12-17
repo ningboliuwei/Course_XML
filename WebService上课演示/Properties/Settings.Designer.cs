@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebService的使用_实验_天气预报.Properties {
+namespace WebService上课演示.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,10 +26,10 @@ namespace WebService的使用_实验_天气预报.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://webservice.webxml.com.cn/WebServices/WeatherWS.asmx")]
-        public string WebService的使用_实验_天气预报_weatherService_WeatherWS {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:51885/Operation.asmx")]
+        public string WebService上课演示_OperationService_Operation {
             get {
-                return ((string)(this["WebService的使用_实验_天气预报_weatherService_WeatherWS"]));
+                return ((string)(this["WebService上课演示_OperationService_Operation"]));
             }
         }
     }
