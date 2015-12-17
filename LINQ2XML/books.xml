@@ -24,4 +24,12 @@
     </author>
     <price>39.95</price>
   </book>
+  <book genre="children">
+    <title>BBBBB</title>
+    <author>
+      <first-name>T</first-name>
+      <last-name>C</last-name>
+    </author>
+    <price>11.95</price>
+  </book>
 </bookstore>

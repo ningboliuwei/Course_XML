@@ -26,7 +26,8 @@ namespace LINQ2XML
 			List<Book> books = new List<Book>()
 			{
 				new Book() {Title = "H", Author = "b b", Price = 1},
-				new Book() {Title = "D", Author = "c c", Price = 2}
+				new Book() {Title = "D", Author = "c c", Price = 2},
+				new Book() {Title = "三国", Author = "罗 贯中", Price = 20}
 			};
 
 			XElement bookstore = new XElement("bookstore",
