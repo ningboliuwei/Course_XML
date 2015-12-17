@@ -16,14 +16,16 @@ namespace LINQ2XML_DEMO
 
 		protected void Button1_OnClick(object sender, EventArgs e)
 		{
-			XDocument xdoc = new XDocument(
-				new XDeclaration("1.0", "UTF-8", "yes"),
-				new XElement("bookstore", 
-					new XElement("book", 
-						new XElement("author", "J. K")))
-				);
+			int[] array = { 3, 5, 6, 9, 12, 4, 8 };
 
-			xdoc.Save("R:\\e1.xml");
+			var nums = from num in array where num >= 5 select num;
+
+
+			foreach (var n in nums)
+			{
+				Response.Write(n + ",");
+			}
+
 		}
 	}
 }

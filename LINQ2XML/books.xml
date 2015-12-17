@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <bookstore>
   <book genre="philosophy">
-    <title>## MODIFIED2! ##</title>
+    <title>AAAAA</title>
     <author>
       <first-name>Immanuel</first-name>
       <last-name>Kant</last-name>
@@ -23,5 +23,13 @@
       <last-name>Ray</last-name>
     </author>
     <price>39.95</price>
+  </book>
+  <book genre="children">
+    <title>BBBBB</title>
+    <author>
+      <first-name>T</first-name>
+      <last-name>C</last-name>
+    </author>
+    <price>11.95</price>
   </book>
 </bookstore>
