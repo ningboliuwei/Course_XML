@@ -305,14 +305,6 @@
                     <binding protocol="http" bindingInformation="*:51885:localhost" />
                 </bindings>
             </site>
-            <site name="XmlReader的使用_实验(1)" id="20">
-                <application path="/" applicationPool="Clr2IntegratedAppPool">
-                    <virtualDirectory path="/" physicalPath="C:\GitHub\Course_XML\XmlReader的使用_实验" />
-                </application>
-                <bindings>
-                    <binding protocol="http" bindingInformation="*:22221:localhost" />
-                </bindings>
-            </site>
             <siteDefaults>
                 <logFile logFormat="W3C" directory="%IIS_USER_HOME%\Logs" />
                 <traceFailedRequestsLogging directory="%IIS_USER_HOME%\TraceLogFiles" enabled="true" maxLogFileSizeKB="1024" />

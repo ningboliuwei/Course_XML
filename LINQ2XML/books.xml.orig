@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bookstore>
+  <book genre="philosophy">
+<<<<<<< HEAD
+    <title>Critique of Pure Reason</title>
+=======
+    <title>AAAAA</title>
+>>>>>>> origin/Year2015
+    <author>
+      <first-name>Immanuel</first-name>
+      <last-name>Kant</last-name>
+    </author>
+    <price>9.99</price>
+  </book>
+  <book genre="children">
+    <title>Harry Potter</title>
+    <author>
+      <first-name>J K.</first-name>
+      <last-name>Rowling</last-name>
+    </author>
+    <price>29.99</price>
+  </book>
+  <book genre="web">
+    <title>Learning XML</title>
+    <author>
+      <first-name>Erik T.</first-name>
+      <last-name>Ray</last-name>
+    </author>
+    <price>39.95</price>
+  </book>
+  <book genre="children">
+    <title>BBBBB</title>
+    <author>
+      <first-name>T</first-name>
+      <last-name>C</last-name>
+    </author>
+    <price>11.95</price>
+  </book>
+</bookstore>

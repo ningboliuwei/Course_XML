@@ -27,26 +27,24 @@ namespace WebService的使用_实验_天气预报.weatherService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="WeatherWSSoap", Namespace="http://WebXml.com.cn/")]
-    public partial class WeatherWS : System.Web.Services.Protocols.SoapHttpClientProtocol {
+    [System.Web.Services.WebServiceBindingAttribute(Name="WeatherWebServiceSoap", Namespace="http://WebXml.com.cn/")]
+    public partial class WeatherWebService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback getRegionDatasetOperationCompleted;
+        private System.Threading.SendOrPostCallback getSupportCityOperationCompleted;
         
-        private System.Threading.SendOrPostCallback getRegionProvinceOperationCompleted;
+        private System.Threading.SendOrPostCallback getSupportProvinceOperationCompleted;
         
-        private System.Threading.SendOrPostCallback getRegionCountryOperationCompleted;
+        private System.Threading.SendOrPostCallback getSupportDataSetOperationCompleted;
         
-        private System.Threading.SendOrPostCallback getSupportCityDatasetOperationCompleted;
+        private System.Threading.SendOrPostCallback getWeatherbyCityNameOperationCompleted;
         
-        private System.Threading.SendOrPostCallback getSupportCityStringOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback getWeatherOperationCompleted;
+        private System.Threading.SendOrPostCallback getWeatherbyCityNameProOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
-        public WeatherWS() {
-            this.Url = global::WebService的使用_实验_天气预报.Properties.Settings.Default.WebService的使用_实验_天气预报_weatherService_WeatherWS;
+        public WeatherWebService() {
+            this.Url = global::WebService的使用_实验_天气预报.Properties.Settings.Default.WebService的使用_实验_天气预报_weatherService1_WeatherWebService;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
@@ -81,190 +79,160 @@ namespace WebService的使用_实验_天气预报.weatherService {
         }
         
         /// <remarks/>
-        public event getRegionDatasetCompletedEventHandler getRegionDatasetCompleted;
+        public event getSupportCityCompletedEventHandler getSupportCityCompleted;
         
         /// <remarks/>
-        public event getRegionProvinceCompletedEventHandler getRegionProvinceCompleted;
+        public event getSupportProvinceCompletedEventHandler getSupportProvinceCompleted;
         
         /// <remarks/>
-        public event getRegionCountryCompletedEventHandler getRegionCountryCompleted;
+        public event getSupportDataSetCompletedEventHandler getSupportDataSetCompleted;
         
         /// <remarks/>
-        public event getSupportCityDatasetCompletedEventHandler getSupportCityDatasetCompleted;
+        public event getWeatherbyCityNameCompletedEventHandler getWeatherbyCityNameCompleted;
         
         /// <remarks/>
-        public event getSupportCityStringCompletedEventHandler getSupportCityStringCompleted;
+        public event getWeatherbyCityNameProCompletedEventHandler getWeatherbyCityNameProCompleted;
         
         /// <remarks/>
-        public event getWeatherCompletedEventHandler getWeatherCompleted;
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getSupportCity", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string[] getSupportCity(string byProvinceName) {
+            object[] results = this.Invoke("getSupportCity", new object[] {
+                        byProvinceName});
+            return ((string[])(results[0]));
+        }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getRegionDataset", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet getRegionDataset() {
-            object[] results = this.Invoke("getRegionDataset", new object[0]);
+        public void getSupportCityAsync(string byProvinceName) {
+            this.getSupportCityAsync(byProvinceName, null);
+        }
+        
+        /// <remarks/>
+        public void getSupportCityAsync(string byProvinceName, object userState) {
+            if ((this.getSupportCityOperationCompleted == null)) {
+                this.getSupportCityOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetSupportCityOperationCompleted);
+            }
+            this.InvokeAsync("getSupportCity", new object[] {
+                        byProvinceName}, this.getSupportCityOperationCompleted, userState);
+        }
+        
+        private void OngetSupportCityOperationCompleted(object arg) {
+            if ((this.getSupportCityCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getSupportCityCompleted(this, new getSupportCityCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getSupportProvince", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string[] getSupportProvince() {
+            object[] results = this.Invoke("getSupportProvince", new object[0]);
+            return ((string[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getSupportProvinceAsync() {
+            this.getSupportProvinceAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getSupportProvinceAsync(object userState) {
+            if ((this.getSupportProvinceOperationCompleted == null)) {
+                this.getSupportProvinceOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetSupportProvinceOperationCompleted);
+            }
+            this.InvokeAsync("getSupportProvince", new object[0], this.getSupportProvinceOperationCompleted, userState);
+        }
+        
+        private void OngetSupportProvinceOperationCompleted(object arg) {
+            if ((this.getSupportProvinceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getSupportProvinceCompleted(this, new getSupportProvinceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getSupportDataSet", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getSupportDataSet() {
+            object[] results = this.Invoke("getSupportDataSet", new object[0]);
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void getRegionDatasetAsync() {
-            this.getRegionDatasetAsync(null);
+        public void getSupportDataSetAsync() {
+            this.getSupportDataSetAsync(null);
         }
         
         /// <remarks/>
-        public void getRegionDatasetAsync(object userState) {
-            if ((this.getRegionDatasetOperationCompleted == null)) {
-                this.getRegionDatasetOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetRegionDatasetOperationCompleted);
+        public void getSupportDataSetAsync(object userState) {
+            if ((this.getSupportDataSetOperationCompleted == null)) {
+                this.getSupportDataSetOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetSupportDataSetOperationCompleted);
             }
-            this.InvokeAsync("getRegionDataset", new object[0], this.getRegionDatasetOperationCompleted, userState);
+            this.InvokeAsync("getSupportDataSet", new object[0], this.getSupportDataSetOperationCompleted, userState);
         }
         
-        private void OngetRegionDatasetOperationCompleted(object arg) {
-            if ((this.getRegionDatasetCompleted != null)) {
+        private void OngetSupportDataSetOperationCompleted(object arg) {
+            if ((this.getSupportDataSetCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getRegionDatasetCompleted(this, new getRegionDatasetCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.getSupportDataSetCompleted(this, new getSupportDataSetCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getRegionProvince", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string[] getRegionProvince() {
-            object[] results = this.Invoke("getRegionProvince", new object[0]);
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getWeatherbyCityName", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string[] getWeatherbyCityName(string theCityName) {
+            object[] results = this.Invoke("getWeatherbyCityName", new object[] {
+                        theCityName});
             return ((string[])(results[0]));
         }
         
         /// <remarks/>
-        public void getRegionProvinceAsync() {
-            this.getRegionProvinceAsync(null);
+        public void getWeatherbyCityNameAsync(string theCityName) {
+            this.getWeatherbyCityNameAsync(theCityName, null);
         }
         
         /// <remarks/>
-        public void getRegionProvinceAsync(object userState) {
-            if ((this.getRegionProvinceOperationCompleted == null)) {
-                this.getRegionProvinceOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetRegionProvinceOperationCompleted);
+        public void getWeatherbyCityNameAsync(string theCityName, object userState) {
+            if ((this.getWeatherbyCityNameOperationCompleted == null)) {
+                this.getWeatherbyCityNameOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetWeatherbyCityNameOperationCompleted);
             }
-            this.InvokeAsync("getRegionProvince", new object[0], this.getRegionProvinceOperationCompleted, userState);
+            this.InvokeAsync("getWeatherbyCityName", new object[] {
+                        theCityName}, this.getWeatherbyCityNameOperationCompleted, userState);
         }
         
-        private void OngetRegionProvinceOperationCompleted(object arg) {
-            if ((this.getRegionProvinceCompleted != null)) {
+        private void OngetWeatherbyCityNameOperationCompleted(object arg) {
+            if ((this.getWeatherbyCityNameCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getRegionProvinceCompleted(this, new getRegionProvinceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.getWeatherbyCityNameCompleted(this, new getWeatherbyCityNameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getRegionCountry", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string[] getRegionCountry() {
-            object[] results = this.Invoke("getRegionCountry", new object[0]);
-            return ((string[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void getRegionCountryAsync() {
-            this.getRegionCountryAsync(null);
-        }
-        
-        /// <remarks/>
-        public void getRegionCountryAsync(object userState) {
-            if ((this.getRegionCountryOperationCompleted == null)) {
-                this.getRegionCountryOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetRegionCountryOperationCompleted);
-            }
-            this.InvokeAsync("getRegionCountry", new object[0], this.getRegionCountryOperationCompleted, userState);
-        }
-        
-        private void OngetRegionCountryOperationCompleted(object arg) {
-            if ((this.getRegionCountryCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getRegionCountryCompleted(this, new getRegionCountryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getSupportCityDataset", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet getSupportCityDataset(string theRegionCode) {
-            object[] results = this.Invoke("getSupportCityDataset", new object[] {
-                        theRegionCode});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void getSupportCityDatasetAsync(string theRegionCode) {
-            this.getSupportCityDatasetAsync(theRegionCode, null);
-        }
-        
-        /// <remarks/>
-        public void getSupportCityDatasetAsync(string theRegionCode, object userState) {
-            if ((this.getSupportCityDatasetOperationCompleted == null)) {
-                this.getSupportCityDatasetOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetSupportCityDatasetOperationCompleted);
-            }
-            this.InvokeAsync("getSupportCityDataset", new object[] {
-                        theRegionCode}, this.getSupportCityDatasetOperationCompleted, userState);
-        }
-        
-        private void OngetSupportCityDatasetOperationCompleted(object arg) {
-            if ((this.getSupportCityDatasetCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getSupportCityDatasetCompleted(this, new getSupportCityDatasetCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getSupportCityString", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string[] getSupportCityString(string theRegionCode) {
-            object[] results = this.Invoke("getSupportCityString", new object[] {
-                        theRegionCode});
-            return ((string[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void getSupportCityStringAsync(string theRegionCode) {
-            this.getSupportCityStringAsync(theRegionCode, null);
-        }
-        
-        /// <remarks/>
-        public void getSupportCityStringAsync(string theRegionCode, object userState) {
-            if ((this.getSupportCityStringOperationCompleted == null)) {
-                this.getSupportCityStringOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetSupportCityStringOperationCompleted);
-            }
-            this.InvokeAsync("getSupportCityString", new object[] {
-                        theRegionCode}, this.getSupportCityStringOperationCompleted, userState);
-        }
-        
-        private void OngetSupportCityStringOperationCompleted(object arg) {
-            if ((this.getSupportCityStringCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getSupportCityStringCompleted(this, new getSupportCityStringCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getWeather", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string[] getWeather(string theCityCode, string theUserID) {
-            object[] results = this.Invoke("getWeather", new object[] {
-                        theCityCode,
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://WebXml.com.cn/getWeatherbyCityNamePro", RequestNamespace="http://WebXml.com.cn/", ResponseNamespace="http://WebXml.com.cn/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string[] getWeatherbyCityNamePro(string theCityName, string theUserID) {
+            object[] results = this.Invoke("getWeatherbyCityNamePro", new object[] {
+                        theCityName,
                         theUserID});
             return ((string[])(results[0]));
         }
         
         /// <remarks/>
-        public void getWeatherAsync(string theCityCode, string theUserID) {
-            this.getWeatherAsync(theCityCode, theUserID, null);
+        public void getWeatherbyCityNameProAsync(string theCityName, string theUserID) {
+            this.getWeatherbyCityNameProAsync(theCityName, theUserID, null);
         }
         
         /// <remarks/>
-        public void getWeatherAsync(string theCityCode, string theUserID, object userState) {
-            if ((this.getWeatherOperationCompleted == null)) {
-                this.getWeatherOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetWeatherOperationCompleted);
+        public void getWeatherbyCityNameProAsync(string theCityName, string theUserID, object userState) {
+            if ((this.getWeatherbyCityNameProOperationCompleted == null)) {
+                this.getWeatherbyCityNameProOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetWeatherbyCityNameProOperationCompleted);
             }
-            this.InvokeAsync("getWeather", new object[] {
-                        theCityCode,
-                        theUserID}, this.getWeatherOperationCompleted, userState);
+            this.InvokeAsync("getWeatherbyCityNamePro", new object[] {
+                        theCityName,
+                        theUserID}, this.getWeatherbyCityNameProOperationCompleted, userState);
         }
         
-        private void OngetWeatherOperationCompleted(object arg) {
-            if ((this.getWeatherCompleted != null)) {
+        private void OngetWeatherbyCityNameProOperationCompleted(object arg) {
+            if ((this.getWeatherbyCityNameProCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getWeatherCompleted(this, new getWeatherCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.getWeatherbyCityNameProCompleted(this, new getWeatherbyCityNameProCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -289,17 +257,69 @@ namespace WebService的使用_实验_天气预报.weatherService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    public delegate void getRegionDatasetCompletedEventHandler(object sender, getRegionDatasetCompletedEventArgs e);
+    public delegate void getSupportCityCompletedEventHandler(object sender, getSupportCityCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getRegionDatasetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class getSupportCityCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal getRegionDatasetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal getSupportCityCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void getSupportProvinceCompletedEventHandler(object sender, getSupportProvinceCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getSupportProvinceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getSupportProvinceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void getSupportDataSetCompletedEventHandler(object sender, getSupportDataSetCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getSupportDataSetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getSupportDataSetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -315,17 +335,17 @@ namespace WebService的使用_实验_天气预报.weatherService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    public delegate void getRegionProvinceCompletedEventHandler(object sender, getRegionProvinceCompletedEventArgs e);
+    public delegate void getWeatherbyCityNameCompletedEventHandler(object sender, getWeatherbyCityNameCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getRegionProvinceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class getWeatherbyCityNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal getRegionProvinceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal getWeatherbyCityNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -341,95 +361,17 @@ namespace WebService的使用_实验_天气预报.weatherService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    public delegate void getRegionCountryCompletedEventHandler(object sender, getRegionCountryCompletedEventArgs e);
+    public delegate void getWeatherbyCityNameProCompletedEventHandler(object sender, getWeatherbyCityNameProCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getRegionCountryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class getWeatherbyCityNameProCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal getRegionCountryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    public delegate void getSupportCityDatasetCompletedEventHandler(object sender, getSupportCityDatasetCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getSupportCityDatasetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getSupportCityDatasetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    public delegate void getSupportCityStringCompletedEventHandler(object sender, getSupportCityStringCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getSupportCityStringCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getSupportCityStringCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    public delegate void getWeatherCompletedEventHandler(object sender, getWeatherCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getWeatherCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getWeatherCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal getWeatherbyCityNameProCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
