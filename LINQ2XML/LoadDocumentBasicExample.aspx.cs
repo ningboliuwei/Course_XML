@@ -17,13 +17,12 @@ namespace LINQ2XML
 
 		protected void btnLoadDocument_OnClick(object sender, EventArgs e)
 		{
-			string filePath = "r:\\books.xml";
+			string filePath = Server.MapPath("books.xml");
 
 			try
 			{
-				XElement xElement = XElement.Load(filePath);
-
-				Response.Write(xElement);
+				XDocument xDocument = XDocument.Load(filePath);
+				txtOutput.Text = xDocument.ToString();
 			}
 			catch (Exception ex)
 			{
@@ -36,13 +35,10 @@ namespace LINQ2XML
 
 		protected void btnLoadUrl_OnClick(object sender, EventArgs e)
 		{
-			string url = txtUrl.Text.Trim();
-
 			try
 			{
-				XElement xElement = XElement.Load(url);
-
-				Response.Write(xElement);
+                XDocument xDocument = XDocument.Load(txtUrl.Text);
+                txtOutput.Text = xDocument.ToString();
 			}
 			catch (Exception ex)
 			{
@@ -54,9 +50,8 @@ namespace LINQ2XML
 		{
 			try
 			{
-				XElement xElement = XElement.Parse(txtString.Text);
-
-				Response.Write(xElement);
+                XDocument xDocument = XDocument.Parse(txtInput.Text);
+			    txtOutput.Text = xDocument.ToString();
 			}
 			catch (Exception ex)
 			{

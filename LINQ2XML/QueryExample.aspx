@@ -16,7 +16,10 @@
 		<asp:Button ID="btnOrderByPrice" runat="server" Text="把所有书的标题按照价格从高到低排列" OnClick="btnOrderByPrice_OnClick"/><br/>
 		<asp:Button ID="btnGroupByGenre" runat="server" Text="把所有书的标题按照类型排列" OnClick="btnGroupByGenre_OnClick"/><br/>
 		<asp:Button ID="btnGetAveragePrice" runat="server" Text="得到所有书的平均价格" OnClick="btnGetAveragePrice_OnClick"/><br/>
-		<asp:Button ID="btnGetAveragePriceGroupByGenre" runat="server" Text="得到每种类型的书的平均价格" OnClick="btnGetAveragePriceGroupByGenre_OnClick"/><br/>
+		<asp:Button ID="btnGetAveragePriceGroupByGenre" runat="server" Text="得到每种类型的书的平均价格" OnClick="btnGetAveragePriceGroupByGenre_OnClick"/>
+        <asp:GridView ID="gdvResult" runat="server">
+        </asp:GridView>
+        <br/>
 	
 
 

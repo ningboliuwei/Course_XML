@@ -10,173 +10,87 @@ using System.Xml.Linq;
 
 namespace LINQ2XML
 {
-	public partial class QueryExample : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class QueryExample : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
 
-		}
+        protected XDocument GetXDoc()
+        {
+            string filePath = Server.MapPath("books.xml");
 
-		protected void btnGetTitles_OnClick(object sender, EventArgs e)
-		{
-			string filePath = Server.MapPath("books.xml");
+            try
+            {
+                return XDocument.Load(filePath);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
-			try
-			{
-				XDocument xdoc = XDocument.Load(filePath);
+        protected void btnGetTitles_OnClick(object sender, EventArgs e)
+        {
+            gdvResult.DataSource = from t in GetXDoc().Descendants("title")
+                select (t.Value).ToUpper();
+            gdvResult.DataBind();
+        }
 
-				var titles = from t in xdoc.Descendants("title")
-							 select (t.Value as string).ToUpper();
+        protected void btnGetChildrenTitles_OnClick(object sender, EventArgs e)
+        {
+            gdvResult.DataSource = from b in GetXDoc().Descendants("book")
+                where b.Attribute("genre").Value == "children"
+                select b.Element("title").Value;
 
-				foreach (var title in titles)
-				{
-					Response.Write(title + "<br/>");
-				}
-			}
-			catch (Exception ex)
-			{
-				throw new Exception(ex.Message);
-			}
-		}
+            gdvResult.DataBind();
+        }
 
-		protected void btnGetChildrenTitles_OnClick(object sender, EventArgs e)
-		{
-			string filePath = Server.MapPath("books.xml");
+        protected void btnGetMaxPrice_OnClick(object sender, EventArgs e)
+        {
+            Response.Write((from p in GetXDoc().Descendants("price")
+                select Convert.ToSingle(p.Value)).Max());
+            gdvResult.DataBind();
+        }
 
-			try
-			{
-				XDocument xdoc = XDocument.Load(filePath);
+        protected void btnOrderByPrice_OnClick(object sender, EventArgs e)
+        {
+            gdvResult.DataSource = from b in GetXDoc().Descendants("book")
+                let p = Convert.ToSingle(b.Element("price").Value)
+                orderby p descending
+                select new {b.Element("title").Value, p};
+            gdvResult.DataBind();
+        }
 
-				var titles = from book in xdoc.Descendants("book")
-							 where book.Attribute("genre").Value == "children"
-							 select book.Element("title").Value;
+        protected void btnGroupByGenre_OnClick(object sender, EventArgs e)
+        {
+            gdvResult.DataSource = from b in GetXDoc().Descendants("book")
+                let n = b.Attribute("genre").Value
+                let t = b.Element("title").Value
+                group t by n
+                into g
+                select new {g.Key, Count = g.Count()};
 
-				foreach (var title in titles)
-				{
-					Response.Write(title + "<br/>");
-				}
-			}
-			catch (Exception ex)
-			{
-				throw new Exception(ex.Message);
-			}
-		}
+            gdvResult.DataBind();
+        }
 
-		protected void btnGetMaxPrice_OnClick(object sender, EventArgs e)
-		{
-			string filePath = Server.MapPath("books.xml");
+        protected void btnGetAveragePrice_OnClick(object sender, EventArgs e)
+        {
+            gdvResult.DataSource = (from p in GetXDoc().Descendants("price")
+                select Convert.ToSingle(p.Value)).ToList().Average();
+            gdvResult.DataBind();
+        }
 
-			try
-			{
-				XDocument xdoc = XDocument.Load(filePath);
+        protected void btnGetAveragePriceGroupByGenre_OnClick(object sender, EventArgs e)
+        {
+            var q = from b in GetXDoc().Descendants("book")
+                group b by b.Attribute("genre").Value
+                into g
+                select new {g.Key, AveragePrice = g.Average(b => Convert.ToDouble(b.Element("price").Value))};
 
-				var maxPrice = (from price in xdoc.Descendants("price")
-								let p = Convert.ToSingle(price.Value)
-								select p).Max();
+            gdvResult.DataSource = q;
 
-				Response.Write(maxPrice);
-			}
-			catch (Exception ex)
-			{
-				throw new Exception(ex.Message);
-			}
-		}
-
-		protected void btnOrderByPrice_OnClick(object sender, EventArgs e)
-		{
-			string filePath = Server.MapPath("books.xml");
-
-			try
-			{
-				XDocument xdoc = XDocument.Load(filePath);
-
-				var titles = from book in xdoc.Descendants("book")
-							 let price = Convert.ToSingle(book.Element("price").Value)
-							 orderby price descending
-							 select book.Element("title").Value;
-
-				foreach (var title in titles)
-				{
-					Response.Write(title + "<br/>");
-				}
-			}
-			catch (Exception ex)
-			{
-				throw new Exception(ex.Message);
-			}
-		}
-
-		protected void btnGroupByGenre_OnClick(object sender, EventArgs e)
-		{
-			string filePath = Server.MapPath("books.xml");
-
-			try
-			{
-				XDocument xdoc = XDocument.Load(filePath);
-
-				var groups = from book in xdoc.Descendants("book")
-							 let genre = book.Attribute("genre").Value
-							 let title = book.Element("title").Value
-							 group title by genre;
-
-				foreach (var g in groups)
-				{
-					Response.Write("<h2>" + g.Key + "</h2><br/>");
-					foreach (var title in g)
-					{
-						Response.Write(title + "<br/>");
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				throw new Exception(ex.Message);
-			}
-		}
-
-		protected void btnGetAveragePrice_OnClick(object sender, EventArgs e)
-		{
-			string filePath = Server.MapPath("books.xml");
-
-			try
-			{
-				XDocument xdoc = XDocument.Load(filePath);
-
-				var maxPrice = (from price in xdoc.Descendants("price")
-								let p = Convert.ToSingle(price.Value)
-								select p).Average();
-
-				Response.Write(maxPrice);
-			}
-			catch (Exception ex)
-			{
-				throw new Exception(ex.Message);
-			}
-		}
-
-		protected void btnGetAveragePriceGroupByGenre_OnClick(object sender, EventArgs e)
-		{
-			string filePath = Server.MapPath("books.xml");
-
-			try
-			{
-				XDocument xdoc = XDocument.Load(filePath);
-
-				var groups = from book in xdoc.Descendants("book")
-							 let genre = book.Attribute("genre").Value
-							 let price = Convert.ToSingle(book.Element("price").Value)
-							 group price by genre;
-
-				foreach (var g in groups)
-				{
-					Response.Write("<h2>" + g.Key + "</h2><br/>");
-					Response.Write(g.Average() + "<br/>");
-				}
-			}
-			catch (Exception ex)
-			{
-				throw new Exception(ex.Message);
-			}
-		}
-	}
+            gdvResult.DataBind();
+        }
+    }
 }

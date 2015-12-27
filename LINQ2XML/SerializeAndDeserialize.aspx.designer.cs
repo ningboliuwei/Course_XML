@@ -2,15 +2,15 @@
 // <自动生成>
 //     此代码由工具生成。
 //
-//     对此文件的更改可能会导致不正确的行为，并且如果
-//     重新生成代码，这些更改将会丢失。 
+//     对此文件的更改可能导致不正确的行为，如果
+//     重新生成代码，则所做更改将丢失。
 // </自动生成>
 //------------------------------------------------------------------------------
 
 namespace LINQ2XML {
     
     
-    public partial class LoadDocumentExample {
+    public partial class SerializeAndDeserialize {
         
         /// <summary>
         /// form1 控件。
@@ -22,48 +22,48 @@ namespace LINQ2XML {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// btnLoadDocument 控件。
+        /// btnSerialize 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLoadDocument;
+        protected global::System.Web.UI.WebControls.Button btnSerialize;
         
         /// <summary>
-        /// txtUrl 控件。
+        /// btnSerializeCollection 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUrl;
+        protected global::System.Web.UI.WebControls.Button btnSerializeCollection;
         
         /// <summary>
-        /// btnLoadUrl 控件。
+        /// btnDeserialize 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLoadUrl;
+        protected global::System.Web.UI.WebControls.Button btnDeserialize;
         
         /// <summary>
-        /// txtString 控件。
+        /// btnDeserializeCollection 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtString;
+        protected global::System.Web.UI.WebControls.Button btnDeserializeCollection;
         
         /// <summary>
-        /// btnLoadString 控件。
+        /// gdvResult 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLoadString;
+        protected global::System.Web.UI.WebControls.GridView gdvResult;
     }
 }

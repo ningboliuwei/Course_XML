@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,28 +55,38 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="books.original">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="books.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="CreateDocumentExample.aspx" />
+    <Content Include="BooksCRUDExample.aspx" />
+    <Content Include="CreateDocumentBasicExample.aspx" />
     <Content Include="CreateObjectsFromXmlDocument.aspx" />
-    <Content Include="CreateXMLDocumentFromDB.aspx" />
     <Content Include="CreateXmlDocumentFromObjects.aspx" />
-    <Content Include="LoadDocumentExample.aspx" />
-    <Content Include="OperationsExample.aspx" />
+    <Content Include="LoadDocumentBasicExample.aspx" />
     <Content Include="QueryExample.aspx" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="SerializeAndDeserialize.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateDocumentExample.aspx.cs">
-      <DependentUpon>CreateDocumentExample.aspx</DependentUpon>
+    <Compile Include="BooksCRUDExample.aspx.cs">
+      <DependentUpon>BooksCRUDExample.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CreateDocumentExample.aspx.designer.cs">
-      <DependentUpon>CreateDocumentExample.aspx</DependentUpon>
+    <Compile Include="BooksCRUDExample.aspx.designer.cs">
+      <DependentUpon>BooksCRUDExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateDocumentBasicExample.aspx.cs">
+      <DependentUpon>CreateDocumentBasicExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateDocumentBasicExample.aspx.designer.cs">
+      <DependentUpon>CreateDocumentBasicExample.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreateObjectsFromXmlDocument.aspx.cs">
       <DependentUpon>CreateObjectsFromXmlDocument.aspx</DependentUpon>
@@ -84,13 +95,6 @@
     <Compile Include="CreateObjectsFromXmlDocument.aspx.designer.cs">
       <DependentUpon>CreateObjectsFromXmlDocument.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateXMLDocumentFromDB.aspx.cs">
-      <DependentUpon>CreateXMLDocumentFromDB.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CreateXMLDocumentFromDB.aspx.designer.cs">
-      <DependentUpon>CreateXMLDocumentFromDB.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CreateXmlDocumentFromObjects.aspx.cs">
       <DependentUpon>CreateXmlDocumentFromObjects.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -98,19 +102,12 @@
     <Compile Include="CreateXmlDocumentFromObjects.aspx.designer.cs">
       <DependentUpon>CreateXmlDocumentFromObjects.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoadDocumentExample.aspx.cs">
-      <DependentUpon>LoadDocumentExample.aspx</DependentUpon>
+    <Compile Include="LoadDocumentBasicExample.aspx.cs">
+      <DependentUpon>LoadDocumentBasicExample.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoadDocumentExample.aspx.designer.cs">
-      <DependentUpon>LoadDocumentExample.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="OperationsExample.aspx.cs">
-      <DependentUpon>OperationsExample.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="OperationsExample.aspx.designer.cs">
-      <DependentUpon>OperationsExample.aspx</DependentUpon>
+    <Compile Include="LoadDocumentBasicExample.aspx.designer.cs">
+      <DependentUpon>LoadDocumentBasicExample.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryExample.aspx.cs">
@@ -119,6 +116,13 @@
     </Compile>
     <Compile Include="QueryExample.aspx.designer.cs">
       <DependentUpon>QueryExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SerializeAndDeserialize.aspx.cs">
+      <DependentUpon>SerializeAndDeserialize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SerializeAndDeserialize.aspx.designer.cs">
+      <DependentUpon>SerializeAndDeserialize.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
