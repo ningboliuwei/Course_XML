@@ -39,7 +39,7 @@ namespace LINQ2XML
             };
 
 
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Book>));
+            XmlSerializer serializer = new XmlSerializer(typeof(Book));
             using (XmlWriter writer = XmlWriter.Create(Server.MapPath("serialized.xml")))
             {
                 serializer.Serialize(writer, book);

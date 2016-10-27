@@ -23,17 +23,21 @@ namespace LINQ2XML
             {
                 XDocument xdoc = XDocument.Load(filePath);
 
+                int sn = 1;
                 var books = from book in xdoc.Descendants("book")
                     let author = book.Element("author")
-                    where  Convert.ToDouble(book.Element("price").Value)>20
-                    orderby book.Element("title").Value descending
-                    select new
+                            //                    where  Convert.ToDouble(book.Element("price").Value)>20
+                            //                    orderby book.Element("title").Value descending
+
+                            select new
                     {
+                                SN=sn++,
                         Title = book.Element("title").Value,
                         //另一种写法
                         //Author = book.Descendants("first-name").ToList()[0].Value + book.Descendants("last-name").ToList()[0].Value,
                         Author = $"{author.Element("first-name").Value} {author.Element("last-name").Value}",
-                        Price = book.Element("price").Value
+                        Price = book.Element("price").Value,
+                        
                     };
 
                 //通过循环遍历对象数组输出结果
