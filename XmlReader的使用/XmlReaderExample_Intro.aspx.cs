@@ -140,32 +140,32 @@ namespace XmlReader与XmlWriter的使用
 //
 
 				//演示第十步开始——深度（Depth 属性）
-				while (reader.Read())
-				{
-					Response.Write(reader.Depth + "<br/>");
-				}
-				//演示第十步结束
-
-				//演示第十一步开始——深度（Depth 属性）前半部分
-				while (reader.Read())
-				{
-					Response.Write(reader.Depth + "<br />");
-				}
-
-
-				//演示第十一步开始——深度（Depth 属性）后半部分
-				while (reader.Read())
-				{
-					string currentLine = "";
-
-					for (int count = 1; count <= reader.Depth; count++)
-					{
-						currentLine += "===";
-					}
-
-					currentLine += "=>" + reader.Name + "<br/>";
-					Response.Write(currentLine);
-				}
+//				while (reader.Read())
+//				{
+//					Response.Write(reader.Depth + "<br/>");
+//				}
+//				//演示第十步结束
+//
+//				//演示第十一步开始——深度（Depth 属性）前半部分
+//				while (reader.Read())
+//				{
+//					Response.Write(reader.Depth + "<br />");
+//				}
+//
+//
+//				//演示第十一步开始——深度（Depth 属性）后半部分
+//				while (reader.Read())
+//				{
+//					string currentLine = "";
+//
+//					for (int count = 1; count <= reader.Depth; count++)
+//					{
+//						currentLine += "===";
+//					}
+//
+//					currentLine += "=>" + reader.Name + "<br/>";
+//					Response.Write(currentLine);
+//				}
 
 				//演示第十一步结束
 
