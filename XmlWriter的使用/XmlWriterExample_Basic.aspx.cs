@@ -8,41 +8,55 @@ using System.Xml;
 
 namespace XmlWriter的使用
 {
-	public partial class XmlWriterExample_Basic : Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
-		}
+    public partial class XmlWriterExample_Basic : Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
 
-		protected void btnWriter_OnClick(object sender, EventArgs e)
-		{
-			XmlWriter xmlWriter = XmlWriter.Create("D:\\basic.xml");
+        protected void btnWriter_OnClick(object sender, EventArgs e)
+        {
+            XmlWriter xmlWriter = XmlWriter.Create("C:\\#TEMP\\basic.xml");
 
-			xmlWriter.WriteStartDocument();
-			xmlWriter.WriteStartElement("Student");
-			//以下三行代码可以用一行 xmlWriter.WriteAttributeString("ID", "95001"); 代替
-			xmlWriter.WriteStartAttribute("ID");
-			xmlWriter.WriteString("95001");
-			xmlWriter.WriteEndAttribute();
-			xmlWriter.WriteElementString("Name", "John Smith");
-			xmlWriter.WriteEndElement();
-			xmlWriter.WriteEndDocument();
-			xmlWriter.Close();
+            xmlWriter.WriteStartDocument();
 
-			xmlWriter.WriteElementString("city", "Seattle");
+            //*************第一部分演示*************
+            //            xmlWriter.WriteElementString("city", "Seattle");
+            //*************第一部分演示*************
 
-			xmlWriter.WriteStartElement("name");
-			xmlWriter.WriteElementString("first_name", "Nancy");
-			xmlWriter.WriteEndElement();
+            //*************第二部分演示*************
+            //            xmlWriter.WriteStartElement("name");
+            //            xmlWriter.WriteElementString("first_name", "Nancy");
+            //            xmlWriter.WriteEndElement();
+            //*************第二部分演示*************
 
+            //*************第三部分演示*************
+            //            xmlWriter.WriteStartElement("Order");
+            //            xmlWriter.WriteStartAttribute("Date");
+            //            xmlWriter.WriteString("2016-11-10");
+            //            xmlWriter.WriteEndAttribute();
+            //*************第三部分演示*************
 
-			xmlWriter.WriteStartAttribute("Date");
-			xmlWriter.WriteString("2014-10-25");
-			xmlWriter.WriteEndAttribute();
+            //*************第四部分演示*************
+//            xmlWriter.WriteStartElement("Order");
+//            xmlWriter.WriteAttributeString("Date", "2016-11-10");
+            //*************第四部分演示*************
 
+            //*************第五部分演示*************
+            //            xmlWriter.WriteStartDocument();
+            //            xmlWriter.WriteStartElement("Student");
+            //            //以下三行代码可以用一行 xmlWriter.WriteAttributeString("ID", "95001"); 代替
+            //            xmlWriter.WriteStartAttribute("ID");
+            //            xmlWriter.WriteString("95001");
+            //            xmlWriter.WriteEndAttribute();
+            //            xmlWriter.WriteElementString("Name", "John Smith");
+            //            xmlWriter.WriteEndElement();
+            //            xmlWriter.WriteEndDocument();
+            //            xmlWriter.Close();
+            //*************第五部分演示*************
 
-			xmlWriter.WriteAttributeString("Date", "2014-10-25");
-
-		}
-	}
+            xmlWriter.WriteEndDocument();
+            xmlWriter.Close();
+        }
+    }
 }
