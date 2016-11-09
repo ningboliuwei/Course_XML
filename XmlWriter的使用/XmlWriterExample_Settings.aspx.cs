@@ -19,7 +19,6 @@ namespace XmlWriter的使用
 		{
 			string xmlFilePath = Server.MapPath("Employees4WriteWithFormat.xml"); //得到要写入的文件在服务器磁盘上的绝对路径
 			XmlWriter writer = null; //声明一个XmlWriter类型的对象writer
-
 			try
 			{
 				//创建一个XmlWriterSettings对象
