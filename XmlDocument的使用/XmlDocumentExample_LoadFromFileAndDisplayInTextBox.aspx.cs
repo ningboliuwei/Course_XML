@@ -31,7 +31,15 @@ namespace XmlDocument的使用
 				Response.Write("Exception: " + ex.Message);
 			}
 			//在浏览器中输出XML文档（利用InnerXml）
-			txtContent.Text = booksDoc.OuterXml;
+//			txtContent.Text = booksDoc.OuterXml;
+
+		    XmlNodeList list = booksDoc.GetElementsByTagName("title");
+
+		    foreach (XmlNode node in list)
+		    {
+		        txtContent.Text += node.InnerXml + "\n";
+
+		    }
 		}
 	}
 }

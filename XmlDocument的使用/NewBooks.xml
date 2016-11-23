@@ -32,4 +32,20 @@
     </author>
     <price>D</price>
   </book>
+  <book genre="TECH">
+    <title>Learning XML</title>
+    <author>
+      <first-name>LIU</first-name>
+      <last-name>Wei</last-name>
+    </author>
+    <price>10.99</price>
+  </book>
+  <book genre="MUSIC">
+    <title>Sing</title>
+    <author>
+      <first-name>Jane</first-name>
+      <last-name>Smith</last-name>
+    </author>
+    <price>20.01</price>
+  </book>
 </bookstore>

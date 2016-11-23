@@ -18,7 +18,7 @@ namespace XmlDocument的使用
 
 			Response.ContentType = "text/xml";
 			//保留空格
-			booksDoc.PreserveWhitespace = true;
+			booksDoc.PreserveWhitespace = false;
 
 			try
 			{
@@ -31,6 +31,7 @@ namespace XmlDocument的使用
 			}
 			//在浏览器中输出XML文档（利用InnerXml）
 			Response.Write(booksDoc.OuterXml);
-		}
+//            Response.Write(booksDoc.InnerXml);
+        }
 	}
 }

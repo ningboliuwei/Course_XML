@@ -92,5 +92,25 @@ namespace WebService的使用.Properties {
                 return ((string)(this["WebService的使用_DataTableService_DataTableWebService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ws.webxml.com.cn/webservices/DomesticAirline.asmx")]
+        public string WebService的使用_WXDomesticAirlineService_DomesticAirline {
+            get {
+                return ((string)(this["WebService的使用_WXDomesticAirlineService_DomesticAirline"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ws.webxml.com.cn/WebServices/MobileCodeWS.asmx")]
+        public string WebService的使用_WXMobileCodeService_MobileCodeWS {
+            get {
+                return ((string)(this["WebService的使用_WXMobileCodeService_MobileCodeWS"]));
+            }
+        }
     }
 }

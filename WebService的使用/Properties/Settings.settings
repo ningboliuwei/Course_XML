@@ -23,5 +23,11 @@
     <Setting Name="WebService的使用_DataTableService_DataTableWebService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:32339/DataTableWebService.asmx</Value>
     </Setting>
+    <Setting Name="WebService的使用_WXDomesticAirlineService_DomesticAirline" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ws.webxml.com.cn/webservices/DomesticAirline.asmx</Value>
+    </Setting>
+    <Setting Name="WebService的使用_WXMobileCodeService_MobileCodeWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ws.webxml.com.cn/WebServices/MobileCodeWS.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
