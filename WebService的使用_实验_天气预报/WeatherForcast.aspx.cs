@@ -2,7 +2,7 @@
 
 using System;
 using System.Web.UI;
-using WebService的使用_实验_天气预报.weatherService;
+using WebService的使用_实验_天气预报.WeatherService;
 
 #endregion
 

@@ -26,10 +26,10 @@ namespace WebService的使用_实验_天气预报.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx")]
-        public string WebService的使用_实验_天气预报_weatherService1_WeatherWebService {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ws.webxml.com.cn/WebServices/WeatherWebService.asmx")]
+        public string WebService的使用_实验_天气预报_WeatherService_WeatherWebService {
             get {
-                return ((string)(this["WebService的使用_实验_天气预报_weatherService1_WeatherWebService"]));
+                return ((string)(this["WebService的使用_实验_天气预报_WeatherService_WeatherWebService"]));
             }
         }
     }

@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace WebService的使用_实验_天气预报.weatherService {
+namespace WebService的使用_实验_天气预报.WeatherService {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -24,7 +24,7 @@ namespace WebService的使用_实验_天气预报.weatherService {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="WeatherWebServiceSoap", Namespace="http://WebXml.com.cn/")]
@@ -44,7 +44,7 @@ namespace WebService的使用_实验_天气预报.weatherService {
         
         /// <remarks/>
         public WeatherWebService() {
-            this.Url = global::WebService的使用_实验_天气预报.Properties.Settings.Default.WebService的使用_实验_天气预报_weatherService1_WeatherWebService;
+            this.Url = global::WebService的使用_实验_天气预报.Properties.Settings.Default.WebService的使用_实验_天气预报_WeatherService_WeatherWebService;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
@@ -256,11 +256,11 @@ namespace WebService的使用_实验_天气预报.weatherService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void getSupportCityCompletedEventHandler(object sender, getSupportCityCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getSupportCityCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -282,11 +282,11 @@ namespace WebService的使用_实验_天气预报.weatherService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void getSupportProvinceCompletedEventHandler(object sender, getSupportProvinceCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getSupportProvinceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -308,11 +308,11 @@ namespace WebService的使用_实验_天气预报.weatherService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void getSupportDataSetCompletedEventHandler(object sender, getSupportDataSetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getSupportDataSetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -334,11 +334,11 @@ namespace WebService的使用_实验_天气预报.weatherService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void getWeatherbyCityNameCompletedEventHandler(object sender, getWeatherbyCityNameCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getWeatherbyCityNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -360,11 +360,11 @@ namespace WebService的使用_实验_天气预报.weatherService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void getWeatherbyCityNameProCompletedEventHandler(object sender, getWeatherbyCityNameProCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getWeatherbyCityNameProCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

@@ -170,12 +170,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Web References\weatherService\Reference.map">
+    <Content Include="Web References\WeatherService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <None Include="Web References\weatherService\WeatherWebService.wsdl" />
-    <None Include="Web References\weatherService\WeatherWebService.disco" />
+    <None Include="Web References\WeatherService\WeatherWebService.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -192,7 +191,7 @@
     <Compile Include="WeatherForcast.aspx.designer.cs">
       <DependentUpon>WeatherForcast.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Web References\weatherService\Reference.cs">
+    <Compile Include="Web References\WeatherService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -202,6 +201,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Web References\WeatherService\WeatherWebService.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -216,16 +216,16 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx">
+    <WebReferenceUrl Include="http://ws.webxml.com.cn/WebServices/WeatherWebService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\weatherService\</RelPath>
-      <UpdateFromURL>http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx</UpdateFromURL>
+      <RelPath>Web References\WeatherService\</RelPath>
+      <UpdateFromURL>http://ws.webxml.com.cn/WebServices/WeatherWebService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>WebService的使用_实验_天气预报_weatherService1_WeatherWebService</CachedSettingsPropName>
+      <CachedSettingsPropName>WebService的使用_实验_天气预报_WeatherService_WeatherWebService</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
