@@ -37,7 +37,10 @@ namespace WebService的使用
 					DataSet ds = new DataSet();
 
 					adapter.Fill(ds, tableName);
-					return ds.Tables[tableName];
+//					return ds.Tables[tableName];
+                    DataTable table = ds.Tables[0];
+
+				    return table;
 				}
 			}
 			catch (Exception ex)

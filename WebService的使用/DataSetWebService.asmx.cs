@@ -32,12 +32,16 @@ namespace WebService的使用
 
 					SqlDataAdapter adapter = new SqlDataAdapter();
 					DataSet ds = new DataSet();
+
 					adapter.SelectCommand = new SqlCommand("SELECT * FROM Student", conn);
 					adapter.Fill(ds, "Student");
+
 					adapter.SelectCommand = new SqlCommand("SELECT * FROM Course", conn);
 					adapter.Fill(ds, "Course");
+
 					adapter.SelectCommand = new SqlCommand("SELECT * FROM SC", conn);
 					adapter.Fill(ds, "SC");
+
 					return ds;
 				}
 			}

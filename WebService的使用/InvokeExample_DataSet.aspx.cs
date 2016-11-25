@@ -19,8 +19,10 @@ namespace WebService的使用
 
 				gdvStudent.DataSource = ds.Tables["Student"];
 				gdvStudent.DataBind();
+
 				gdvCourse.DataSource = ds.Tables["Course"];
 				gdvCourse.DataBind();
+
 				gdvSC.DataSource = ds.Tables["SC"];
 				gdvSC.DataBind();
 			}
