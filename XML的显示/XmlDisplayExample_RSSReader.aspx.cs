@@ -18,7 +18,7 @@ namespace XML的显示
 		{
 			XmlDocument doc = new XmlDocument();
 			doc.Load(rssTextBox.Text.Trim());
-			Xml1.Document = doc;
+			Xml1.DocumentContent = doc.OuterXml;
 			Xml1.TransformSource = "RSS.xsl";
 		}
 	}
