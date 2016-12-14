@@ -17,14 +17,7 @@
                         <asp:BoundField DataField="Title" HeaderText="TITLE" />
                         <asp:BoundField DataField="Price" HeaderText="PRICE" />
                     </Columns>
-            
                 </asp:GridView>
-                <p>
-                    <!--<asp:DropDownList runat="server" ID="DropDownList1" DataSourceID="xmlDataSource1" DataTextField="Title" DataValueField="ISBN"/>-->
-            
-
-                </p>
-
             </div>
         </form>
     </body>
