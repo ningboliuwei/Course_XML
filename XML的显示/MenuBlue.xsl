@@ -7,7 +7,7 @@
       <BODY STYLE="font-family:Arial, helvetica, sans-serif; font-size:12pt;
             background-color:#EEEEEE">
         <xsl:for-each select="lunch-menu/food[calories &lt;= $calories]">
-          <DIV STYLE="background-color:green; color:white; padding:4px">
+          <DIV STYLE="background-color:blue; color:white; padding:4px">
             <SPAN STYLE="font-weight:bold; color:white">
               <xsl:value-of select="name" />
             </SPAN>
