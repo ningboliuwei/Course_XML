@@ -11,8 +11,8 @@
         <form id="form1" runat="server">
             <div>
                 <P>
-                    <asp:TextBox ID=rssTextBox runat=server Width="300px"></asp:TextBox>
-                    <asp:Button ID=okButton text="OK" runat=server onclick="okButton_Click" />
+                    <asp:TextBox ID="rssTextBox" runat="server" Width="300px"></asp:TextBox>
+                    <asp:Button ID="okButton" text="OK" runat="server" onclick="okButton_Click" />
                     <asp:Xml id="Xml1" runat="server"></asp:Xml>
                 </P>
             </div>

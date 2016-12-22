@@ -14,7 +14,7 @@
                 <asp:XmlDataSource ID="xmlDataSource2" runat="server" DataFile="bookstore.xml" XPath="bookstore/genre" />
                 <asp:XmlDataSource ID="xmlDataSource3" runat="server" DataFile="bookstore.xml" XPath="bookstore/genre/book" />
                 <asp:XmlDataSource ID="xmlDataSource4" runat="server" DataFile="bookstore.xml" XPath="bookstore/genre[@name='Fiction']/book" />
-                <asp:TreeView ID="treeView1" runat="server" DataSourceID="xmlDataSource4">
+                <asp:TreeView ID="treeView1" runat="server" DataSourceID="xmlDataSource1">
                     <DataBindings>
                         <asp:TreeNodeBinding DataMember="book" TextField="Title" />
                         <asp:TreeNodeBinding DataMember="genre" TextField="name" />
