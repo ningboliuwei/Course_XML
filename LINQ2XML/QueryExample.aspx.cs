@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Xml.Linq;
 
 namespace LINQ2XML
 {
-    public partial class QueryExample : System.Web.UI.Page
+    public partial class QueryExample : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,7 +13,7 @@ namespace LINQ2XML
 
         protected XDocument GetXDoc()
         {
-            string filePath = Server.MapPath("books.xml");
+            var filePath = Server.MapPath("books.xml");
 
             try
             {
@@ -33,15 +28,15 @@ namespace LINQ2XML
         protected void btnGetTitles_OnClick(object sender, EventArgs e)
         {
             gdvResult.DataSource = from t in GetXDoc().Descendants("title")
-                select (t.Value).ToUpper();
+                select t.Value.ToUpper();
             gdvResult.DataBind();
         }
 
         protected void btnGetChildrenTitles_OnClick(object sender, EventArgs e)
         {
             gdvResult.DataSource = from b in GetXDoc().Descendants("book")
-                where b.Attribute("genre").Value == "children"
-                select b.Element("title").Value;
+                where b.Attribute("genre")?.Value == "children"
+                select b.Element("title")?.Value;
 
             gdvResult.DataBind();
         }
@@ -56,17 +51,17 @@ namespace LINQ2XML
         protected void btnOrderByPrice_OnClick(object sender, EventArgs e)
         {
             gdvResult.DataSource = from b in GetXDoc().Descendants("book")
-                let p = Convert.ToSingle(b.Element("price").Value)
+                let p = Convert.ToSingle(b.Element("price")?.Value)
                 orderby p descending
-                select new {b.Element("title").Value, p};
+                select new {b.Element("title")?.Value, p};
             gdvResult.DataBind();
         }
 
         protected void btnGroupByGenre_OnClick(object sender, EventArgs e)
         {
             gdvResult.DataSource = from b in GetXDoc().Descendants("book")
-                let n = b.Attribute("genre").Value
-                let t = b.Element("title").Value
+                let n = b.Attribute("genre")?.Value
+                let t = b.Element("title")?.Value
                 group t by n
                 into g
                 select new {g.Key, Count = g.Count()};
@@ -84,9 +79,9 @@ namespace LINQ2XML
         protected void btnGetAveragePriceGroupByGenre_OnClick(object sender, EventArgs e)
         {
             var q = from b in GetXDoc().Descendants("book")
-                group b by b.Attribute("genre").Value
+                group b by b.Attribute("genre")?.Value
                 into g
-                select new {g.Key, AveragePrice = g.Average(b => Convert.ToDouble(b.Element("price").Value))};
+                select new {g.Key, AveragePrice = g.Average(b => Convert.ToDouble(b.Element("price")?.Value))};
 
             gdvResult.DataSource = q;
 

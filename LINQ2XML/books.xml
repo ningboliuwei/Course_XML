@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <bookstore>
-  <book genre="philosophy">
-    <title>Critique of Pure Reason1</title>
-    <author>
-      <first-name>Immanuel1</first-name>
-      <last-name>Kant1</last-name>
-    </author>
-    <price>9.991</price>
-  </book>
   <book genre="children">
     <title>Harry Potter</title>
     <author>
@@ -26,6 +18,22 @@
   </book>
   <book genre="children">
     <title>BBBBB</title>
+    <author>
+      <first-name>T</first-name>
+      <last-name>C</last-name>
+    </author>
+    <price>11.95</price>
+  </book>
+  <book genre="philosophy">
+    <title>Critique of Pure Reason1</title>
+    <author>
+      <first-name>Immanuel1</first-name>
+      <last-name>Kant1</last-name>
+    </author>
+    <price>9.991</price>
+  </book>
+  <book genre="children">
+    <title>DDDDD</title>
     <author>
       <first-name>T</first-name>
       <last-name>C</last-name>

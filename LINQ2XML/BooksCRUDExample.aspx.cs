@@ -11,7 +11,7 @@ namespace LINQ2XML
 {
     public partial class BooksCRUDExample : System.Web.UI.Page
     {
-        private static int index;
+        private static int _index;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,9 +23,9 @@ namespace LINQ2XML
 
         protected void btnPreviousRecord_OnClick(object sender, EventArgs e)
         {
-            if (index >= 1)
+            if (_index >= 1)
             {
-                ShowRecord(--index);
+                ShowRecord(--_index);
             }
         }
 
@@ -73,9 +73,9 @@ namespace LINQ2XML
 
         protected void btnNextRecord_OnClick(object sender, EventArgs e)
         {
-            if (index < GetRecordsCount() - 1)
+            if (_index < GetRecordsCount() - 1)
             {
-                ShowRecord(++index);
+                ShowRecord(++_index);
             }
         }
 
@@ -130,15 +130,15 @@ namespace LINQ2XML
 
         protected void btnUpdate_OnClick(object sender, EventArgs e)
         {
-            UpdateRecord(index);
+            UpdateRecord(_index);
         }
 
         protected void btnDelete_OnClick(object sender, EventArgs e)
         {
             if (GetRecordsCount() != 0)
             {
-                DeleteRecord(index);
-                ShowRecord(--index);
+                DeleteRecord(_index);
+                ShowRecord(--_index);
             }
         }
     }

@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <bookstore>
   <book genre="philosophy">
     <title>Critique of Pure Reason</title>
     <author>
-      <first-name>Immanuel</first-name>
+      <first-name>Immuanuel</first-name>
       <last-name>Kant</last-name>
     </author>
     <price>9.99</price>

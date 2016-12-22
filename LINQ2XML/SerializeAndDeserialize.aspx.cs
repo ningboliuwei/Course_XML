@@ -1,35 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Xml;
 using System.Xml.Serialization;
 
 namespace LINQ2XML
 {
-    public partial class SerializeAndDeserialize : System.Web.UI.Page
+    public partial class SerializeAndDeserialize : Page
     {
-        [Serializable]
-        [XmlRoot("Book")] //这表明序列化xml文档时。自定义节点名
-        public class Book
-        {
-            public string Title { get; set; }
-            public string Genre { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-            public double Price { get; set; }
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
         }
 
         protected void btnSerialize_OnClick(object sender, EventArgs e)
         {
-            Book book = new Book()
+            var book = new Book
             {
                 Title = "红楼梦",
                 Genre = "小说",
@@ -39,8 +24,8 @@ namespace LINQ2XML
             };
 
 
-            XmlSerializer serializer = new XmlSerializer(typeof(Book));
-            using (XmlWriter writer = XmlWriter.Create(Server.MapPath("serialized.xml")))
+            var serializer = new XmlSerializer(typeof(Book));
+            using (var writer = XmlWriter.Create(Server.MapPath("serialized.xml")))
             {
                 serializer.Serialize(writer, book);
             }
@@ -48,9 +33,9 @@ namespace LINQ2XML
 
         protected void btnSerializeCollection_OnClick(object sender, EventArgs e)
         {
-            List<Book> books = new List<Book>()
+            var books = new List<Book>
             {
-                new Book()
+                new Book
                 {
                     Title = "红楼梦",
                     Genre = "小说",
@@ -58,7 +43,7 @@ namespace LINQ2XML
                     LastName = "雪芹",
                     Price = 9.99
                 },
-                new Book()
+                new Book
                 {
                     Title = "西游记",
                     Genre = "小说",
@@ -66,7 +51,7 @@ namespace LINQ2XML
                     LastName = "承恩",
                     Price = 20.13
                 },
-                new Book()
+                new Book
                 {
                     Title = "三国演义",
                     Genre = "小说",
@@ -77,8 +62,8 @@ namespace LINQ2XML
             };
 
 
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Book>));
-            using (XmlWriter writer = XmlWriter.Create(Server.MapPath("serializedList.xml")))
+            var serializer = new XmlSerializer(typeof(List<Book>));
+            using (var writer = XmlWriter.Create(Server.MapPath("serializedList.xml")))
             {
                 serializer.Serialize(writer, books);
             }
@@ -86,23 +71,35 @@ namespace LINQ2XML
 
         protected void btnDeserialize_OnClick(object sender, EventArgs e)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Book));
-            using (XmlReader reader = XmlReader.Create(Server.MapPath("serialized.xml")))
+            var serializer = new XmlSerializer(typeof(Book));
+            using (var reader = XmlReader.Create(Server.MapPath("serialized.xml")))
             {
-                //can not display in gridview
-                gdvResult.DataSource= serializer.Deserialize(reader) as Book;
-                gdvResult.DataBind();
+                var book = serializer.Deserialize(reader) as Book;
+                if (book != null)
+                    Response.Write(
+                        $"Title:{book.Title}<br/>Genre:{book.Genre}<br/>FirstName{book.FirstName}<br/>LastName:{book.LastName}<br/>Price:{book.Price}");
             }
         }
 
         protected void btnDeserializeCollection_OnClick(object sender, EventArgs e)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Book>));
-            using (XmlReader reader = XmlReader.Create(Server.MapPath("serializedList.xml")))
+            var serializer = new XmlSerializer(typeof(List<Book>));
+            using (var reader = XmlReader.Create(Server.MapPath("serializedList.xml")))
             {
                 gdvResult.DataSource = serializer.Deserialize(reader) as List<Book>;
                 gdvResult.DataBind();
             }
+        }
+
+        [Serializable]
+        [XmlRoot("Book")] //这表明序列化xml文档时。自定义节点名
+        public class Book
+        {
+            public string Title { get; set; }
+            public string Genre { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public double Price { get; set; }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <bookstore>
-  <book>
+  <book genre="小说">
     <title>红楼梦</title>
     <author>
       <first-name>曹</first-name>
@@ -8,7 +8,7 @@
     </author>
     <price>9.99</price>
   </book>
-  <book>
+  <book genre="小说">
     <title>西游记</title>
     <author>
       <first-name>吴</first-name>
@@ -16,7 +16,7 @@
     </author>
     <price>20.13</price>
   </book>
-  <book>
+  <book genre="小说">
     <title>三国演义</title>
     <author>
       <first-name>罗</first-name>
