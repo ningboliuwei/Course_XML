@@ -26,7 +26,6 @@ namespace LINQ2XML
                                 new XElement("first-name", "Immanuel"),
                                 new XElement("last-name", "Kant")),
                             new XElement("price", "9.99"))));
-                xdoc.Save(Server.MapPath("book_1.xml"));
 
                 xdoc.Save(filePath);
 
@@ -80,7 +79,8 @@ namespace LINQ2XML
                 var xdoc = new XDocument(
                     new XDeclaration("1.0", "UTF-8", "yes"),
                     new XComment($"Created at {DateTime.Now}"),
-                    new XElement("root"));
+                    new XElement("root")
+                );
 
                 xdoc.Save(filePath);
 

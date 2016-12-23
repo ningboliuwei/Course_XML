@@ -25,19 +25,19 @@
     <price>11.95</price>
   </book>
   <book genre="philosophy">
-    <title>Critique of Pure Reason1</title>
+    <title>Critique of Pure Reason</title>
     <author>
       <first-name>Immanuel1</first-name>
       <last-name>Kant1</last-name>
     </author>
     <price>9.991</price>
   </book>
-  <book genre="children">
-    <title>DDDDD</title>
+    <book genre="philosophy">
+    <title>Critique of Pure Reason333</title>
     <author>
-      <first-name>T</first-name>
-      <last-name>C</last-name>
+      <first-name>Immanuel1</first-name>
+      <last-name>Kant1</last-name>
     </author>
-    <price>11.95</price>
+    <price>9.991</price>
   </book>
 </bookstore>

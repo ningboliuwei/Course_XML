@@ -81,10 +81,13 @@ namespace LINQ2XML
             var q = from b in GetXDoc().Descendants("book")
                 group b by b.Attribute("genre")?.Value
                 into g
-                select new {g.Key, AveragePrice = g.Average(b => Convert.ToDouble(b.Element("price")?.Value))};
+                select new
+                {
+                    g.Key,
+                    AveragePrice = g.Average(b => Convert.ToDouble(b.Element("price")?.Value))
+                };
 
             gdvResult.DataSource = q;
-
             gdvResult.DataBind();
         }
     }

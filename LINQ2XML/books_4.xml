@@ -24,4 +24,12 @@
     </author>
     <price>30.82</price>
   </book>
+  <book genre="小说">
+    <title>水浒传</title>
+    <author>
+      <first-name>施</first-name>
+      <last-name>耐庵</last-name>
+    </author>
+    <price>15.45</price>
+  </book>
 </bookstore>

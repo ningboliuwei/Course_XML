@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Xml;
 using System.Xml.Serialization;
@@ -16,15 +17,16 @@ namespace LINQ2XML
         {
             var book = new Book
             {
-                Title = "红楼梦",
+                Title = "西游记",
                 Genre = "小说",
-                FirstName = "曹",
-                LastName = "雪芹",
+                FirstName = "吴",
+                LastName = "承恩",
                 Price = 9.99
             };
 
 
             var serializer = new XmlSerializer(typeof(Book));
+            
             using (var writer = XmlWriter.Create(Server.MapPath("serialized.xml")))
             {
                 serializer.Serialize(writer, book);

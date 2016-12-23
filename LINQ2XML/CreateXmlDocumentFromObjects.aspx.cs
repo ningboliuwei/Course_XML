@@ -39,6 +39,14 @@ namespace LINQ2XML
                     FirstName = "罗",
                     LastName = "贯中",
                     Price = 30.82
+                },
+                new Book()
+                {
+                    Title = "水浒传",
+                    Genre = "小说",
+                    FirstName = "施",
+                    LastName = "耐庵",
+                    Price = 15.45
                 }
             };
 
