@@ -44,7 +44,7 @@ namespace XmlDocument的使用
 			//创建一个 book 节点，并添加为 bookstore 节点的子节点
 			XmlNode bookStoreNode = doc.SelectSingleNode("bookstore");
 			//bookStoreNode.AppendChild(bookNode);
-			bookStoreNode.AppendChild(bookNode);
+			bookStoreNode?.AppendChild(bookNode);
 			lblResult.Text = "XML 文档已被成功创建";
 
 			
@@ -66,7 +66,7 @@ namespace XmlDocument的使用
 			//为 book 节点添加 genre 属性
 			XmlAttribute genreAttribute = doc.CreateAttribute("genre");
 			genreAttribute.Value = txtGenre.Text;
-			bookNode.Attributes.Append(genreAttribute);
+			bookNode.Attributes?.Append(genreAttribute);
 
 			//为 book 节点添加 titile 节点          
 			XmlNode titleNode = doc.CreateElement("title");

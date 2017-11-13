@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books.xml" />
+    <Content Include="books_original.xml" />
     <Content Include="Employees.xml" />
     <Content Include="NewBooks.xml" />
     <Content Include="Web.config" />
