@@ -28,61 +28,61 @@ namespace XmlReader与XmlWriter的使用
                 var reader = XmlReader.Create(xmlFilePath);
 
                 //演示第一步开始——读取所有的元素名称
-                //while (reader.Read()) //循环读取被解析的XML文档的每一个节点
-                //{
-                //	//if (reader.NodeType == XmlNodeType.Element) //仅处理元素节点
-                //	//{
-                //		Response.Write(reader.Name + "<br/>");//每输出一次元素节点的名称就换行
-                //	//}
-                //}
+//                while (reader.Read()) //循环读取被解析的XML文档的每一个节点
+//                {
+//                	if (reader.NodeType == XmlNodeType.Element) //仅处理元素节点
+//                	{
+//                		Response.Write(reader.Name + "<br/>");//每输出一次元素节点的名称就换行
+//                	}
+//                }
                 //演示第一步结束
 
 
                 //演示第二步开始——
                 //如何显示当前元素的值？reader.Value属性可以吗？
-                //while (reader.Read())
-                //{
-                //	if (reader.NodeType == XmlNodeType.Element) //仅处理元素节点
-                //	{
-                //		Response.Write(reader.Value + "<br/>"); //每输出一次元素节点的元素值就换行
-                //	}
-                //}
+//                while (reader.Read())
+//                {
+//                	if (reader.NodeType == XmlNodeType.Element) //仅处理元素节点
+//                	{
+//                		Response.Write(reader.Value + "<br/>"); //每输出一次元素节点的元素值就换行
+//                	}
+//                }
                 //演示第二步结束
 
                 //演示第三步开始——读取所有的文本值
-                //while (reader.Read())
-                //{
-                //	if (reader.NodeType == XmlNodeType.Text) //仅处理文本节点
-                //	{
-                //		Response.Write(reader.Value + "<br/>"); //每输出一次文本节点的元素值就换行
-                //	}
-                //}
+//                while (reader.Read())
+//                {
+//                                if (reader.NodeType == XmlNodeType.Text) //仅处理文本节点
+//                                {
+//                                                Response.Write(reader.Value + "<br/>"); //每输出一次文本节点的元素值就换行
+//                                }
+//                }
                 //引出节点类型（NodeType）的具体概念（F1帮助）
                 //可以用单步调试 + 监视观察每次读取的节点
                 //演示第三步结束
 
                 //演示第四步开始——读取所有的节点类型
-                //while (reader.Read())
-                //{
-                //	//Response.Write(reader.NodeType + "<br/>"); //输出每一个节点的NodeType
-                //	if (reader.NodeType != XmlNodeType.Whitespace)
-                //	{
-                //		Response.Write(reader.NodeType + "<br/>");
-                //	}
-                //}
+//                while (reader.Read())
+//                {
+//                	//Response.Write(reader.NodeType + "<br/>"); //输出每一个节点的NodeType
+//                	if (reader.NodeType != XmlNodeType.Whitespace)
+//                	{
+//                		Response.Write(reader.NodeType + "<br/>");
+//                	}
+//                }
                 //与对应的XML文档作对比
                 //将要解析的文件改为：CustomersWithoutWhiteSpace.xml
                 //演示第四步结束
 
                 //演示第五步开始——读取指定节点的值
-                //while (reader.Read())
-                //{
-                //	if (reader.Name == "Street")
-                //	{
-
-                //		Response.Write("Street: " + reader.Value); //这么使用可以吗？
-                //	}
-                //}
+//                while (reader.Read())
+//                {
+//                	if (reader.Name == "Street")
+//	                {
+////	                                reader.Read();
+//                		Response.Write("Street: " + reader.Value); //这么使用可以吗？
+//                	}
+//                }
                 //演示第五步结束
 
 
@@ -90,7 +90,7 @@ namespace XmlReader与XmlWriter的使用
                 //while (reader.Read())
                 //{
                 //	if (reader.Name == "Name" && reader.NodeType == XmlNodeType.Element)
-                //	{
+                //              {
                 //		Response.Write("Customer's Name: " + reader.Value);//这么使用可以吗？
                 //		//为什么没有显示值？
                 //	}
@@ -110,13 +110,13 @@ namespace XmlReader与XmlWriter的使用
                 //演示第七步结束
 
                 //演示第八步开始——利用XmlNode.ReadString()方法
-                //while (reader.Read())
-                //{
-                //	if (reader.Name == "Name" && reader.NodeType == XmlNodeType.Element)
-                //	{
-                //		Response.Write("Customer's Name: " + reader.ReadString());
-                //	}
-                //}
+//                while (reader.Read())
+//                {
+//                    if (reader.Name == "Name" && reader.NodeType == XmlNodeType.Element)
+//                    {
+//                        Response.Write("Customer's Name: " + reader.ReadString());
+//                    }
+//                }
                 //演示第八步结束
 
 
@@ -139,25 +139,25 @@ namespace XmlReader与XmlWriter的使用
                 //演示第十步结束
 
                 //演示第十一步开始——深度（Depth 属性）前半部分
-                //while (reader.Read())
-                //{
-                //	Response.Write(reader.Depth + "<br />");
-                //}
+//                while (reader.Read())
+//                {
+//                	Response.Write(reader.Depth + "<br />");
+//                }
 
 
                 //演示第十一步开始——深度（Depth 属性）后半部分
-                //while (reader.Read())
-                //{
-                //	string currentLine = "";
-
-                //	for (int count = 1; count <= reader.Depth; count++)
-                //	{
-                //		currentLine += "===";
-                //	}
-
-                //	currentLine += "=>" + reader.Name + "<br/>";
-                //	Response.Write(currentLine);
-                //}
+//                while (reader.Read())
+//                {
+//                	string currentLine = "";
+//
+//                	for (int count = 1; count <= reader.Depth; count++)
+//                	{
+//                		currentLine += "===";
+//                	}
+//
+//                	currentLine += "=>" + reader.Name + "<br/>";
+//                	Response.Write(currentLine);
+//                }
 
                 //演示第十一步结束
 
@@ -194,21 +194,19 @@ namespace XmlReader与XmlWriter的使用
 //					}
 //					currentLine += nodeString + "<br/>";
 //					Response.Write(currentLine);
-//
-//
 //				}
 
                 //演示第十二步结束
 
                 //演示第十三步——HasAttribute属性
-//				while (reader.Read())
-//				{
-//					if (reader.HasAttributes)
-//					{
-//						reader.MoveToFirstAttribute();
-//						Response.Write(reader.Name + "=" + reader.Value + "<br/>");
-//					}
-//				}
+//                while (reader.Read())
+//                {
+//	                if (reader.HasAttributes)
+//	                {
+//		                reader.MoveToFirstAttribute();
+//		                Response.Write(reader.Name + "=" + reader.Value + "<br/>");
+//	                }
+//                }
                 //存在什么问题？
                 //演示第十三步结束
 
@@ -220,21 +218,21 @@ namespace XmlReader与XmlWriter的使用
                 //演示第十三步结束
 
                 //演示第十四步——多个属性的处理
-                //while (reader.Read())
-                //{
-                //	if (reader.HasAttributes)
-                //	{
-                //		while (reader.MoveToNextAttribute())
-                //		{
-                //			Response.Write(reader.Name + " = " + reader.Value + "<br/>");
-                //		}
-                //	}
-                //	//存在什么问题？
-                //}
+//                while (reader.Read())
+//                {
+//                    if (reader.HasAttributes)
+//                    {
+//                        while (reader.MoveToNextAttribute())
+//                        {
+//                            Response.Write(reader.Name + " = " + reader.Value + "<br/>");
+//                        }
+//                    }
+//                    //存在什么问题？
+//                }
                 //演示第十四步结束
 
                 var result = "";
-//				//演示第十五步开始——多个Attribute的处理
+////				//演示第十五步开始——多个Attribute的处理
                 while (reader.Read())
                 {
                     var currentLine = "";
@@ -285,18 +283,18 @@ namespace XmlReader与XmlWriter的使用
                     currentLine += nodeString + "<br/>";
                     result += currentLine;
                 }
-
-                //演示第十五步结束
-
-                //演示第十六步 ReadInnerXml() 与 ReadOuterXml() 的区别 
-                reader.Read();
-                reader.Read();
-                reader.Read();
-
-                Response.Write(reader.ReadInnerXml());
-                Response.Write(reader.ReadOuterXml().Replace("<", "&lt;").Replace(">", "&gt;"));
-                Response.Write("<br/>");
-                Response.Write(reader.ReadInnerXml().Replace("<", "&lt;").Replace(">", "&gt;"));
+//
+//                //演示第十五步结束
+//
+//                //演示第十六步 ReadInnerXml() 与 ReadOuterXml() 的区别 
+//                reader.Read();
+//                reader.Read();
+//                reader.Read();
+//
+//                Response.Write(reader.ReadInnerXml());
+//                Response.Write(reader.ReadOuterXml().Replace("<", "&lt;").Replace(">", "&gt;"));
+//                Response.Write("<br/>");
+//                Response.Write(reader.ReadInnerXml().Replace("<", "&lt;").Replace(">", "&gt;"));
                 //演示第十六步结束
 
                 //演示第十七步 MoveToContent() 方法
