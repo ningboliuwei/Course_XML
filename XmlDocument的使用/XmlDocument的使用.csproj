@@ -55,7 +55,9 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="books.xml" />
+    <Content Include="books.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="books_original.xml" />
     <Content Include="Employees.xml" />
     <Content Include="NewBooks.xml" />
