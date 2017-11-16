@@ -43,7 +43,6 @@ namespace XmlDocument的使用
 			XmlNode bookNode = CreateBookNode(doc);
 			//创建一个 book 节点，并添加为 bookstore 节点的子节点
 			XmlNode bookStoreNode = doc.SelectSingleNode("bookstore");
-			//bookStoreNode.AppendChild(bookNode);
 			bookStoreNode?.AppendChild(bookNode);
 			lblResult.Text = "XML 文档已被成功创建";
 

@@ -19,7 +19,7 @@ namespace XmlDocument的使用
 				//Load the XML from a String
 				empDoc.LoadXml("<?xml version=\"1.0\" ?>" +
 				               "<employees>" +
-				               "<employee id='1'>" +
+				               "<employee id='2'>" +
 				               "<name><firstName>Nancy</firstName>" +
 				               "<lastName>Davolio</lastName>" +
 				               "</name><city>Seattle</city>" +
