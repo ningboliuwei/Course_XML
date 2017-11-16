@@ -9,17 +9,16 @@ using System.Xml;
 
 namespace XmlWriter的使用
 {
-    public partial class XmlWriterExample_Settings : Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-        }
+	public partial class XmlWriterExample_Settings : Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
+		}
 
         protected void btnWrite_Click(object sender, EventArgs e)
         {
             var xmlFilePath = Server.MapPath("Employees4WriteWithFormat.xml"); //得到要写入的文件在服务器磁盘上的绝对路径
             XmlWriter writer = null; //声明一个XmlWriter类型的对象writer
-
             try
             {
                 //创建一个XmlWriterSettings对象

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<bookstore>
+  <book genre="philosophy">
+    <title>三国演义</title>
+    <author>
+      <first-name>罗</first-name>
+      <last-name>贯中</last-name>
+    </author>
+    <price>30.21</price>
+  </book>
+  <book genre="philosophy">
+    <title>红楼梦</title>
+    <author>
+      <first-name>曹</first-name>
+      <last-name>雪芹</last-name>
+    </author>
+    <price>91.99</price>
+  </book>
+</bookstore>

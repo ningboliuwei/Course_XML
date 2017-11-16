@@ -25,7 +25,7 @@ namespace WebService的使用
 			doc.LoadXml(result); //将返回的字符串加载到XmlDocument对象中（以便进行后续操作）
 
 			//txtInfo.Text = doc.OuterXml;
-
+   
 			//第二步开始——用户友好
 			string symbol = doc.GetElementsByTagName("Symbol")[0].InnerText;
 			string last = doc.GetElementsByTagName("Last")[0].InnerText;

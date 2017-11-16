@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Book>
+        <Title>红楼梦</Title>
+        <Genre>小说</Genre>
+        <FirstName>曹</FirstName>
+        <LastName>雪芹</LastName>
+        <Price>9.99</Price>
+    </Book>
+    <Book>
+        <Title>西游记</Title>
+        <Genre>小说</Genre>
+        <FirstName>吴</FirstName>
+        <LastName>承恩</LastName>
+        <Price>20.13</Price>
+    </Book>
+    <Book>
+        <Title>西游记</Title>
+        <Genre>小说</Genre>
+        <FirstName>吴</FirstName>
+        <LastName>承恩</LastName>
+        <Price>9.99</Price>
+    </Book>
+</ArrayOfBook>

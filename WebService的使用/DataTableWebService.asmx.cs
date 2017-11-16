@@ -33,10 +33,11 @@ namespace WebService的使用
 					SqlCommand command = new SqlCommand("SELECT * FROM " + tableName, conn);
 
 					SqlDataAdapter adapter = new SqlDataAdapter(command);
+
 					DataSet ds = new DataSet();
 
 					adapter.Fill(ds, tableName);
-					return ds.Tables[tableName];
+				    return ds.Tables[tableName];
 				}
 			}
 			catch (Exception ex)

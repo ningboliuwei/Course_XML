@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,21 +56,25 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CreateWebServiceExample_CustomClass.aspx" />
-    <Content Include="CreateWebServiceExample_DataSet.aspx" />
-    <Content Include="CreateWebServiceExample_DataTable.aspx" />
-    <Content Include="CreateWebServiceExample_GetAddressList.aspx" />
-    <Content Include="CreateWebServiceExample_HelloWorld.aspx" />
+    <Content Include="InvokeExample_CustomClass.aspx" />
+    <Content Include="InvokeExample_DataSet.aspx" />
+    <Content Include="InvokeExample_DataTable.aspx" />
+    <Content Include="InvokeExample_DomesticAirline.aspx" />
+    <Content Include="InvokeExample_DomesticAirlinePro.aspx" />
+    <Content Include="InvokeExample_GetAddressList.aspx" />
+    <Content Include="InvokeExample_HelloWorld.aspx" />
     <Content Include="CustomClassWebService.asmx" />
     <Content Include="CustomDataArrayWebService.asmx" />
     <Content Include="DataSetWebService.asmx" />
     <Content Include="DataTableWebService.asmx" />
     <Content Include="HelloWorldWebService.asmx" />
+    <Content Include="InvokeExample_MobileCode.aspx" />
     <Content Include="InvokeWebServiceExample_CurrencyConvertor.aspx" />
     <Content Include="InvokeWebServiceExample_StockQuote.aspx" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,8 +100,8 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <None Include="Web References\DataTableService\DataTableWebService.wsdl" />
     <None Include="Web References\DataSetService\DataSetWebService.disco" />
+    <None Include="Web References\DataTableService\DataTableWebService.wsdl" />
     <Content Include="Web References\DataTableService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -110,7 +115,19 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
     <None Include="Web References\HelloWorldService\HelloWorldWebService.disco" />
+    <None Include="Web References\WXDomesticAirlineService\DomesticAirline.wsdl" />
+    <Content Include="Web References\WXDomesticAirlineService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\WXMobileCodeService\MobileCodeWS.wsdl" />
+    <Content Include="Web References\WXMobileCodeService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web References\XCurrencyConvertor\CurrencyConvertor.disco" />
+    <None Include="Web References\WXDomesticAirlineService\DomesticAirline.disco" />
+    <None Include="Web References\WXMobileCodeService\MobileCodeWS.disco" />
     <Content Include="Web References\XStockQuote\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -120,40 +137,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
-    <Compile Include="CreateWebServiceExample_CustomClass.aspx.cs">
-      <DependentUpon>CreateWebServiceExample_CustomClass.aspx</DependentUpon>
+    <Compile Include="InvokeExample_CustomClass.aspx.cs">
+      <DependentUpon>InvokeExample_CustomClass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CreateWebServiceExample_CustomClass.aspx.designer.cs">
-      <DependentUpon>CreateWebServiceExample_CustomClass.aspx</DependentUpon>
+    <Compile Include="InvokeExample_CustomClass.aspx.designer.cs">
+      <DependentUpon>InvokeExample_CustomClass.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateWebServiceExample_DataSet.aspx.cs">
-      <DependentUpon>CreateWebServiceExample_DataSet.aspx</DependentUpon>
+    <Compile Include="InvokeExample_DataSet.aspx.cs">
+      <DependentUpon>InvokeExample_DataSet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CreateWebServiceExample_DataSet.aspx.designer.cs">
-      <DependentUpon>CreateWebServiceExample_DataSet.aspx</DependentUpon>
+    <Compile Include="InvokeExample_DataSet.aspx.designer.cs">
+      <DependentUpon>InvokeExample_DataSet.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateWebServiceExample_DataTable.aspx.cs">
-      <DependentUpon>CreateWebServiceExample_DataTable.aspx</DependentUpon>
+    <Compile Include="InvokeExample_DataTable.aspx.cs">
+      <DependentUpon>InvokeExample_DataTable.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CreateWebServiceExample_DataTable.aspx.designer.cs">
-      <DependentUpon>CreateWebServiceExample_DataTable.aspx</DependentUpon>
+    <Compile Include="InvokeExample_DataTable.aspx.designer.cs">
+      <DependentUpon>InvokeExample_DataTable.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateWebServiceExample_GetAddressList.aspx.cs">
-      <DependentUpon>CreateWebServiceExample_GetAddressList.aspx</DependentUpon>
+    <Compile Include="InvokeExample_DomesticAirline.aspx.cs">
+      <DependentUpon>InvokeExample_DomesticAirline.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CreateWebServiceExample_GetAddressList.aspx.designer.cs">
-      <DependentUpon>CreateWebServiceExample_GetAddressList.aspx</DependentUpon>
+    <Compile Include="InvokeExample_DomesticAirline.aspx.designer.cs">
+      <DependentUpon>InvokeExample_DomesticAirline.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateWebServiceExample_HelloWorld.aspx.cs">
-      <DependentUpon>CreateWebServiceExample_HelloWorld.aspx</DependentUpon>
+    <Compile Include="InvokeExample_DomesticAirlinePro.aspx.cs">
+      <DependentUpon>InvokeExample_DomesticAirlinePro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CreateWebServiceExample_HelloWorld.aspx.designer.cs">
-      <DependentUpon>CreateWebServiceExample_HelloWorld.aspx</DependentUpon>
+    <Compile Include="InvokeExample_DomesticAirlinePro.aspx.designer.cs">
+      <DependentUpon>InvokeExample_DomesticAirlinePro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvokeExample_GetAddressList.aspx.cs">
+      <DependentUpon>InvokeExample_GetAddressList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvokeExample_GetAddressList.aspx.designer.cs">
+      <DependentUpon>InvokeExample_GetAddressList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvokeExample_HelloWorld.aspx.cs">
+      <DependentUpon>InvokeExample_HelloWorld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvokeExample_HelloWorld.aspx.designer.cs">
+      <DependentUpon>InvokeExample_HelloWorld.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomClassWebService.asmx.cs">
       <DependentUpon>CustomClassWebService.asmx</DependentUpon>
@@ -174,6 +205,13 @@
     <Compile Include="HelloWorldWebService.asmx.cs">
       <DependentUpon>HelloWorldWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InvokeExample_MobileCode.aspx.cs">
+      <DependentUpon>InvokeExample_MobileCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvokeExample_MobileCode.aspx.designer.cs">
+      <DependentUpon>InvokeExample_MobileCode.aspx</DependentUpon>
     </Compile>
     <Compile Include="InvokeWebServiceExample_CurrencyConvertor.aspx.cs">
       <DependentUpon>InvokeWebServiceExample_CurrencyConvertor.aspx</DependentUpon>
@@ -216,6 +254,16 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\HelloWorldService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WXDomesticAirlineService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WXMobileCodeService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -309,6 +357,28 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>WebService的使用_HelloWorldService_HelloWorldWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://ws.webxml.com.cn/webservices/DomesticAirline.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WXDomesticAirlineService\</RelPath>
+      <UpdateFromURL>http://ws.webxml.com.cn/webservices/DomesticAirline.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebService的使用_WXDomesticAirlineService_DomesticAirline</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://ws.webxml.com.cn/WebServices/MobileCodeWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WXMobileCodeService\</RelPath>
+      <UpdateFromURL>http://ws.webxml.com.cn/WebServices/MobileCodeWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebService的使用_WXMobileCodeService_MobileCodeWS</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://www.webservicex.net/CurrencyConvertor.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>

@@ -31,6 +31,7 @@ namespace XmlDocument的使用
 			}
 			//在浏览器中输出XML文档（利用InnerXml）
 			Response.Write(booksDoc.OuterXml);
-		}
+//            Response.Write(booksDoc.InnerXml);
+        }
 	}
 }

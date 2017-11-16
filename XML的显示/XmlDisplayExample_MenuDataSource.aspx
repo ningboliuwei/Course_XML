@@ -19,6 +19,8 @@
                     <asp:Xml ID="Xml1" runat="server" DocumentSource="Menu.xml" TransformSource="Menu.xsl"></asp:Xml>
                 </p>
             </div>
+            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+            </asp:DropDownList>
         </form>
     </body>
 </html>

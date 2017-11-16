@@ -20,7 +20,7 @@
                                 <img src='<%# "images/" + XPath("@ISBN") + ".jpg" %>'>
                             </td>
                             <td>
-                                <h4><%# XPath("@Title") %></h4>
+                                <h4><%# XPath("@Title") %></h4> 
                                 <b>ISBN:</b> <%# XPath("@ISBN") %><br>
                                 <b>Price:</b> <%# XPath("@Price") %><br>
                             </td>

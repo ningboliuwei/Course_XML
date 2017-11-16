@@ -45,7 +45,6 @@ namespace XmlDocument的使用
 			XmlNode bookStoreNode = doc.SelectSingleNode("bookstore");
 			bookStoreNode?.AppendChild(bookNode);
 			lblResult.Text = "XML 文档已被成功创建";
-
 			
 			try
 			{

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<bookstore>
+  <book genre="小说">
+    <title>红楼梦</title>
+    <author>
+      <first-name>曹</first-name>
+      <last-name>雪芹</last-name>
+    </author>
+    <price>9.99</price>
+  </book>
+  <book genre="小说">
+    <title>西游记</title>
+    <author>
+      <first-name>吴</first-name>
+      <last-name>承恩</last-name>
+    </author>
+    <price>20.13</price>
+  </book>
+  <book genre="小说">
+    <title>三国演义</title>
+    <author>
+      <first-name>罗</first-name>
+      <last-name>贯中</last-name>
+    </author>
+    <price>30.82</price>
+  </book>
+  <book genre="小说">
+    <title>水浒传</title>
+    <author>
+      <first-name>施</first-name>
+      <last-name>耐庵</last-name>
+    </author>
+    <price>15.45</price>
+  </book>
+</bookstore>

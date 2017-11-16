@@ -11,20 +11,13 @@
         <form id="form1" runat="server">
             <div>
                 <asp:XmlDataSource ID=xmlDataSource1 runat=server ></asp:XmlDataSource>
-                <asp:GridView ID="gridView1" runat=server AutoGenerateColumns="False" EnableModelValidation="True"  >
+                <asp:GridView ID="gridView1" runat=server AutoGenerateColumns="False" EnableModelValidation="True" DataSourceID="xmlDataSource1"  >
                     <Columns>
                         <asp:BoundField DataField="ISBN" HeaderText="ISBN" />
-                        <asp:BoundField DataField="Title" HeaderText="Title" />
-                        <asp:BoundField DataField="Price" HeaderText="Price" />
+                        <asp:BoundField DataField="Title" HeaderText="TITLE" />
+                        <asp:BoundField DataField="Price" HeaderText="PRICE" />
                     </Columns>
-            
                 </asp:GridView>
-                <p>
-                    <!--<asp:DropDownList runat="server" ID="DropDownList1" DataSourceID="xmlDataSource1" DataTextField="Title" DataValueField="ISBN"/>-->
-            
-
-                </p>
-
             </div>
         </form>
     </body>

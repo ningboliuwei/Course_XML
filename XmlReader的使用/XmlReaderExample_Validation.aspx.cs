@@ -17,7 +17,7 @@ namespace XmlReader与XmlWriter的使用
 		protected void btnDisplay_Click(object sender, EventArgs e)
 		{
 			//XML文件所在位置
-			string xmlFilePath = Server.MapPath(@"Docs\Book1.xml");
+			string xmlFilePath = Server.MapPath(@"Docs\Book2.xml");
 
 			//创建XmlReaderSettings对象，并设置适合的属性
 			XmlReaderSettings settings = new XmlReaderSettings();
