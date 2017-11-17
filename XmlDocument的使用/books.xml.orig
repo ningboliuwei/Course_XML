@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bookstore>
+<<<<<<< HEAD
+  <book genre="autobiography">
+    <title>The Autobiography of Benjamin Franklin</title>
+    <author>
+      <first-name>Benjamin</first-name>
+      <last-name>Franklin</last-name>
+    </author>
+    <price>8.99</price>
+  </book>
+  <book genre="novel">
+    <title>The Confidence Man</title>
+    <author>
+      <first-name>Herman</first-name>
+      <last-name>Melville</last-name>
+    </author>
+    <price>11.99</price>
+=======
+  <book genre="children">
+    <title>Harry Potter</title>
+    <author>
+      <first-name>J K.</first-name>
+      <last-name>Rowling</last-name>
+    </author>
+    <price>29.99</price>
+>>>>>>> origin/2016版
+  </book>
+  <book genre="philosophy">
+    <title>Learning XML</title>
+    <author>
+      <first-name>Erik T.</first-name>
+      <last-name>Ray</last-name>
+    </author>
+    <price>20</price>
+  </book>
+</bookstore>

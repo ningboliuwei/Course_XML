@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<<<<<<< HEAD
+<bookstore />
+=======
+<bookstore>
+  <book genre="a">
+    <title>a</title>
+    <author>
+      <first-name>a</first-name>
+      <last-name>a</last-name>
+    </author>
+    <price>a</price>
+  </book>
+  <book genre="b">
+    <title>b</title>
+    <author>
+      <first-name>b</first-name>
+      <last-name>b</last-name>
+    </author>
+    <price>b</price>
+  </book>
+  <book genre="c">
+    <title>c</title>
+    <author>
+      <first-name>c</first-name>
+      <last-name>c</last-name>
+    </author>
+    <price>c</price>
+  </book>
+  <book genre="D">
+    <title>D</title>
+    <author>
+      <first-name>D</first-name>
+      <last-name>D</last-name>
+    </author>
+    <price>D</price>
+  </book>
+  <book genre="TECH">
+    <title>Learning XML</title>
+    <author>
+      <first-name>LIU</first-name>
+      <last-name>Wei</last-name>
+    </author>
+    <price>10.99</price>
+  </book>
+  <book genre="MUSIC">
+    <title>Sing</title>
+    <author>
+      <first-name>Jane</first-name>
+      <last-name>Smith</last-name>
+    </author>
+    <price>20.01</price>
+  </book>
+</bookstore>
+>>>>>>> origin/2016版
