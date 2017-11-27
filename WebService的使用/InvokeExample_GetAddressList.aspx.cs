@@ -18,7 +18,7 @@ namespace WebService的使用
 		{
 			CustomDataArrayService.CustomDataArrayWebService service = new CustomDataArrayService.CustomDataArrayWebService();
 
-			//gdvAddress.DataSource = service.GetAddresses();
+			gdvAddress.DataSource = service.GetAddresses();
 
 			gdvAddress.DataBind();
 		}
